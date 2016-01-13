@@ -75,6 +75,10 @@
 	    </div>	    
 	  </section>
           <section data-background="img/new_kings.jpg">
+	    <aside class="notes">
+	      Fifth UK university after Oxford (1167), Cambridge (1209),
+	      St Andrews (1410), and Glasgow (1451).
+	    </aside>
 	    <h4 class="backbox">University of Aberdeen</h4>
 	    <div class="backbox">
 	      <p>
@@ -86,10 +90,6 @@
 		  <li class="fragment">
 		    Ancient university, established in 1495 (fifth in
 		    the UK).
-		    <aside class="notes">
-		      Fifth UK university after Oxford (1167), Cambridge (1209),
-		      St Andrews (1410), and Glasgow (1451).
-		    </aside>
 		  </li>
 		  <li class="fragment">
 		    5 Nobel prize winners: insulin treatment,
@@ -137,6 +137,7 @@
 	    </ul>
 	  </section>
 	  <section>
+	    <aside class="notes">Radiant heat flux is 440 kW in a 80 MW pulverised coal corner fired boiler.</aside>
 	    <ul>
 	      <li>
 		<img src="img/heat_pipes.jpg" width="470px"
@@ -151,7 +152,7 @@
 		(1.2 MW/m${}^2$).
 	      </li>
 	      <li class="fragment">
-		Here, the transfer fluid (air) and geometry is
+		Here, the transfer fluid (air) and geometry 
 		limiting.
 	      </li>
 	      <li class="fragment">
@@ -182,9 +183,25 @@
 	    </ul>
 	  </section>
 	  <section>
+	    <aside class="notes">Water has a thermal conductivity of $\approx$0.6 W/m/K, copper is 385 W/m/K.</aside>
             <object type="image/svg+xml" data="img/thermal_conductivity.svg" width="100%">
 	      Your browser does not support SVG
 	    </object>
+	  </section>
+	  <section>
+	    <ul>
+	      <li>
+		<img src="img/power_plant.jpg" width="470px"
+		     height="858px"
+		     style="width:30%;height:auto;float:right;"/>
+		Nanofluids are an attempt to "alloy" the
+		properties of imiscible phases, but retain the
+		fluid nature.
+	      </li>
+	      <li class="fragment">
+		E.g., Copper/oil/CNT and water/ethylene glycol etc.
+	      </li>
+	    </ul>
 	  </section>
 	</section>
       </div>
@@ -223,8 +240,14 @@
 	  { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
 
 	  // Speaker notes
-	  { src: 'reveal.js/plugin/notes/notes.js', async: true },
-
+	  {
+	  src: 'reveal.js/plugin/notes/notes.js',
+	  async: true,
+	  condition: function () {
+          return !!document.body.classList;
+          }
+	  },
+	  
 	  // Remote control your reveal.js presentation using a touch device
 	  // { src: 'reveal.js/plugin/remotes/remotes.js', async: true },
 

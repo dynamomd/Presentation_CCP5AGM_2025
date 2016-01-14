@@ -56,7 +56,7 @@
 		  <a href="#History">A brief history of nanofluids.</a>
 		</li>
 		<li>
-		  <a href="#">Defining thermal conductivity in mixtures.</a>
+		  <a href="#Definition">Defining thermal conductivity in mixtures.</a>
 		</li>
 		<li>
 		  <a href="#">Theoretical evidence of anomalous enhancements.</a>
@@ -184,7 +184,7 @@
 	  </section>
 	  <section>
 	    <aside class="notes">Water has a thermal conductivity of $\approx$0.6 W/m/K, copper is 385 W/m/K.</aside>
-            <object type="image/svg+xml" data="img/thermal_conductivity.svg" width="100%">
+            <object type="image/svg+xml" data="img/thermal_conductivity.svg" width="100%" class="stretch">
 	      Your browser does not support SVG
 	    </object>
 	  </section>
@@ -330,30 +330,62 @@
 	  <section>
 	    <ul>
 	      <li>
-		<div style="display:inline-block;float:right;width:50%;">
+		<div style="display:inline-block;float:right;width:30%;">
 		  <object type="image/svg+xml" data="img/Classical_limits.svg" width="100%">
 		    Your browser does not support SVG
 		  </object>
 		  <p style="text-align:center;">
-		    <small>Measured conductivities for 10 nm copper
-		    nanoparticles in ethylene
-		    glycol (+thioglycolic acid or or aged two days/months)<sup>1</sup>.</small>
+		    <small>Series parallel limits.</small>
 		  </p>
 		</div>
 		The absolute classical limits are series and parallel
 		resistances.
+	      </li>
+	      <li class="fragment">
+		If data is outside these limits then it is truly
+		anomalous.
+	      </li>
+	      <li class="fragment">
+		Tighter bounds are given by the
+		Maxwell/Hashin-Shtrikman bounds.
+	      </li>
+	    </ul>
+	  </section>
+	  <section>
+	    <ul>
+	      <li>
+		<div style="display:inline-block;float:right;width:35%;">
+		  <object type="image/svg+xml" data="img/Maxwell.svg" width="100%">
+		    Your browser does not support SVG
+		  </object>
+		  <p style="text-align:center;">
+		    <small>Series parallel limits.</small>
+		  </p>
+		</div>
+		The two Maxwell/HS limits depend on which phase is the
+		"continuous" phase and which is "dispersed".
+	      </li>
+	      <li class="fragment">
+		This still assumes a homogenized structure to the
+		fluid; a "continuous" nanoparticle phase requires some
+		imagination (see right).
+	      </li>
+	      <li class="fragment">
+		Most results fit these bounds, results outside these
+		are deemed "anomalous".
 	      </li>
 	    </ul>
 	  </section>
 	  <section>
 	    <aside class="notes">
 	    </aside>
-	    <div style="display:inline-block;width:80%;">
+	    <div style="display:inline-block;width:85%;">
 	      <object type="image/svg+xml" data="img/anomylous.svg" width="100%">
 		Your browser does not support SVG
 	      </object>
 	    </div>
 	    <div class="footnote">
+	      The remaining "anomalous" results, some of which are truly anomalous.
 	      Taken from L. Wang and J. Fan, "Toward nanofluids of ultra-high
 	      thermal conductivity", <i>Nano. Research
 	      Lett.</i>, <b>6</b>, 153 (2011)
@@ -361,16 +393,27 @@
 	  </section>
 	  <section>
 	    <p>
-	      Conclusions:
+	      Conclusions from history:
 	    </p>
 	    <ul>
 	      <li>
-		Results are surprising, but the majority are within via
-		classical models (not anomalous)
+		Results are surprising, but the majority are within
+		classical limits (not anomalous).
+	      </li>
+	    </ul>
+	  </section>
+	  <section>
+	    <p>
+	      Questions from history:
+	    </p>
+	    <ul>
+	      <li>
+		Are anomalous effects due to some non-classical
+		(molecular) effect possible?
 	      </li>
 	      <li>
-		Nanofluids are <i>hard</i>, and something unexplained
-		might be making it difficult to measure conductivity.
+		If so, why is it so difficult to measure this
+		anomalous conductivity?
 	      </li>
 	      <li>
 		Is scatter due to poor experimental procedure,
@@ -378,6 +421,221 @@
 	      </li>
 	    </ul>
 	  </section>
+	</section>
+	<section id="Definition">
+	  <section>
+	    <h2>Definitions of thermal conductivity</h2>
+	    <p>
+	      The definition of thermal conductivity in
+	      single-component materials:
+	      
+	      \begin{align*}
+	      \vec{q} = - k\, \nabla\,T
+	      \end{align*}
+	      
+	      This thermal conductivity, $k$, is often reported from
+	      experiments which attempt to extract this value
+	      indirectly; however, nanofluids are essentially
+	      molecular mixtures.
+	    </p>
+	  </section>
+	  <section>
+	    <p>
+	      The definition of thermal conductivity in fluid mixtures
+	      arises from linear
+	      phenomenological theory:
+	      
+	      \begin{align*}
+	      \vec{J}_q &= L_{q,q}\,\vec{X}_q + \sum_a L_{q,a}\,\vec{X}_a
+	      \end{align*}
+	      
+	      where $\vec{X}_q$ is the heat "force", $\vec{X}_a$ is
+	      the diffusion force of species $a$ and $\vec{L}_{qa}$
+	      is the thermal diffusivity.
+	    </p>
+	    <p>
+	      $\vec{L}_{qq}$ is the thermal conductivity, provided
+	      $\vec{X}_a=0$.
+	    </p>
+	  </section>
+	  <section>
+	    <p>
+	      Our difficulty is increased as there is no unique
+	      separation of the heat flux into a thermal, $\vec{X}_q$,
+	      and diffusive part, $\vec{X}_a$.
+	    </p>
+	    <p>
+	      In the presence of choice, the most convenient choice
+	      (for calculations) is best:
+
+	      \begin{align*}
+	      \vec{X}_q &= -T^{-1} \nabla T & \vec{X}_a &= -T^{-1}\nabla \left(\mu_a\,T^{-1}\right)
+	      \end{align*}
+	    </p>
+	  </section>
+	  <section>
+	    <p>
+	      Taking the expression for the corresponding mass flux:
+	      
+	      \begin{align*}
+	      \vec{J}_a &= L_{q,a}\,\vec{X}_q + \sum_b L_{a,b}\,\vec{X}_b
+	      \end{align*}
+
+	      where $L_{a,b}$ is a mutual diffusion coefficient.
+	    </p>
+	    <p>
+	      In binary mixtures, we can solve for a uniquely defined "steady state"
+	      thermal conductivity ($\vec{J}_a = 0$):
+
+	      \begin{align*}
+	      \lambda = L_{q,q} - \frac{L_{a,q}^2}{L_{a,a}}
+	      \end{align*}
+	    </p>
+	  </section>
+	  <section>
+	    <p>
+	      Conclusions on definition:
+	    </p>
+	    <ul>
+	      <li>
+		The thermal conductivity in general is not well
+		defined.
+	      </li>
+	      <li>
+		We have many definitions of $L_{q,q}$. Used here is:
+		\begin{align*}
+		\vec{J}_q &= -\frac{L_{q,q}}{T}\,\nabla T & \text{iff $\nabla \left(\mu_a\,T^{-1}\right)=0$}
+		\end{align*}
+	      </li>
+	      <li>
+		A universally well-defined value is:
+
+		\begin{align*}
+		\lambda &= \left(L_{q,q} - \frac{L_{a,q}^2}{L_{a,a}}\right) & \text{iff $\vec{J}_a=0$}
+		\end{align*}
+	      </li>
+	    </ul>
+	  </section>
+	</section>
+	<section>
+	  <section>
+	    <h2>Modelling nanofluids</h2>
+	    <ul>
+	      <li>
+		Most models are either classical, or do not fully
+		capture molecular effects.
+	      </li>
+	      <li>
+		Some badly mix hydrodynamic and molecular effects,
+		e.g., brownian nanoconvection.
+	      </li>
+	      <li>
+		We need a model which is well understood, from the
+		molecular to hydrodynamic scale:
+	      </li>
+	      <li>
+		The only real option is the <b>hard-sphere fluid</b>,
+		where we have molecular dynamics, kinetic theory, and
+		accurate equations of state.
+	      </li>
+	    </ul>
+	  </section>
+	  <section>
+	    <img src="img/nanocolloid.png" width="811px" height="738px" class="stretch"/>
+	    <p>
+	      Equilibrium molecular dynamics simulations of binary mixture of hard-spheres, 10:1 size ratio, with
+	      1000:1 mass ratio approximating a nanofluid.
+	    </p>
+	  </section>
+	  <section>
+	    <div style="display:inline-block;width:70%;">
+	      <object type="image/svg+xml" data="img/thermalcond.svg" width="100%" class="stretch">
+		Your browser does not support SVG
+	      </object>
+	    </div>
+	    <p>
+	      10:1 size, 1000:1 mass, binary HS at constant volume
+	      fraction $\phi$ or constant pressure $p$. Symbols
+	      are MD and lines are from kinetic theory.<sup>1</sup>
+	    </p>
+	    <div class="footnote">
+	      1:M. N. Bannerman and L. Lue, "Transport properties of
+	      highly asymmetric hard-sphere
+	      mixtures", <i>J. Chem. Phys.</i> <b>130</b>, 164507
+	      (2009)
+	    </div>
+	  </section>
+	  <section>
+	    <ul>
+	      <li>
+		Truly anomalous results exist in $L_{q,q}$ for
+		hard-spheres, and all nanofluids at least share key
+		features with this system.
+	      </li>
+	      <li class="fragment">
+		Nanoparticles (in this case) are insulating. If
+		$L_{qq}$ is a useful definition then this is an
+		enhancement like the olive-oil/water system.
+	      </li>
+	      <li  class="fragment">
+		Analysing the kinetic theory expressions, $L_{qq}$ has a dominant term:
+		\begin{align*}
+		\vec{J}_q \approx\left(C_V^{Nano} - C_V^{Base}\right)k_B\,T\,L_{Nano,q} T^{-1}\nabla T
+		\end{align*}
+	      </li>
+	      <li  class="fragment">
+		Large mass difference (as $C_V=5\,m/2$), coupled with
+		thermophoresis causes heat pumping effect <b>IF</b>
+		$L_{qq}$ is relevant.
+	      </li>
+	    </ul>
+	  </section>
+	  <section>
+	    <div class="stretch">
+	      <object type="image/svg+xml" data="img/thermophoresis.svg" width="100%">
+		Your browser does not support SVG
+	      </object>
+	      <p>
+		Graphical illustration of heat flux via
+		thermophoresis. Momentum conservation causes equal and
+		opposite fluxes of mass. If there is a heat capacity
+		imbalance, this results in a flux.
+	      </p>
+	    </div>
+	  </section>
+	  <section>
+	    <div>
+	      <img src="img/lambda.png" width="947px" height="612px" style="width:90%;height:auto;background:white;"/>
+	    </div>	    
+	    <p>
+	      "Light" nanofluids (size 2:1, mass 1:6) have anomalous
+	      dehancements in $\lambda$ while anomalous
+	      enhancements appear in $L_{q,q}$.
+	    </p>
+	  </section>
+	  <section>
+	    <div>
+	      <img src="img/Lqq_maximums.png" width="947px" height="612px" style="width:90%;height:auto;background:none;"/>
+	    </div>	    
+	    <p>
+	    </p>	    
+	  </section>
+	  <section>
+	    <div>
+	      <img src="img/lambda_minimums.png" width="947px" height="612px" style="width:90%;height:auto;background:none;"/>
+	    </div>	    
+	    <p>
+	    </p>	    
+	  </section>
+	  <section>
+	    <h2>Non-equilibrium results</h2>
+	    <video autoplay width="100%" loop controls class="stretch">
+	      <source data-src="videos/bounded_nequil.mp4" type="video/mp4" />
+            </video>
+	  </section>
+	</section>
+	<section>
+	  <h2>Conclusions</h2>
 	</section>
       </div>
     </div>
@@ -389,8 +647,8 @@
       // Full list of configuration options available here:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
-      //width:1200,
-      //height:900,
+      width:1024,
+      height:768,
       controls:false,
       slideNumber: 'c / t',
       history: true,

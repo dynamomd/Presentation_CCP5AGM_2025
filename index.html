@@ -9,16 +9,13 @@
     <meta name="apple-mobile-web-app-status-bar-style" 
 	  content="black-translucent" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css"></link>
+
     <link rel="stylesheet" href="reveal.js/css/reveal.css"></link>
-    <!-- Default themes -->
-    <link rel="stylesheet" href="UoA.css" id="theme"></link>
-    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="reveal.js/css/theme/beige.css"></link>
+    <link rel="stylesheet" href="MCBreveal.css" id="theme"></link>
+    <link rel="stylesheet" href="Font-Awesome/css/font-awesome.min.css"></link>
     <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css"></link>
-    <!-- For LaTeX formating highlighting -->
-    <!--[if lt IE 9]>
-	<script src="reveal.js/lib/js/html5shiv.js"></script>
-	<![endif]-->
+    <script src="reveal.js/lib/js/head.min.js"></script>
   </head>
   <body>
     <div class="reveal">
@@ -26,8 +23,8 @@
         <section style="height:100%;width:100%;">
 	  <section style="height:100%;width:100%;">
 	    <div class="backbox">
-	      <h1>Anomalous thermal conductivity in nanofluids?</h1>
-	      <h3>15/01/2016, Universit&auml;t Bremen, Germany</h3>
+	      <h1>Can nanofluids exhibit "anomalous" thermal conductivity?</h1>
+	      <h3>21/02/2018, University of Strathclyde, Chemical &amp; process engineering</h3>
 	    </div>
 	    <p>
 	      Marcus N. Bannerman<br/>
@@ -35,40 +32,13 @@
 	      <a href="mailto:m.campbellbannerman@abdn.ac.uk">m.campbellbannerman@abdn.ac.uk</a>
 	    </p>
 	    <div style="position:absolute; bottom:15px; width:10em;">
-              <object type="image/svg+xml" data="img/UoALarge_reversed.svg" width="100%" height="100%">
+              <object type="image/svg+xml" data="img/UoALarge.svg" width="100%" height="100%">
 		Your browser does not support SVG
 	      </object>
 	    </div>
 	  </section>
-	  <section>
-	    <div class="backbox">
-	      <h2>Contents</h2>
-	    </div>
-	    <p>
-	      <ul>
-<!--		<li>
-		  <a href="#Aberdeen">University of Aberdeen.</a>
-		</li>
-!-->		<li>
-		  <a href="#Motivation">Motivation.</a>
-		</li>
-		<li>
-		  <a href="#History">A brief history of nanofluids.</a>
-		</li>
-		<li>
-		  <a href="#Definition">Defining thermal conductivity in mixtures.</a>
-		</li>
-		<li>
-		  <a href="#">Theoretical evidence of anomalous enhancements.</a>
-		</li>
-		<li>
-		  <a href="#">Conclusions.</a>
-		</li>
-	      </ul>
-	    </p>
-	  </section>
 	</section>
-<!--	<section id="Aberdeen" data-background="img/new_kings.jpg" style="height:100%;">
+	<section id="Aberdeen" data-background="img/new_kings.jpg" style="height:100%;">
           <section style="height:100%;">
 	    <div style="position:absolute; right: 0; bottom:0;"class="backbox">
 	      <small>New Kings<br/>University of Aberdeen </small>
@@ -79,15 +49,11 @@
 	      Fifth UK university after Oxford (1167), Cambridge (1209),
 	      St Andrews (1410), and Glasgow (1451).
 	    </aside>
-	    <h4 class="backbox">University of Aberdeen</h4>
-	    <div class="backbox">
-	      <p>
-		<ul>
+	    <h2 class="backbox" style="width:80%; margin-left:auto;margin-right:auto;">University of Aberdeen</h2>
+	    <div class="backbox" style="width:80%; margin-left:auto;margin-right:auto;">
+	      <p >
+		<ul >
 		  <li>
-		    Statistically the coldest city with 18 hours of
-		    daylight in summer but only 6 in winter.
-		  </li>
-		  <li class="fragment">
 		    Ancient university, established in 1495 (fifth in
 		    the UK).
 		  </li>
@@ -104,119 +70,62 @@
 		    students.
 		  </li>
 		  <li class="fragment">
-		    James Clerk Maxwell was here, but was fired in 1860.
+		    James Clerk Maxwell was here, but was fired in
+		    1860 when Marischal and King's college merged to
+		    form the university.
 		  </li>
 		</ul>
 	      </p>
 	    </div>
 	  </section>
 	</section>
-!-->
-	<section id="#Motivation">
+	<section>
 	  <section>
-	    <ul>
-	      <li>
-		<img src="img/power_plant.jpg" width="470px"
-		     height="858px"
-		     style="width:30%;height:auto;float:right;"/>
-		The
-		importance of heat transfer is hard to understate.  It
-		is at the heart of almost all industrial processes.
-	      </li>
-	      <li class="fragment">
-		HX designs are advanced.
-	      </li>
-	      <li class="fragment">
-		E.g., Electrical power plants can now reach a thermal
-		efficiency of 60\% (relative to the Carnot cycle).
-	      </li>
-	      <li class="fragment">
-		New improvements may only come from changes to the
-		working fluids or thermodynamic principles used.
-	      </li>
-	    </ul>
-	  </section>
-	  <section>
-	    <aside class="notes">Radiant heat flux is 440 kW in a 80 MW pulverized coal corner fired boiler.</aside>
-	    <ul>
-	      <li>
-		<img src="img/heat_pipes.jpg" width="470px"
-		     height="858px"
-		     style="width:30%;height:auto;float:right;"/>
-		Technologies such as <b>heat pipes</b> are widely used in electronic
-		devices. These exploit phase change to transport heat.
-	      </li>
-	      <li class="fragment">
-		Yet heat dissipation is a major concern;
-		i.e. processors produce 100 W on a 9x9&nbsp;mm die
-		(1.2 MW/m${}^2$).
-	      </li>
-	      <li class="fragment">
-		Here, the transfer fluid (air) and geometry 
-		limiting.
-	      </li>
-	      <li class="fragment">
-		For smaller, more efficient exchangers, better
-		transfer fluids are needed.
-	      </li>
-	    </ul>
-	  </section>
-	  <section>
-	    <ul>
-	      <li>
-		<img src="img/power_plant.jpg" width="470px"
-		     height="858px"
-		     style="width:30%;height:auto;float:right;"/>
-		Water is cheap, inert, widely available, and has
-		excellent properties.
-	      </li>
-	      <li class="fragment">
-		The relatively <b>high heat-capacity</b> and
-		<b>enthalpy of vaporization</b> with relatively <b>low
-		viscosity</b> make water ideal for storing and
-		transporting heat.
-	      </li>
-	      <li class="fragment">
-		However, water has an unimpressive <b>thermal
-		conductivity</b> compared to other materials:
-	      </li>
-	    </ul>
-	  </section>
-	  <section>
-	    <aside class="notes">Water has a thermal conductivity of $\approx$0.6 W/m/K, copper is 385 W/m/K.</aside>
-            <object type="image/svg+xml" data="img/thermal_conductivity.svg" width="100%" class="stretch">
-	      Your browser does not support SVG
-	    </object>
-	  </section>
-	</section>
-	<section id="History">
-	  <section>
-	    <ul>
-	      <li>
-		<div style="display:inline-block;float:right;width:30%;">
+	    <div style="display:flex;align-items:center;">
+	      <div style="flex: 1 1 calc(100% * 0.7);">
+		<ul>
+		  <li>
+		    Nanofluids are an attempt to "alloy" the
+		    properties of an imiscible material with a base
+		    liquid phase.
+		  </li>
+		  <li>
+		    By breaking the imiscible phase into nanometer
+		    sized particles, a 
+		  </li>
+		  <li>
+		    The imiscible material may be a solid or liquid;
+		    however, primarily focussed on solids due to their
+		    high thermal conductivity.
+		  </li>
+		  <li>
+		    
+		    
+		  </li>
+		  <li class="fragment">
+		    E.g., Copper/oil/CNT with water/ethylene glycol etc.
+		  </li>
+		  <li class="fragment">
+		    Initial results reported in 2001 were promising, for
+		    copper in ethylene glycol
+		  </li>
+		</ul>
+	      </div>
+	      <div style="flex: 1 1 calc(100% * 0.3);">
+		<figure>
 		  <object type="image/svg+xml" data="img/ethylene_glycol.svg" width="100%">
 		    Your browser does not support SVG
 		  </object>
-		  <p>
-		    <small>10 nm copper nanoparticles in ethylene glycol<sup>1</sup>.</small>
-		  </p>
-		</div>
-		Nanofluids are an attempt to "alloy" the
-		properties of imiscible phases, but retain the
-		fluid nature.
-	      </li>
-	      <li class="fragment">
-		E.g., Copper/oil/CNT and water/ethylene glycol etc.
-	      </li>
-	      <li class="fragment">
-		Initial results reported in 2001 were promising, for
-		copper in ethylene glycol:
-	      </li>
-	    </ul>
+		  <figcaption>
+		    10 nm copper nanoparticles in ethylene glycol<sup>1</sup>.
+		  </figcaption>
+		</figure>
+	      </div>
+	    </div>	      
 	    <div class="footnote">
-	      1:Eastman, J. A. et al. 'Anomalously increased effective thermal
-		conductivities of ethylene glycol-based nanofluids containing copper
-		nanoparticles'. <i>Appl. Phys. Lett.</i>, <b>78</b>, 718–720 (2001).
+	      [1] Eastman, J. A. et al. 'Anomalously increased effective thermal
+	      conductivities of ethylene glycol-based nanofluids containing copper
+	      nanoparticles'. <i>Appl. Phys. Lett.</i>, <b>78</b>, 718–720 (2001).
 	    </div>
 	  </section>
 	  <section>
@@ -327,6 +236,84 @@
 	      Lett.</i>, <b>6</b>, 153 (2011)
 	    </div>
 	  </section>
+	  <section>
+	    <div style="display:flex;align-items:center;">
+	      <div style="flex: 1 1 calc(100% * 0.651);">
+		<ul>
+		  <li>
+		    Maxwell developed in 1873 (post-Aberdeen) an
+		    expression for the electrical conductivity of a
+		    two-component mixture, deemed "Maxwell theory",
+		    which also works equally well for heat.
+		  </li>
+		  <li>
+		    It assumes suspended particles are infinitely
+		    separated, no interfacial resistance, and uses a
+		    superpostition of the solution for temperature
+		    around a spherical inclusion embedded in a linear
+		    temperature gradient.
+		  </li>
+		</ul>
+	      </div>
+	      <div style="flex: 1 1 calc(100% * 0.351);">
+		<img src="img/James_Clerk_Maxwell.png" style="width:100%"/>
+	      </div>
+	    </div>
+	  </section>
+	  <section>
+	    <aside class="notes">Radiant heat flux is 440 kW in a 80 MW pulverized coal corner fired boiler.</aside>
+	    <ul>
+	      <li>
+		<img src="img/heat_pipes.jpg" width="470px"
+		     height="858px"
+		     style="width:30%;height:auto;float:right;"/>
+		Technologies such as <b>heat pipes</b> are widely used in electronic
+		devices. These exploit phase change to transport heat.
+	      </li>
+	      <li class="fragment">
+		Yet heat dissipation is a major concern;
+		i.e. processors produce 100 W on a 9x9&nbsp;mm die
+		(1.2 MW/m${}^2$).
+	      </li>
+	      <li class="fragment">
+		Here, the transfer fluid (air) and geometry 
+		limiting.
+	      </li>
+	      <li class="fragment">
+		For smaller, more efficient exchangers, better
+		transfer fluids are needed.
+	      </li>
+	    </ul>
+	  </section>
+	  <section>
+	    <ul>
+	      <li>
+		<img src="img/power_plant.jpg" width="470px"
+		     height="858px"
+		     style="width:30%;height:auto;float:right;"/>
+		Water is cheap, inert, widely available, and has
+		excellent properties.
+	      </li>
+	      <li class="fragment">
+		The relatively <b>high heat-capacity</b> and
+		<b>enthalpy of vaporization</b> with relatively <b>low
+		viscosity</b> make water ideal for storing and
+		transporting heat.
+	      </li>
+	      <li class="fragment">
+		However, water has an unimpressive <b>thermal
+		conductivity</b> compared to other materials:
+	      </li>
+	    </ul>
+	  </section>
+	  <section>
+	    <aside class="notes">Water has a thermal conductivity of $\approx$0.6 W/m/K, copper is 385 W/m/K.</aside>
+            <object type="image/svg+xml" data="img/thermal_conductivity.svg" width="100%" class="stretch">
+	      Your browser does not support SVG
+	    </object>
+	  </section>
+	</section>
+	<section id="History" data-menu-title="History">
 	  <section>
 	    <ul>
 	      <li>
@@ -704,93 +691,82 @@
 	</section>
       </div>
     </div>
-    <script src="jquery/jquery-1.11.3.min.js"></script>
-    <script src="reveal.js/js/reveal.js"></script>
-    <script src="reveal.js/lib/js/head.min.js"></script>
-    <script src="reveal.js/js/reveal.js"></script>
     <script>
-      // Full list of configuration options available here:
-      // https://github.com/hakimel/reveal.js#configuration
-      Reveal.initialize({
-      width:1024,
-      height:768,
-      controls:false,
-      slideNumber: 'c / t',
-      history: true,
-      transition: 'slide',
-      backgroundTransition: 'fade',
-      math: {
-        mathjax: 'MathJax/MathJax.js',
-        config: 'TeX-AMS-MML_SVG-full'
-      },      
-      dependencies: [
-      // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
-      { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+var link = document.createElement('link');
+link.rel = 'stylesheet';
+link.type = 'text/css';
+if (window.location.search.match( /print-pdf/gi ))
+    link.href = 'reveal.js/css/print/pdf.css';
+else
+    link.href = 'reveal.js/css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
 
-      // Interpret Markdown in <section> elements
-	{ src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-	{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+head.load("reveal.js/js/reveal.js", function() {
+    var revealopts = {
+	//This width and height allows printing to pdf at A4 and is slightly widescreen to give the best all round size
+	width:1920,height:1080,margin:0.1, minScale:0.2, maxScale:1.5,
+	slideNumber: 'c / t',
+	history: true,
+	transition: 'fade',
+	backgroundTransition: 'fade',
+	pdfMaxPagesPerSlide: 1,
+	controls:false,
+	math: {
+	    mathjax: 'MathJax/MathJax.js',
+	    config: 'TeX-AMS_SVG-full'
+	},
+	dependencies: [
+	    // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+	    { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+	    // Syntax highlight for <code> elements
+	    { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+	    // MathJax
+	    { src: 'reveal.js/plugin/math/math.js', async: true},
+	    { src: 'reveal.js-plugins/chalkboard/chalkboard.js'},
+	    { src: 'reveal.js-plugins/menu/menu.js'},
+	],
+	keyboard: {
+	    67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle chalkboard when 'c' is pressed
+	    66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+	    46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+	    8: function() { RevealChalkboard.reset() },	// reset all chalkboard data when 'BACKSPACE' is pressed
+	    68: function() { RevealChalkboard.download() },	// downlad chalkboard drawing when 'd' is pressed
+	    82: function() { Recorder.toggleRecording(); },	// press 'r' to start/stop recording
+	    90: function() { Recorder.downloadZip(); }, 	// press 'z' to download zip containing audio files
+	    84: function() { Recorder.fetchTTS(); } 	// press 't' to fetch TTS audio files		 
+	},
+	menu: {
+	    loadIcons:false,
+	    titleSelector:'WILLNOTFINDTITLES',
+	    markers: true,
+	    hideMissingTitles: true,
+	    themes: false,
+	    transitions: false
+	},
+	chalkboard: { // font-awesome.min.css must be available
+	    //src: "chalkboard/chalkboard.json",
+	    toggleChalkboardButton: { left: "80px" },
+	    toggleNotesButton: { left: "130px" },
+	},
+    };
 
-	// Syntax highlight for <code> elements
-	  { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    if (!(typeof(audiofiles) === 'undefined')) {
+	revealopts.dependencies = revealopts.dependencies.concat([
+            { src: '../reveal.js-plugins/audio-slideshow/slideshow-recorder.js', condition: function( ) { return !!document.body.classList; } },
+	    { src: '../reveal.js-plugins/audio-slideshow/audio-slideshow.js', condition: function( ) { return !!document.body.classList; } },
+	]);
+	revealopts.audio = {
+	    prefix: audiofiles,
+	    autoplay:true,
+	};
+    }
+	
+    Reveal.initialize(revealopts);
 
-	  // Zoom in and out with Alt+click
-	  { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
 
-	  // Speaker notes
-	  {
-	  src: 'reveal.js/plugin/notes/notes.js',
-	  async: true,
-	  condition: function () {
-          return !!document.body.classList;
-          }
-	  },
-	  
-	  // Remote control your reveal.js presentation using a touch device
-	  // { src: 'reveal.js/plugin/remotes/remotes.js', async: true },
-
-	  // MathJax
-	  { src: 'reveal.js/plugin/math/math.js',
-            async: false
-          }
-	  ]
-          });
-    </script>
-    <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
-    <script>
-//      $(function () {
-//    // on page load  replace all src URLs
-//
-//    $('.animated-gif').each(function (i, e) {
-//        disableGif(e)
-//    });
-//});
-//Reveal.addEventListener('slidechanged', initAnimatedGifs);
-//Reveal.addEventListener('ready', initAnimatedGifs);
-//
-//function initAnimatedGifs(event) {
-//    $('.animated-gif', event.currentSlide).each(function (i, e) {
-//        enableGif(e)
-//    });
-//
-//    if (event.previousSlide)
-//        $('.animated-gif', event.previousSlide).each(function (i, e) {
-//            disableGif(e)
-//
-//        });
-//}
-//
-//function enableGif(e) {
-//    var src = $(e).attr("src")
-//    $(e).attr('src', src.replace('-image.gif', '.gif'));
-//
-//
-//}
-//function disableGif(e) {
-//    var src = $(e).attr("src")
-//    $(e).attr('src', src.replace('.gif', '-image.gif'));
-//
-//}
+    if (window.location.search.match( /print-pdf/gi ))
+	window.print();
+})
     </script>
   </body>
 </html>

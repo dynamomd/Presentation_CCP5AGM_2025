@@ -4,3 +4,12 @@
 [submodule "MathJax"]
 	path = MathJax
 	url = https://github.com/mathjax/MathJax.git
+[submodule "Font-Awesome"]
+	path = Font-Awesome
+	url = https://github.com/FortAwesome/Font-Awesome.git
+[submodule "jquery-dist"]
+	path = jquery-dist
+	url = https://github.com/jquery/jquery-dist.git
+[submodule "reveal.js-plugins"]
+	path = reveal.js-plugins
+	url = https://github.com/toastedcrumpets/reveal.js-plugins.git

@@ -1,0 +1,89 @@
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+.reveal h2 {
+    font-size: 2em;
+}
+
+.reveal h3 {
+    font-size: 1.2em;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal {
+    font-family: "Mathjax_Main";
+    text-transform: initial;
+}
+
+.reveal img {
+    width:auto;
+    height:auto;
+    background: none;
+}
+
+.reveal figure {
+    padding:5px;
+}
+
+.reveal figcaption {
+    margin:0 0em;
+    font-size:0.8em;
+    text-align:center;
+}
+
+body.print-pdf .hide-on-pdf,
+body.print-pdf .audio-controls,
+body.print-pdf .slide-menu,
+body.print-pdf .slide-menu-button,
+body.print-pdf .chalkboard-button {
+    display:none;
+}
+
+.reveal .center > * {
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+}
+
+.reveal ul {
+    /*display:initial;*/
+}
+
+.reveal .footnote-container, .reveal .footnotemark {
+    font-size: 0.8em;
+}
+
+.reveal .mathblock {
+    background:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1));
+    border-radius:1em;
+    padding:0 1em;
+}
+
+.reveal .mathblock h3 {
+    text-align:center;
+    width:100%;
+}
+
+.reveal .slide-menu-item.menu-section {
+    font-size:0.9em;
+    border-bottom: 4px double;
+    border-top: 4px double;    
+    text-align: center;
+    padding: 0.25em;
+    cursor:default;
+}
+
+.reveal .active-menu-panel li.selected.menu-section {
+    background-color:inherit;
+    color:inherit;
+}
+
+.reveal .backbox {
+    background: rgba(250, 247, 234, 0.9);
+    border-radius: 10px;
+    padding:5px;
+    margin:5px 0;
+}
+
+.reveal .footnote {
+    font-size:80%;
+}

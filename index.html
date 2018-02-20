@@ -1,708 +1,707 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Marcus Bannerman: Nanofluids</title>
-    <meta name="description" content="A presentation by Marcus Bannerman.">
-    <meta name="author" content="Marcus Bannerman <m.bannerman@gmail.com">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" 
-	  content="black-translucent" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <head>
+	<meta charset="utf-8">
+	<title>Marcus Bannerman: Nanofluids</title>
+	<meta name="description" content="A presentation by Marcus Bannerman.">
+	<meta name="author" content="Marcus Bannerman <m.bannerman@gmail.com">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" 
+	      content="black-translucent" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-    <link rel="stylesheet" href="reveal.js/css/reveal.css"></link>
-    <link rel="stylesheet" href="reveal.js/css/theme/beige.css"></link>
-    <link rel="stylesheet" href="MCBreveal.css" id="theme"></link>
-    <link rel="stylesheet" href="Font-Awesome/css/font-awesome.min.css"></link>
-    <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css"></link>
-    <script src="reveal.js/lib/js/head.min.js"></script>
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides">
-        <section style="height:100%;width:100%;">
-	  <section style="height:100%;width:100%;">
-	    <div class="backbox">
-	      <h1>Can nanofluids exhibit "anomalous" thermal conductivity?</h1>
-	      <h3>21/02/2018, University of Strathclyde, Chemical &amp; process engineering</h3>
-	    </div>
-	    <p>
-	      Marcus N. Bannerman<br/>
-	      School of Engineering, University of Aberdeen
-	      <a href="mailto:m.campbellbannerman@abdn.ac.uk">m.campbellbannerman@abdn.ac.uk</a>
-	    </p>
-	    <div style="position:absolute; bottom:15px; width:10em;">
-              <object type="image/svg+xml" data="img/UoALarge.svg" width="100%" height="100%">
-		Your browser does not support SVG
-	      </object>
-	    </div>
-	  </section>
-	</section>
-	<section id="Aberdeen" data-background="img/new_kings.jpg" style="height:100%;">
-          <section style="height:100%;">
-	    <div style="position:absolute; right: 0; bottom:0;"class="backbox">
-	      <small>New Kings<br/>University of Aberdeen </small>
-	    </div>	    
-	  </section>
-          <section data-background="img/new_kings.jpg">
-	    <aside class="notes">
-	      Fifth UK university after Oxford (1167), Cambridge (1209),
-	      St Andrews (1410), and Glasgow (1451).
-	    </aside>
-	    <h2 class="backbox" style="width:80%; margin-left:auto;margin-right:auto;">University of Aberdeen</h2>
-	    <div class="backbox" style="width:80%; margin-left:auto;margin-right:auto;">
-	      <p >
-		<ul >
-		  <li>
-		    Ancient university, established in 1495 (fifth in
-		    the UK).
-		  </li>
-		  <li class="fragment">
-		    5 Nobel prize winners: insulin treatment,
-		    crystalline electron diffraction, and partition
-		    chromatography.
-		  </li>
-		  <li class="fragment">
-		    James Clerk Maxwell was here, but was fired in
-		    1860 when Marischal and King's college merged to
-		    form the university.
-		  </li>
-		  <li class="fragment">
-		    Currently has around 16,000 students.
-		  </li>
-		  <li class="fragment">
-		    A <em>general</em> school of engineering with over 1000 UG
-		    students.
-		  </li>
-		</ul>
-	      </p>
-	    </div>
-	  </section>
-	</section>
-	<section>
-	  <section>
-	    <h3>Motivation</h3>
-	    <aside class="notes">Water has a thermal conductivity of $\approx$0.6 W/m/K, copper is 385 W/m/K.</aside>
-            <img src="img/thermal_conductivity.svg" style="width:100%">
-	    <p>
-	      Water is an excellent heat-transfer medium, but has a
-	      relatively poor thermal conductivity, particularly compared to solids such as copper.
-	    </p>
-	  </section>
-	  <section>
-	    <div style="display:flex;align-items:center;">
-	      <div style="flex: 1 1 calc(100% * 0.7);">
-		<ul>
-		  <li>
-		    Nanofluids are an attempt to "alloy" the
-		    properties of a immiscible material with a base
-		    liquid phase.
-		  </li>
-		  <li class="fragment">
-		    By breaking the imiscible phase into nanometer
-		    sized particles, non-abrasive solid suspensions or
-		    stable emulsions can be made.
-		  </li>
-		  <li class="fragment">
-		    Although the immiscible material may be a liquid,
-		    metallic solids are very interesting due to their
-		    high thermal conductivity (e.g., copper/alumina
-		    oxide).
-		  </li>
-		  <li class="fragment">
-		    Initial results for copper in ethylene glycol
-		    reported in 2001 were promising &hellip;
-		  </li>
-		</ul>
-	      </div>
-	      <div style="flex: 1 1 calc(100% * 0.3);">
-		<figure>
-		  <object type="image/svg+xml" data="img/ethylene_glycol.svg" width="100%">
-		  </object>
-		  <figcaption>
-		    10 nm copper nanoparticles in ethylene glycol<sup>1</sup>.
-		  </figcaption>
-		</figure>
-	      </div>
-	    </div>	      
-	    <div class="footnote">
-	      [1] Eastman, J. A. et al. 'Anomalously increased effective thermal
-	      conductivities of ethylene glycol-based nanofluids containing copper
-	      nanoparticles'. <i>Appl. Phys. Lett.</i>, <b>78</b>, 718–720 (2001).
-	    </div>
-	  </section>
-	  <section>
-	    <div style="display:flex;align-items:center;">
-	      <div style="flex: 1 1 calc(100% * 0.55);">
-		<ul>
-		  <li>
-		    Measured enhancements of 40% over the base fluid
-		    for 0.2%&nbsp;v/v seemed improbable, leading to them
-		    being termed <i>&ldquo;anomalous.&rdquo;</i>
-		  </li>
-		  <li class="fragment">
-		    An explosion of research followed, with
-		    conflicting and contradictory results being
-		    published. Even this initial paper demonstrates
-		    the dramatic effects of adding a small amount of
-		    acid to stabilize the suspension.
-		  </li>
-		  <li class="fragment">
-		    Variations in manufacturing, dispersion,
-		    measurement, and delay all meant many results are
-		    unrepeatable or have large uncertainties.
-		  </li>
-		</ul>
-	      </div>
-	      <div style="flex: 1 1 calc(100% * 0.45);">
-		<figure>
-		  <img src="img/Eastman_etal_2001.svg" width="100%">
-		  <figcaption style="text-align:center;">
-		    Measured conductivities for 10 nm copper
-		    nanoparticles in ethylene glycol (with $<1\%$ thioglycolic
-		    acid, or aged two days (fresh), or aged two months (old))<sup>1</sup>.
-		  </figcaption>
-		</figure>
-	      </div>
-	    </div>
-	    <div class="footnote">
-	      1:Eastman, J. A. et al. 'Anomalously increased effective thermal
-	      conductivities of ethylene glycol-based nanofluids containing copper
-	      nanoparticles'. <i>Appl. Phys. Lett.</i>, <b>78</b>, 718–720 (2001).
-	    </div>
-	  </section>
-	  <section>
-	    <ul>
-	      <li>
-		This came to a head in 2009, where the International
-		Nanofluid Property Benchmark Exercise prepared
-		standard samples and issued them to multiple
-		organizations for testing.
-		<p style="text-align:center;"><i>
-		    <small>J. Buongiorno, D. C. Venerus, N. Prabhat,
-		      T. McKrell, J. Townsend, R. Christianson,
-		      Y. V. Tolmachev, P. Keblinski, Lin-wen Hu,
-		      J. L. Alvarado, I. C. Bang, S. W. Bishnoi,
-		      M. Bonetti, F. Botz, A. Cecere, Y. Chang,
-		      G. Chen, H. Chen, S. J. Chung, M. K. Chyu,
-		      S. K. Das, R. Di Paola, Y. Ding, F. Dubois,
-		      G. Dzido, J. Eapen, W. Escher, D. Funfschilling,
-		      Q. Galand, J. Gao, P. E. Gharagozloo,
-		      K. E. Goodson, J. G. Gutierrez, H. Hong,
-		      M. Horton, K. S. Hwang, C. S. Iorio, S. P. Jang,
-		      A. B. Jarzebski, Y. Jiang, L. Jin, S. Kabelac,
-		      A. Kamath, M. A. Kedzierski, L. G. Kieng,
-		      C. Kim, J.-H. Kim, S. Kim, S. H. Lee,
-		      K. C. Leong, I. Manna, B. Michel, R. Ni,
-		      H. E. Patel, J. Philip, D. Poulikakos,
-		      C. Reynaud, R. Savino, P. K. Singh, P. Song,
-		      T. Sundararajan, E. Timofeeva, T. Tritcak,
-		      A. N. Turanov, S. Van Vaerenbergh, D. Wen,
-		      S. Witharana, C. Yang, W.-H. Yeh, X.-Z. Zhao,
-		      and S.-Q. Zhou</small> <br/> "A benchmark study
-		    on the thermal conductivity of
-		    nanofluids",<br/>
-		    <i>J. Appl. Phys.</i>, <b>106</b>,
-		    094312 (2009)
-		</i></p> 
-	      </li>
-	      <li class="fragment">
-		All samples were blind, organizations did not know
-		what they were testing.
-	      </li>
-	    </ul>
-	  </section>
-	  <section>
-	    <ul>
-	      <li>
-		Even the results for deionized water had some outliers:
-		<img src="img/deionized_water.png" style="width:100%;display:block;margin-left:auto; margin-right:auto;">
-	      </li>
-	      <li class="fragment">
-		Neglecting the outliers, most results for water-based
-		nanofluids agreed within 10%.
-	      </li>
-	      <li class="fragment">
-		Are these consensus results anomalous though? What
-		simple limits can we generate?
-	      </li>
-	    </ul>
-	  </section>
-	  <section>
-	    <div style="display:flex;align-items:center;">
-	      <div style="flex: 1 1 calc(100% * 0.7);">
-		<ul>
-		  <li>
-		    The upper/lower limits possible in continuum
-		    models are series and parallel resistance, and
-		    most data (including from the benchmark study)
-		    fits between these limits<sup>1</sup>.
-		  </li>
-		  <li class="fragment" data-fragment-index="1">
-		    Maxwell also developed in 1873 (post-Aberdeen) an
-		    expression for the electrical conductivity of a
-		    two-component mixture which also works equally
-		    well for heat. It is based on the solution for the
-		    temperature profile around an isolated sphere.
-		  </li>
-		  <li class="fragment"  data-fragment-index="2">
-		    Most results are also within Maxwell's tighter
-		    limits, thus we now define any results outside of
-		    Maxwell's bounds as &ldquo;anomalous&rdquo;, and
-		    outside of the series/parallel bounds as
-		    &ldquo;truly anomalous&rdquo;.
-		  </li>
-		  <li class="fragment" data-fragment-index="3">
-		    There are still results which are outside these
-		    so-called &ldquo;classical&rdquo;
-		    bounds<sup>2</sup>; however, the results do have
-		    large scatter, or are for ill-defined systems
-		    (olive oil/water?). More conclusive proof is
-		    needed that these truly anomalous results are even
-		    possible.
-		  </li>
-		</ul>
-	      </div>
-	      <div style="flex: 1 1 calc(100% * 0.3);">
-		<img src="img/Classical_limits.svg" style="width:100%"/>
-	      </div>
-	    </div>
-	    <div class="footnote" >
-	      1: J. Eapen, R. Rusconi, R. Piazza, and S. Yip, "The
-	      Classical Nature of Thermal Conduction in
-	      Nanofluids", <i>J. Heat Transfer</i>, <b>132</b>, 102402
-	      (2010)
-	    </div>	     
-	    <div class="footnote fragment" data-fragment-index="3">
-	      2: L. Wang and J. Fan, "Toward nanofluids of ultra-high
-	      thermal conductivity", <i>Nano. Research
-		Lett.</i>, <b>6</b>, 153 (2011)
-	    </div>
-	  </section>
-	  <section>
-	    <img src="img/anomylous.svg" style="width:60%">
-	    <div class="footnote">
-	      The remaining "anomalous" results, some of which are truly anomalous.
-	      Taken from L. Wang and J. Fan, "Toward nanofluids of ultra-high
-	      thermal conductivity", <i>Nano. Research
-	      Lett.</i>, <b>6</b>, 153 (2011)
-	    </div>
-	  </section>
-	  <section>
-	    <p>
-	      Conclusions from history:
-	    </p>
-	    <ul>
-	      <li>
-		Results are surprising, but the majority are within
-		classical/continuum limits (not truly anomalous) and
-		most are within Maxwell's limits (not even anomalous).
-	      </li>
-	      <li class="fragment">
-		Only molecular (non-continuum) models can demonstrate
-		truly anomalous results.
-	      </li>
-	    </ul>
-	    <p class="fragment">
-	      Questions from history:
-	    </p>
-	    <ul>
-	      <li class="fragment">
-		Are anomalous effects possible? If so, why haven't we
-		seen it more conclusively? Is it difficult to measure
-		anomalous thermal conductivity? 
-	      </li>
-	      <li class="fragment">
-		Is the scatter in the current anomalous results due to
-		poor experimental procedure, high-difficulty, and/or
-		some phenomena?
-	      </li>
-	    </ul>
-	  </section>
-	</section>
-	<section>
-	  <section>
-	    <h3>The Binary Hard Sphere Model</h3>
-	    <div style="display:flex;align-items:center;">
-	      <div style="flex: 1 1 calc(100% * 0.5);">
-		<ul>
-		  <li>Simplest possible molecular model, hard spheres
-		    at near-ideal densities/pressures.
-		    <img src="img/hard_sphere_diagram.svg" style="width:100%">
-		  </li>
-		  <li class="fragment">
-		    For $\sigma_1/\sigma_2=10$ and $m_1/m_2=1000$ (see
-		    right), thermal diffusion in response to a heat
-		    gradient is evident! Conduction in binary mixtures
-		    is both transient and inhomogeneous in concentration.
-		  </li>
-		</ul>
-	      </div>
-	      <div style="flex: 1 1 calc(100% * 0.5);">
-		<video autoplay width="100%" loop controls class="stretch">
-		  <source data-src="videos/bounded_nequil.mp4" type="video/mp4" />
-		</video>
-	      </div>
-	  </section>
-	</section>
-	<section id="Definition">
-	  <section>
-	    <h3>Issue 1: Definition of thermal conductivity</h3>
-	    <p>
-	      An observational definition of thermal conductivity is
-	      as follows:
-	      
-	      \begin{align*}
-	      \vec{q} = - k\, \nabla T
-	      \end{align*}
-	      
-	      Simple experiments (parallel plates) use this directly,
-	      others use transient results built from this model.
-	    </p>
-	    <p class="fragment">
-	      But for mixtures, thermal diffusion also plays a role:
+	<link rel="stylesheet" href="reveal.js/css/reveal.css"></link>
+	<link rel="stylesheet" href="reveal.js/css/theme/beige.css"></link>
+	<link rel="stylesheet" href="MCBreveal.css" id="theme"></link>
+	<link rel="stylesheet" href="Font-Awesome/css/font-awesome.min.css"></link>
+	<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css"></link>
+	<script src="reveal.js/lib/js/head.min.js"></script>
+    </head>
+    <body>
+	<div class="reveal">
+	    <div class="slides">
+		<section style="height:100%;width:100%;">
+		    <section style="height:100%;width:100%;">
+			<div class="backbox">
+			    <h1>Can nanofluids exhibit "anomalous" thermal conductivity?</h1>
+			    <h3>21/02/2018, University of Strathclyde, Chemical &amp; process engineering</h3>
+			</div>
+			<p>
+			    Marcus N. Bannerman<br/>
+			    School of Engineering, University of Aberdeen
+			    <a href="mailto:m.campbellbannerman@abdn.ac.uk">m.campbellbannerman@abdn.ac.uk</a>
+			</p>
+			<div style="position:absolute; bottom:15px; width:10em;">
+			    <object type="image/svg+xml" data="img/UoALarge.svg" width="100%" height="100%">
+				Your browser does not support SVG
+			    </object>
+			</div>
+		    </section>
+		</section>
+		<section id="Aberdeen" data-background="img/new_kings.jpg" style="height:100%;">
+		    <section style="height:100%;">
+			<div style="position:absolute; right: 0; bottom:0;"class="backbox">
+			    <small>New Kings<br/>University of Aberdeen </small>
+			</div>	    
+		    </section>
+		    <section data-background="img/new_kings.jpg">
+			<aside class="notes">
+			    Fifth UK university after Oxford (1167), Cambridge (1209),
+			    St Andrews (1410), and Glasgow (1451).
+			</aside>
+			<h2 class="backbox" style="width:80%; margin-left:auto;margin-right:auto;">University of Aberdeen</h2>
+			<div class="backbox" style="width:80%; margin-left:auto;margin-right:auto;">
+			    <p >
+				<ul >
+				    <li>
+					Ancient university, established in 1495 (fifth in
+					the UK).
+				    </li>
+				    <li class="fragment">
+					5 Nobel prize winners: insulin treatment,
+					crystalline electron diffraction, and partition
+					chromatography.
+				    </li>
+				    <li class="fragment">
+					James Clerk Maxwell was here, but was fired in
+					1860 when Marischal and King's college merged to
+					form the university.
+				    </li>
+				    <li class="fragment">
+					Currently has around 16,000 students.
+				    </li>
+				    <li class="fragment">
+					A <em>general</em> school of engineering with over 1000 UG
+					students.
+				    </li>
+				</ul>
+			    </p>
+			</div>
+		    </section>
+		</section>
+		<section>
+		    <section>
+			<h3>Motivation</h3>
+			<aside class="notes">Water has a thermal conductivity of $\approx$0.6 W/m/K, copper is 385 W/m/K.</aside>
+			<img src="img/thermal_conductivity.svg" style="width:100%">
+			<p>
+			    Water is an excellent heat-transfer medium, but has a
+			    relatively poor thermal conductivity, particularly compared to solids such as copper.
+			</p>
+		    </section>
+		    <section>
+			<div style="display:flex;align-items:center;">
+			    <div style="flex: 1 1 calc(100% * 0.7);">
+				<ul>
+				    <li>
+					Nanofluids are an attempt to "alloy" the
+					properties of a immiscible material with a base
+					liquid phase.
+				    </li>
+				    <li class="fragment">
+					By breaking the imiscible phase into nanometer
+					sized particles, non-abrasive solid suspensions or
+					stable emulsions can be made.
+				    </li>
+				    <li class="fragment">
+					Although the immiscible material may be a liquid,
+					metallic solids are very interesting due to their
+					high thermal conductivity (e.g., copper/alumina
+					oxide).
+				    </li>
+				    <li class="fragment">
+					Initial results for copper in ethylene glycol
+					reported in 2001 were promising &hellip;
+				    </li>
+				</ul>
+			    </div>
+			    <div style="flex: 1 1 calc(100% * 0.3);">
+				<figure>
+				    <object type="image/svg+xml" data="img/ethylene_glycol.svg" width="100%">
+				    </object>
+				    <figcaption>
+					10 nm copper nanoparticles in ethylene glycol<sup>1</sup>.
+				    </figcaption>
+				</figure>
+			    </div>
+			</div>	      
+			<div class="footnote">
+			    [1] Eastman, J. A. et al. 'Anomalously increased effective thermal
+			    conductivities of ethylene glycol-based nanofluids containing copper
+			    nanoparticles'. <i>Appl. Phys. Lett.</i>, <b>78</b>, 718–720 (2001).
+			</div>
+		    </section>
+		    <section>
+			<div style="display:flex;align-items:center;">
+			    <div style="flex: 1 1 calc(100% * 0.55);">
+				<ul>
+				    <li>
+					Measured enhancements of 40% over the base fluid
+					for 0.2%&nbsp;v/v seemed improbable, leading to them
+					being termed <i>&ldquo;anomalous.&rdquo;</i>
+				    </li>
+				    <li class="fragment">
+					An explosion of research followed, with
+					conflicting and contradictory results being
+					published. Even this initial paper demonstrates
+					the dramatic effects of adding a small amount of
+					acid to stabilize the suspension.
+				    </li>
+				    <li class="fragment">
+					Variations in manufacturing, dispersion,
+					measurement, and delay all meant many results are
+					unrepeatable or have large uncertainties.
+				    </li>
+				</ul>
+			    </div>
+			    <div style="flex: 1 1 calc(100% * 0.45);">
+				<figure>
+				    <img src="img/Eastman_etal_2001.svg" width="100%">
+				    <figcaption style="text-align:center;">
+					Measured conductivities for 10 nm copper
+					nanoparticles in ethylene glycol (with $<1\%$ thioglycolic
+					acid, or aged two days (fresh), or aged two months (old))<sup>1</sup>.
+				    </figcaption>
+				</figure>
+			    </div>
+			</div>
+			<div class="footnote">
+			    1:Eastman, J. A. et al. 'Anomalously increased effective thermal
+			    conductivities of ethylene glycol-based nanofluids containing copper
+			    nanoparticles'. <i>Appl. Phys. Lett.</i>, <b>78</b>, 718–720 (2001).
+			</div>
+		    </section>
+		    <section>
+			<ul>
+			    <li>
+				This came to a head in 2009, where the International
+				Nanofluid Property Benchmark Exercise prepared
+				standard samples and issued them to multiple
+				organizations for testing.
+				<p style="text-align:center;"><i>
+				    <small>J. Buongiorno, D. C. Venerus, N. Prabhat,
+					T. McKrell, J. Townsend, R. Christianson,
+					Y. V. Tolmachev, P. Keblinski, Lin-wen Hu,
+					J. L. Alvarado, I. C. Bang, S. W. Bishnoi,
+					M. Bonetti, F. Botz, A. Cecere, Y. Chang,
+					G. Chen, H. Chen, S. J. Chung, M. K. Chyu,
+					S. K. Das, R. Di Paola, Y. Ding, F. Dubois,
+					G. Dzido, J. Eapen, W. Escher, D. Funfschilling,
+					Q. Galand, J. Gao, P. E. Gharagozloo,
+					K. E. Goodson, J. G. Gutierrez, H. Hong,
+					M. Horton, K. S. Hwang, C. S. Iorio, S. P. Jang,
+					A. B. Jarzebski, Y. Jiang, L. Jin, S. Kabelac,
+					A. Kamath, M. A. Kedzierski, L. G. Kieng,
+					C. Kim, J.-H. Kim, S. Kim, S. H. Lee,
+					K. C. Leong, I. Manna, B. Michel, R. Ni,
+					H. E. Patel, J. Philip, D. Poulikakos,
+					C. Reynaud, R. Savino, P. K. Singh, P. Song,
+					T. Sundararajan, E. Timofeeva, T. Tritcak,
+					A. N. Turanov, S. Van Vaerenbergh, D. Wen,
+					S. Witharana, C. Yang, W.-H. Yeh, X.-Z. Zhao,
+					and S.-Q. Zhou</small> <br/> "A benchmark study
+				    on the thermal conductivity of
+				    nanofluids",<br/>
+				    <i>J. Appl. Phys.</i>, <b>106</b>,
+				    094312 (2009)
+				</i></p> 
+			    </li>
+			    <li class="fragment">
+				All samples were blind, organizations did not know
+				what they were testing.
+			    </li>
+			</ul>
+		    </section>
+		    <section>
+			<ul>
+			    <li>
+				Even the results for deionized water had some outliers:
+				<img src="img/deionized_water.png" style="width:100%;display:block;margin-left:auto; margin-right:auto;">
+			    </li>
+			    <li class="fragment">
+				Neglecting the outliers, most results for water-based
+				nanofluids agreed within 10%.
+			    </li>
+			    <li class="fragment">
+				Are these consensus results anomalous though? What
+				simple limits can we generate?
+			    </li>
+			</ul>
+		    </section>
+		    <section>
+			<div style="display:flex;align-items:center;">
+			    <div style="flex: 1 1 calc(100% * 0.7);">
+				<ul>
+				    <li>
+					The upper/lower limits possible in continuum
+					models are series and parallel resistance, and
+					most data (including from the benchmark study)
+					fits between these limits<sup>1</sup>.
+				    </li>
+				    <li class="fragment" data-fragment-index="1">
+					Maxwell also developed in 1873 (post-Aberdeen) an
+					expression for the electrical conductivity of a
+					two-component mixture which also works equally
+					well for heat. It is based on the solution for the
+					temperature profile around an isolated sphere.
+				    </li>
+				    <li class="fragment"  data-fragment-index="2">
+					Most results are also within Maxwell's tighter
+					limits, thus we now define any results outside of
+					Maxwell's bounds as &ldquo;anomalous&rdquo;, and
+					outside of the series/parallel bounds as
+					&ldquo;truly anomalous&rdquo;.
+				    </li>
+				    <li class="fragment" data-fragment-index="3">
+					There are still results which are outside these
+					so-called &ldquo;classical&rdquo;
+					bounds<sup>2</sup>; however, the results do have
+					large scatter, or are for ill-defined systems
+					(olive oil/water?). More conclusive proof is
+					needed that these truly anomalous results are even
+					possible.
+				    </li>
+				</ul>
+			    </div>
+			    <div style="flex: 1 1 calc(100% * 0.3);">
+				<img src="img/Classical_limits.svg" style="width:100%"/>
+			    </div>
+			</div>
+			<div class="footnote" >
+			    1: J. Eapen, R. Rusconi, R. Piazza, and S. Yip, "The
+			    Classical Nature of Thermal Conduction in
+			    Nanofluids", <i>J. Heat Transfer</i>, <b>132</b>, 102402
+			    (2010)
+			</div>	     
+			<div class="footnote fragment" data-fragment-index="3">
+			    2: L. Wang and J. Fan, "Toward nanofluids of ultra-high
+			    thermal conductivity", <i>Nano. Research
+			    Lett.</i>, <b>6</b>, 153 (2011)
+			</div>
+		    </section>
+		    <section>
+			<img src="img/anomylous.svg" style="width:60%">
+			<div class="footnote">
+			    The remaining "anomalous" results, some of which are truly anomalous.
+			    Taken from L. Wang and J. Fan, "Toward nanofluids of ultra-high
+			    thermal conductivity", <i>Nano. Research
+			    Lett.</i>, <b>6</b>, 153 (2011)
+			</div>
+		    </section>
+		    <section>
+			<p>
+			    Conclusions from history:
+			</p>
+			<ul>
+			    <li>
+				Results are surprising, but the majority are within
+				classical/continuum limits (not truly anomalous) and
+				most are within Maxwell's limits (not even anomalous).
+			    </li>
+			    <li class="fragment">
+				Only molecular (non-continuum) models can demonstrate
+				truly anomalous results.
+			    </li>
+			</ul>
+			<p class="fragment">
+			    Questions from history:
+			</p>
+			<ul>
+			    <li class="fragment">
+				Are anomalous effects possible? If so, why haven't we
+				seen it more conclusively? Is it difficult to measure
+				anomalous thermal conductivity? 
+			    </li>
+			    <li class="fragment">
+				Is the scatter in the current anomalous results due to
+				poor experimental procedure, high-difficulty, and/or
+				some phenomena?
+			    </li>
+			</ul>
+		    </section>
+		</section>
+		<section>
+		    <section>
+			<h3>The Binary Hard Sphere Model</h3>
+			<div style="display:flex;align-items:center;">
+			    <div style="flex: 1 1 calc(100% * 0.5);">
+				<ul>
+				    <li>
+					There are many
+					Brownian/interfacial models,
+					which have inconsistencies,
+					here we start from the ground
+					up.</li>
+				    <li class="fragment">Simplest possible binary molecular model, hard spheres
+					at near-ideal densities/pressures.
+					<img src="img/hard_sphere_diagram.svg" style="width:100%">
+				    </li>
+				    <li class="fragment">
+					Non-equilibrium molecular
+					dynamics, with predictions from
+					Enskog theory (3rd Sonine).
+				    </li>
+				    <li class="fragment">
+					For $\sigma_1/\sigma_2=10$ and $m_1/m_2=1000$ (see
+					right), thermal diffusion in response to a heat
+					gradient is evident! Conduction in binary mixtures
+					is both transient and inhomogeneous in concentration.
+				    </li>
+				</ul>
+			    </div>
+			    <div style="flex: 1 1 calc(100% * 0.5);">
+				<video autoplay width="100%" loop controls class="stretch">
+				    <source data-src="videos/bounded_nequil.mp4" type="video/mp4" />
+				</video>
+			    </div>
+		    </section>
+		</section>
+		<section id="Definition">
+		    <section>
+			<h3>Issue: Definition of thermal conductivity</h3>
+			<p>
+			    An observational definition of thermal conductivity is
+			    as follows:
+			    
+			    \begin{align*} \vec{q} = - k\, \nabla T \end{align*}
+			    
+			    Simple experiments (parallel plates) use this directly,
+			    others use transient results built from this model
+			    (which appears dangerous given the presence of transient
+			    thermodiffusion).</p>
+			<p class="fragment">
+			    For mixtures, thermal diffusion also plays a role:
 
-	      \begin{align*}
-	      \vec{q} &= L_{q,q}\,\vec{X}_q + \sum_a L_{q,a}\,\vec{X}_a
-	      \end{align*}
+			    \begin{align*} \vec{q} &= L_{q,q}\,\vec{X}_q + \sum_a
+			    L_{q,a}\,\vec{X}_a \end{align*}
 
-	      where $L_{q,q}$ is also a thermal conductivity,
-	      $\vec{X}_q$ is the heat "force" which has a relatively
-	      constant definition,
-	      
-	      \begin{align*}
-	      \vec{X}_q=-T^{-1}\nabla\,T
-	      \end{align*}
+			    where $L_{q,q}$ is also a thermal conductivity,
+			    $\vec{X}_q$ is the heat "force" which has a relatively
+			    constant definition,
+			    
+			    \begin{align*} \vec{X}_q=-T^{-1}\nabla\,T \end{align*}
 
-	      Depending on how the diffusion force $\vec{X}_a$ is
-	      defined changes the definition of $L_{q,q}$ and
-	      $\vec{L}_{qa}$, which is the thermal diffusivity. There
-	      are multiple definitions of thermal conductivity and
-	      $L_{q,q}\,T^{-1}\neq k$.
-	    </p>
-	    <p class="fragment">
-	      For example, the so-called mainstream definition which
-	      is convenient for calculations uses
-	      $\vec{X}_a=-T\,\nabla \mu_a\,T^{-1}$, thus temperature
-	      gradients may appear from this. $L_{q,q}$ may be a red
-	      herring!
-	    </p>
-	  </section>
-	  <section>
-	    <p>
-	      A better expression can be derived by taking the
-	      expression for the mass flux:
-	      
-	      \begin{align*}
-	      \vec{J}_a &= L_{q,a}\,\vec{X}_q + \sum_b L_{a,b}\,\vec{X}_b
-	      \end{align*}
+			    Depending on how the diffusion force $\vec{X}_a$ is
+			    defined changes the definition of $L_{q,q}$ and
+			    $\vec{L}_{qa}$, which is the thermal diffusivity. There
+			    are multiple definitions of thermal conductivity, but
+			    regardless of which is chosen $L_{q,q}\,T^{-1}\neq k$.</p>
+			<p class="fragment">
+			    For example, the so-called mainstream definition which
+			    is convenient for calculations uses
+			    $\vec{X}_a=-T\,\nabla \mu_a\,T^{-1}$.
+			</p>
+		    </section>
+		    <section>
+			<p>
+			    Consider the expression for the mass flux:
+			    
+			    \begin{align*}
+			    \vec{J}_a &= L_{q,a}\,\vec{X}_q + \sum_b
+			    L_{a,b}\,\vec{X}_b
+			    \end{align*}
+			    
+			    where $L_{a,b}$ is a mutual diffusion coefficient.
+			</p>
+			<p class="fragment">
+			    Solving for a "steady state" where $\vec{J}_a = 0$,
+			    and using this to eliminate $\vec{X}_a$ in the heat
+			    flux yields the following expression:
 
-	      where $L_{a,b}$ is a mutual diffusion coefficient and
-	      solving for a "steady state" thermal conductivity
-	      where $\vec{J}_a = 0$, thus eliminating $\vec{X}_a$ to give:
-
-	      \begin{align*}
-	      \lambda = L_{q,q} - \frac{L_{a,q}^2}{L_{a,a}}
-	      \end{align*}
-	    </p>
-	  </section>
-	  <section>
-	    <p>
-	      Conclusions on definition:
-	    </p>
-	    <ul>
-	      <li>
-		The thermal conductivity in general is not well
-		defined.
-	      </li>
-	      <li>
-		We have many definitions of $L_{q,q}$. Used here is:
-		\begin{align*}
-		\vec{J}_q &= -\frac{L_{q,q}}{T}\,\nabla T & \text{iff $\nabla \left(\mu_a\,T^{-1}\right)=0$}
-		\end{align*}
-	      </li>
-	      <li>
-		A definition which is invariant under changes in the thermodynamic forces is:
-
-		\begin{align*}
-		\lambda &= L_{q,q} - \frac{L_{a,q}^2}{L_{a,a}} & \text{iff $\vec{J}_a=0$}
-		\end{align*}
-	      </li>
-	    </ul>
-	  </section>
-	</section>
-	<section>
-	  <section>
-	    <h2>Modeling nanofluids</h2>
-	    <ul>
-	      <li>
-		Most models are either classical, or do not fully
-		capture molecular effects.
-	      </li>
-	      <li>
-		Some badly mix hydrodynamic and molecular effects,
-		e.g., Brownian nanoconvection.
-	      </li>
-	      <li>
-		We need a model which is well understood, from the
-		molecular to hydrodynamic scale:
-	      </li>
-	      <li>
-		The only real option is the <b>hard-sphere fluid</b>,
-		where we have molecular dynamics, kinetic theory, and
-		accurate equations of state.
-	      </li>
-	    </ul>
-	  </section>
-	  <section>
-	    <img src="img/nanocolloid.png" width="811px" height="738px" class="stretch"/>
-	    <p>
-	      Equilibrium molecular dynamics simulations of binary mixture of hard-spheres, 10:1 size ratio, with
-	      1000:1 mass ratio approximating a nanofluid.
-	    </p>
-	  </section>
-	  <section>
-	    <div style="display:inline-block;width:70%;">
-	      <object type="image/svg+xml" data="img/thermalcond.svg" width="100%" class="stretch">
-		Your browser does not support SVG
-	      </object>
+			    \begin{align*}
+			    \vec{q} &= T^{-1}\left(L_{q,q} -
+			    \frac{L_{a,q}^2}{L_{a,a}}\right) \nabla\,T\\
+			    &=-\lambda\,\nabla\,T
+			    \end{align*}
+			    where the &ldquo;steady-state&rdquo; thermal conductivity $\lambda$ has been implicitly defined.
+			</p>
+			<p class="fragment">
+			    $\lambda$ is independent of the definition of
+			    $\vec{X}_a$, but may depend on temperature and
+			    concentration, both of which vary across a conducting
+			    system.
+			</p>
+		    </section>
+		</section>
+		<section>
+		    <figure>
+			<img src="img/NEMDAspectRatioPlot_vf_0.2.svg" style="width:70%">
+			<figcaption>
+			    NEMD results for the observed thermal
+			    conductivity for a binary mixture of
+			    $\sigma_1/\sigma_2=0.4$, $m_1/m_2=20$ at a
+			    number density of $\sigma_1^3\,N/V=0.01$,
+			    for a range of system sizes and aspect
+			    ratios.
+			</figcaption>
+		    </figure>
+		</section>
+		<section>
+		    <figure>
+			<img src="img/NEMDAspectRatioPlot_vf_0.2.svg" style="width:70%">
+			<figcaption>
+			    NEMD results for the observed thermal
+			    conductivity for a binary mixture of
+			    $\sigma_1/\sigma_2=0.4$, $m_1/m_2=20$ at a
+			    number density of $\sigma_1^3\,N/V=0.01$,
+			    for a range of system sizes and aspect
+			    ratios.
+			</figcaption>
+		    </figure>
+		</section>
+		<section>
+		    <h2>Conclusions</h2>
+		    <ul>
+			<li>
+			    Binary mixtures of hard-spheres used as a model
+			    nanofluid display both anomalous enhancements and
+			    dehancements:<br/>
+			    <b><u>Classical limits can be broken.</u></b>
+			</li>
+			<li>
+			    $\lambda$ is the most appropriate definition of the
+			    thermal conductivity as NEMD results reach this at
+			    steady state.
+			</li>
+			<li>
+			    Enhancements (in this system and if they exist), are
+			    short lived before  the system diffuses
+			    significantly ($k\to\lambda$).
+			</li>
+		    </ul>
+		</section>
+		<section>
+		    <section>
+			<h2>Outlook</h2>
+			<ul>
+			    <li>
+				These results provide a recipe for anomalous nanofluids,
+				lets go make and test some!
+			    </li>
+			    <li>
+				Super-enhancements are transient, can we design
+				equipment which operates in the transient regime?
+			    </li>
+			    <li>
+				Only way to test this is through coupled kinetic
+				theory/hydrodynamic simulations.
+			    </li>
+			</ul>
+		    </section>
+		    <section>
+			<video autoplay width="100%" loop controls class="stretch">
+			    <source data-src="videos/hydro.mp4" type="video/mp4" />
+			</video>
+			<p>
+			    Simulation of two heated walls ($k_B\,T=\{1,\,1.5\}$)
+			    ten NP diameters apart contacting a size ratio 1:0.5, mass
+			    ratio 1:0.5, $\rho=0.2$, $k_B\,T=1$ system.
+			</p>
+		    </section>
+		</section>
+		<section>
+		    <section>
+			<h2>Appendix</h2>
+		    </section>
+		    <section>
+			<img src="img/nanocolloid.png" width="811px" height="738px" class="stretch"/>
+			<p>
+			    Equilibrium molecular dynamics simulations of binary mixture of hard-spheres, 10:1 size ratio, with
+			    1000:1 mass ratio approximating a nanofluid.
+			</p>
+		    </section>
+		    <section>
+			<div style="display:inline-block;width:70%;">
+			    <object type="image/svg+xml" data="img/thermalcond.svg" width="100%" class="stretch">
+				Your browser does not support SVG
+			    </object>
+			</div>
+			<p>
+			    10:1 size, 1000:1 mass, binary HS at constant volume
+			    fraction $\phi$ or constant pressure $p$. Symbols
+			    are MD and lines are from kinetic theory.<sup>1</sup>
+			</p>
+			<div class="footnote">
+			    1:M. N. Bannerman and L. Lue, "Transport properties of
+			    highly asymmetric hard-sphere
+			    mixtures", <i>J. Chem. Phys.</i> <b>130</b>, 164507
+			    (2009)
+			</div>
+		    </section>
+		    <section>
+			<ul>
+			    <li>
+				Truly anomalous results exist in $L_{q,q}$ for
+				hard-spheres, and all nanofluids at least share key
+				features with this system.
+			    </li>
+			    <li class="fragment">
+				Nanoparticles (in this case) are insulating. If
+				$L_{qq}$ is a useful definition then this is an
+				enhancement like the olive-oil/water system.
+			    </li>
+			    <li  class="fragment">
+				Analyzing the kinetic theory expressions, $L_{qq}$ has a dominant term:
+				\begin{align*}
+				\vec{J}_q \approx\left(C_V^{Nano} - C_V^{Base}\right)k_B\,T\,L_{Nano,q} T^{-1}\nabla T
+				\end{align*}
+			    </li>
+			    <li  class="fragment">
+				Large mass difference (as $C_V=5\,m/2$), coupled with
+				thermophoresis causes heat pumping effect <b>IF</b>
+				$L_{qq}$ is relevant.
+			    </li>
+			</ul>
+		    </section>
+		    <section>
+			<div class="stretch">
+			    <object type="image/svg+xml" data="img/thermophoresis.svg" width="100%">
+				Your browser does not support SVG
+			    </object>
+			    <p>
+				Graphical illustration of heat flux via
+				thermophoresis. Momentum conservation causes equal and
+				opposite fluxes of mass. If there is a heat capacity
+				imbalance, this results in a flux.
+			    </p>
+			</div>
+		    </section>
+		    <section>
+			<div>
+			    <img src="img/lambda.png" width="947px" height="612px" style="width:90%;height:auto;background:white;"/>
+			</div>	    
+			<p>
+			    "Light" nanofluids (size 2:1, mass 1:6) have anomalous
+			    dehancements in $\lambda$ while anomalous
+			    enhancements appear in $L_{q,q}$.
+			</p>
+		    </section>
+		    <section>
+			<div>
+			    <img src="img/Lqq_maximums.png" width="947px" height="612px" style="width:90%;height:auto;background:none;"/>
+			</div>
+			<div class="footnote">
+			    Isobaric simulations at pressures equal to a unit system
+			    at a reduced number density of 0.1 scanned for
+			    maximums. Isobars are the value of the peak in $log_10$.
+			</div>
+		    </section>
+		    <section>
+			<div>
+			    <img src="img/lambda_minimums.png" width="947px" height="612px" style="width:90%;height:auto;background:none;"/>
+			</div>	    
+			<div class="footnote">
+			    Isobaric simulations at pressures equal to a unit system
+			    at a reduced number density of 0.1 scanned for
+			    maximums. Isobars are the value of the peak in $log_10$.
+			</div>
+		    </section>
+		    <section>
+			<h2>Non-equilibrium molecular dynamics</h2>
+			<video autoplay width="100%" loop controls class="stretch">
+			    <source data-src="videos/bounded_nequil.mp4" type="video/mp4" />
+			</video>
+		    </section>
+		    <section>
+			<object type="image/svg+xml" data="img/NEMD_results.svg" width="90%" style="background:white;">
+			    Your browser does not support SVG
+			</object>
+			<div class="footnote">
+			    10:1 mass ratio, 1:1 size ratio, number ratio 0.1:1,
+			    packing fraction 0.01, NEMD results for the thermal
+			    conductivity between two walls at $T=1\pm0.05$. Points
+			    are simulation results, lines are extrapolations to
+			    infinite system size/zero gradient.
+			</div>
+		    </section>
+		</section>
+			</div>
 	    </div>
-	    <p>
-	      10:1 size, 1000:1 mass, binary HS at constant volume
-	      fraction $\phi$ or constant pressure $p$. Symbols
-	      are MD and lines are from kinetic theory.<sup>1</sup>
-	    </p>
-	    <div class="footnote">
-	      1:M. N. Bannerman and L. Lue, "Transport properties of
-	      highly asymmetric hard-sphere
-	      mixtures", <i>J. Chem. Phys.</i> <b>130</b>, 164507
-	      (2009)
-	    </div>
-	  </section>
-	  <section>
-	    <ul>
-	      <li>
-		Truly anomalous results exist in $L_{q,q}$ for
-		hard-spheres, and all nanofluids at least share key
-		features with this system.
-	      </li>
-	      <li class="fragment">
-		Nanoparticles (in this case) are insulating. If
-		$L_{qq}$ is a useful definition then this is an
-		enhancement like the olive-oil/water system.
-	      </li>
-	      <li  class="fragment">
-		Analyzing the kinetic theory expressions, $L_{qq}$ has a dominant term:
-		\begin{align*}
-		\vec{J}_q \approx\left(C_V^{Nano} - C_V^{Base}\right)k_B\,T\,L_{Nano,q} T^{-1}\nabla T
-		\end{align*}
-	      </li>
-	      <li  class="fragment">
-		Large mass difference (as $C_V=5\,m/2$), coupled with
-		thermophoresis causes heat pumping effect <b>IF</b>
-		$L_{qq}$ is relevant.
-	      </li>
-	    </ul>
-	  </section>
-	  <section>
-	    <div class="stretch">
-	      <object type="image/svg+xml" data="img/thermophoresis.svg" width="100%">
-		Your browser does not support SVG
-	      </object>
-	      <p>
-		Graphical illustration of heat flux via
-		thermophoresis. Momentum conservation causes equal and
-		opposite fluxes of mass. If there is a heat capacity
-		imbalance, this results in a flux.
-	      </p>
-	    </div>
-	  </section>
-	  <section>
-	    <div>
-	      <img src="img/lambda.png" width="947px" height="612px" style="width:90%;height:auto;background:white;"/>
-	    </div>	    
-	    <p>
-	      "Light" nanofluids (size 2:1, mass 1:6) have anomalous
-	      dehancements in $\lambda$ while anomalous
-	      enhancements appear in $L_{q,q}$.
-	    </p>
-	  </section>
-	  <section>
-	    <div>
-	      <img src="img/Lqq_maximums.png" width="947px" height="612px" style="width:90%;height:auto;background:none;"/>
-	    </div>
-	    <div class="footnote">
-	      Isobaric simulations at pressures equal to a unit system
-	      at a reduced number density of 0.1 scanned for
-	      maximums. Isobars are the value of the peak in $log_10$.
-	    </div>
-	  </section>
-	  <section>
-	    <div>
-	      <img src="img/lambda_minimums.png" width="947px" height="612px" style="width:90%;height:auto;background:none;"/>
-	    </div>	    
-	    <div class="footnote">
-	      Isobaric simulations at pressures equal to a unit system
-	      at a reduced number density of 0.1 scanned for
-	      maximums. Isobars are the value of the peak in $log_10$.
-	    </div>
-	  </section>
-	  <section>
-	    <h2>Non-equilibrium molecular dynamics</h2>
-	    <video autoplay width="100%" loop controls class="stretch">
-	      <source data-src="videos/bounded_nequil.mp4" type="video/mp4" />
-            </video>
-	  </section>
-	  <section>
-	    <object type="image/svg+xml" data="img/NEMD_results.svg" width="90%" style="background:white;">
-	      Your browser does not support SVG
-	    </object>
-	    <div class="footnote">
-	      10:1 mass ratio, 1:1 size ratio, number ratio 0.1:1,
-	      packing fraction 0.01, NEMD results for the thermal
-	      conductivity between two walls at $T=1\pm0.05$. Points
-	      are simulation results, lines are extrapolations to
-	      infinite system size/zero gradient.
-	    </div>
-	  </section>
-	</section>
-	<section>
-	  <h2>Conclusions</h2>
-	  <ul>
-	    <li>
-	      Binary mixtures of hard-spheres used as a model
-	      nanofluid display both anomalous enhancements and
-	      dehancements:<br/>
-	      <b><u>Classical limits can be broken.</u></b>
-	    </li>
-	    <li>
-	      $\lambda$ is the most appropriate definition of the
-	      thermal conductivity as NEMD results reach this at
-	      steady state.
-	    </li>
-	    <li>
-	      Enhancements (in this system and if they exist), are
-	      short lived before  the system diffuses
-	      significantly ($k\to\lambda$).
-	    </li>
-	  </ul>
-	</section>
-	<section>
-	  <section>
-	    <h2>Outlook</h2>
-	    <ul>
-	      <li>
-		These results provide a recipe for anomalous nanofluids,
-		lets go make and test some!
-	      </li>
-	      <li>
-		Super-enhancements are transient, can we design
-		equipment which operates in the transient regime?
-	      </li>
-	      <li>
-		Only way to test this is through coupled kinetic
-		theory/hydrodynamic simulations.
-	      </li>
-	    </ul>
-	  </section>
-	  <section>
-	    <video autoplay width="100%" loop controls class="stretch">
-	      <source data-src="videos/hydro.mp4" type="video/mp4" />
-            </video>
-	    <p>
-	      Simulation of two heated walls ($k_B\,T=\{1,\,1.5\}$)
-	      ten NP diameters apart contacting a size ratio 1:0.5, mass
-	      ratio 1:0.5, $\rho=0.2$, $k_B\,T=1$ system.
-	    </p>
-	  </section>
-	</section>
-      </div>
-    </div>
-    <script>
-var link = document.createElement('link');
-link.rel = 'stylesheet';
-link.type = 'text/css';
-if (window.location.search.match( /print-pdf/gi ))
-    link.href = 'reveal.js/css/print/pdf.css';
-else
-    link.href = 'reveal.js/css/print/paper.css';
-document.getElementsByTagName( 'head' )[0].appendChild( link );
+	    <script>
+	     var link = document.createElement('link');
+	     link.rel = 'stylesheet';
+	     link.type = 'text/css';
+	     if (window.location.search.match( /print-pdf/gi ))
+		 link.href = 'reveal.js/css/print/pdf.css';
+	     else
+		 link.href = 'reveal.js/css/print/paper.css';
+	     document.getElementsByTagName( 'head' )[0].appendChild( link );
 
-head.load("reveal.js/js/reveal.js", function() {
-    var revealopts = {
-	//This width and height allows printing to pdf at A4 and is slightly widescreen to give the best all round size
-	width:1920,height:1080,margin:0.1, minScale:0.2, maxScale:1.5,
-	slideNumber: 'c / t',
-	history: true,
-	transition: 'fade',
-	backgroundTransition: 'fade',
-	pdfMaxPagesPerSlide: 1,
-	controls:true,
-	math: {
-	    mathjax: 'MathJax/MathJax.js',
-	    config: 'TeX-AMS_SVG-full'
-	},
-	dependencies: [
-	    // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
-	    { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-	    // Syntax highlight for <code> elements
-	    { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-	    // MathJax
-	    { src: 'reveal.js/plugin/math/math.js', async: true},
-	    { src: 'reveal.js-plugins/chalkboard/chalkboard.js'},
-	// Speaker notes
-	    {
-	  src: 'reveal.js/plugin/notes/notes.js',
-	  async: true,
-	  condition: function () {
-          return !!document.body.classList;
-          }
-	  }
-	],
-	keyboard: {
-	    67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle chalkboard when 'c' is pressed
-	    66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
-	    46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
-	    8: function() { RevealChalkboard.reset() },	// reset all chalkboard data when 'BACKSPACE' is pressed
-	    68: function() { RevealChalkboard.download() },	// downlad chalkboard drawing when 'd' is pressed
-	    82: function() { Recorder.toggleRecording(); },	// press 'r' to start/stop recording
-	    90: function() { Recorder.downloadZip(); }, 	// press 'z' to download zip containing audio files
-	    84: function() { Recorder.fetchTTS(); } 	// press 't' to fetch TTS audio files		 
-	},
-	menu: {
-	    loadIcons:false,
-	    titleSelector:'WILLNOTFINDTITLES',
-	    markers: true,
-	    hideMissingTitles: true,
-	    themes: false,
-	    transitions: false
-	},
-	chalkboard: { // font-awesome.min.css must be available
-	    //src: "chalkboard/chalkboard.json",
-	    toggleChalkboardButton: { left: "80px" },
-	    toggleNotesButton: { left: "130px" },
-	},
-    };
+	     head.load("reveal.js/js/reveal.js", function() {
+		 var revealopts = {
+		     //This width and height allows printing to pdf at A4 and is slightly widescreen to give the best all round size
+		     width:1920,height:1080,margin:0.1, minScale:0.2, maxScale:1.5,
+		     slideNumber: 'c / t',
+		     history: true,
+		     transition: 'fade',
+		     backgroundTransition: 'fade',
+		     pdfMaxPagesPerSlide: 1,
+		     controls:true,
+		     math: {
+			 mathjax: 'MathJax/MathJax.js',
+			 config: 'TeX-AMS_SVG-full'
+		     },
+		     dependencies: [
+			 // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+			 { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			 // Syntax highlight for <code> elements
+			 { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			 // MathJax
+			 { src: 'reveal.js/plugin/math/math.js', async: true},
+			 { src: 'reveal.js-plugins/chalkboard/chalkboard.js'},
+			 // Speaker notes
+			 {
+			     src: 'reveal.js/plugin/notes/notes.js',
+			     async: true,
+			     condition: function () {
+				 return !!document.body.classList;
+			     }
+			 }
+		     ],
+		     keyboard: {
+			 67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle chalkboard when 'c' is pressed
+			 66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+			 46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+			 8: function() { RevealChalkboard.reset() },	// reset all chalkboard data when 'BACKSPACE' is pressed
+			 68: function() { RevealChalkboard.download() },	// downlad chalkboard drawing when 'd' is pressed
+			 82: function() { Recorder.toggleRecording(); },	// press 'r' to start/stop recording
+			 90: function() { Recorder.downloadZip(); }, 	// press 'z' to download zip containing audio files
+			 84: function() { Recorder.fetchTTS(); } 	// press 't' to fetch TTS audio files		 
+		     },
+		     menu: {
+			 loadIcons:false,
+			 titleSelector:'WILLNOTFINDTITLES',
+			 markers: true,
+			 hideMissingTitles: true,
+			 themes: false,
+			 transitions: false
+		     },
+		     chalkboard: { // font-awesome.min.css must be available
+			 //src: "chalkboard/chalkboard.json",
+				   toggleChalkboardButton: { left: "80px" },
+				   toggleNotesButton: { left: "130px" },
+		     },
+		 };
 
-    if (!(typeof(audiofiles) === 'undefined')) {
-	revealopts.dependencies = revealopts.dependencies.concat([
-            { src: '../reveal.js-plugins/audio-slideshow/slideshow-recorder.js', condition: function( ) { return !!document.body.classList; } },
-	    { src: '../reveal.js-plugins/audio-slideshow/audio-slideshow.js', condition: function( ) { return !!document.body.classList; } },
-	]);
-	revealopts.audio = {
-	    prefix: audiofiles,
-	    autoplay:true,
-	};
-    }
-	
-    Reveal.initialize(revealopts);
+		 if (!(typeof(audiofiles) === 'undefined')) {
+		     revealopts.dependencies = revealopts.dependencies.concat([
+			 { src: '../reveal.js-plugins/audio-slideshow/slideshow-recorder.js', condition: function( ) { return !!document.body.classList; } },
+			 { src: '../reveal.js-plugins/audio-slideshow/audio-slideshow.js', condition: function( ) { return !!document.body.classList; } },
+		     ]);
+		     revealopts.audio = {
+			 prefix: audiofiles,
+			 autoplay:true,
+		     };
+		 }
+		 
+		 Reveal.initialize(revealopts);
 
 
-    if (window.location.search.match( /print-pdf/gi ))
-	window.print();
-})
-    </script>
-  </body>
+		 if (window.location.search.match( /print-pdf/gi ))
+		     window.print();
+	     })
+	    </script>
+    </body>
 </html>
 <!---
 Bannerman, MN., Strobl, S., Formella, A. & Poeschel, T. (2014). 'Stable algorithm for event detection in event-driven particle dynamics'. Computational Particle Mechanics, vol 1, no. 2, pp. 191-198. 

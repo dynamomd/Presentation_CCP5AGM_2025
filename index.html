@@ -233,33 +233,33 @@
 	      <div style="flex: 1 1 calc(100% * 0.7);">
 		<ul>
 		  <li>
-		    The largest limits possible in continuum theory
-		    are series and parallel resistance, and most data
-		    (including from the benchmark study) fits between
-		    these limits<sup>1</sup>.
+		    The upper/lower limits possible in continuum
+		    models are series and parallel resistance, and
+		    most data (including from the benchmark study)
+		    fits between these limits<sup>1</sup>.
 		  </li>
 		  <li class="fragment" data-fragment-index="1">
-		    There are still results which are outside these
-		    so-called &ldquo;classical&rdquo;
-		    bounds<sup>3</sup>; however, the results do have
-		    large scatter, or are for ill-defined systems
-		    (olive oil/water?). More conclusive proof is
-		    needed that these truly anomalous results are even
-		    possible.
-		  </li>
-		  <li class="fragment" data-fragment-index="2">
 		    Maxwell also developed in 1873 (post-Aberdeen) an
 		    expression for the electrical conductivity of a
 		    two-component mixture which also works equally
 		    well for heat. It is based on the solution for the
 		    temperature profile around an isolated sphere.
 		  </li>
-		  <li class="fragment"  data-fragment-index="3">
-		    Any results outside of Maxwell's limits are also
-		    deemed anomalous in the literature, but results
-		    outside of the classical bounds are unambiguously
-		    anomalous as they cannot be explained by a
-		    continuum model.
+		  <li class="fragment"  data-fragment-index="2">
+		    Most results are also within Maxwell's tighter
+		    limits, thus we now define any results outside of
+		    Maxwell's bounds as &ldquo;anomalous&rdquo;, and
+		    outside of the series/parallel bounds as
+		    &ldquo;truly anomalous&rdquo;.
+		  </li>
+		  <li class="fragment" data-fragment-index="3">
+		    There are still results which are outside these
+		    so-called &ldquo;classical&rdquo;
+		    bounds<sup>2</sup>; however, the results do have
+		    large scatter, or are for ill-defined systems
+		    (olive oil/water?). More conclusive proof is
+		    needed that these truly anomalous results are even
+		    possible.
 		  </li>
 		</ul>
 	      </div>
@@ -273,8 +273,8 @@
 	      Nanofluids", <i>J. Heat Transfer</i>, <b>132</b>, 102402
 	      (2010)
 	    </div>	     
-	    <div class="footnote fragment" data-fragment-index="1">
-	      3: L. Wang and J. Fan, "Toward nanofluids of ultra-high
+	    <div class="footnote fragment" data-fragment-index="3">
+	      2: L. Wang and J. Fan, "Toward nanofluids of ultra-high
 	      thermal conductivity", <i>Nano. Research
 		Lett.</i>, <b>6</b>, 153 (2011)
 	    </div>
@@ -295,64 +295,88 @@
 	    <ul>
 	      <li>
 		Results are surprising, but the majority are within
-		classical limits (not anomalous).
+		classical/continuum limits (not truly anomalous) and
+		most are within Maxwell's limits (not even anomalous).
+	      </li>
+	      <li class="fragment">
+		Only molecular (non-continuum) models can demonstrate
+		truly anomalous results.
 	      </li>
 	    </ul>
-	  </section>
-	  <section>
-	    <p>
+	    <p class="fragment">
 	      Questions from history:
 	    </p>
 	    <ul>
-	      <li>
-		Are anomalous effects due to some non-classical
-		(molecular) effect possible?
+	      <li class="fragment">
+		Are anomalous effects possible? If so, why haven't we
+		seen it more conclusively? Is it difficult to measure
+		anomalous thermal conductivity? 
 	      </li>
-	      <li>
-		If so, why is it so difficult to measure this
-		anomalous conductivity?
-	      </li>
-	      <li>
-		Is scatter due to poor experimental procedure,
-		high-difficulty, and/or some phenomena?
+	      <li class="fragment">
+		Is the scatter in the current anomalous results due to
+		poor experimental procedure, high-difficulty, and/or
+		some phenomena?
 	      </li>
 	    </ul>
 	  </section>
 	</section>
+	<section>
+	  <section>
+	    <h3>The binary hard sphere model</h3>
+	    <div style="display:flex;align-items:center;">
+	      <div style="flex: 1 1 calc(100% * 0.5);">
+		<ul>
+		  <li>Simplest possible molecular model, hard spheres
+		    at near-ideal densities/pressures.
+		  </li>
+		</ul>
+	      </div>
+	      <div style="flex: 1 1 calc(100% * 0.5);">
+		<video autoplay width="100%" loop controls class="stretch">
+		  <source data-src="videos/bounded_nequil.mp4" type="video/mp4" />
+		</video>
+	      </div>
+	  </section>
+	</section>
 	<section id="Definition">
 	  <section>
-	    <h2>Definitions of thermal conductivity</h2>
+	    <h3>Issue 1: Definition of thermal conductivity</h3>
 	    <p>
-	      The definition of thermal conductivity in
-	      single-component materials:
+	      An observational definition of thermal conductivity is
+	      as follows:
 	      
 	      \begin{align*}
-	      \vec{q} = - k\, \nabla\,T
+	      \vec{q} = - k\, \nabla T
 	      \end{align*}
 	      
-	      This thermal conductivity, $k$, is often reported from
-	      experiments which attempt to extract this value
-	      indirectly; however, nanofluids are essentially
-	      molecular mixtures.
+	      Simple experiments (parallel plates) use this directly,
+	      others use transient results built from this model.
 	    </p>
-	  </section>
-	  <section>
-	    <p>
-	      The definition of thermal conductivity in fluid mixtures
-	      arises from linear
-	      phenomenological theory:
+	    <p class="fragment">
+	      But for mixtures, thermal diffusion also plays a role:
+
+	      \begin{align*}
+	      \vec{q} &= L_{q,q}\,\vec{X}_q + \sum_a L_{q,a}\,\vec{X}_a
+	      \end{align*}
+
+	      where $L_{q,q}$ is also a thermal conductivity,
+	      $\vec{X}_q$ is the heat "force" which has a relatively
+	      constant definition,
 	      
 	      \begin{align*}
-	      \vec{J}_q &= L_{q,q}\,\vec{X}_q + \sum_a L_{q,a}\,\vec{X}_a
+	      \vec{X}_q=-T^{-1}\nabla\,T
 	      \end{align*}
-	      
-	      where $\vec{X}_q$ is the heat "force", $\vec{X}_a$ is
-	      the diffusion force of species $a$ and $\vec{L}_{qa}$
-	      is the thermal diffusivity.
+
+	      Depending on how the diffusion force $\vec{X}_a$ is
+	      defined changes the definition of $L_{q,q}$ and
+	      $\vec{L}_{qa}$, which is the thermal diffusivity. There
+	      are multiple definitions of thermal conductivity and
+	      $L_{q,q}\,T^{-1}\neq k$.
 	    </p>
-	    <p>
-	      $\vec{L}_{qq}$ is the thermal conductivity, provided
-	      $\vec{X}_a=0$.
+	    <p class="fragment">
+	      For example, the so-called mainstream definition uses
+	      $\vec{X}_a=-T\,\nabla \mu_a\,T^{-1}$, thus temperature
+	      gradients may appear from this.
 	    </p>
 	  </section>
 	  <section>
@@ -620,7 +644,7 @@ head.load("reveal.js/js/reveal.js", function() {
 	transition: 'fade',
 	backgroundTransition: 'fade',
 	pdfMaxPagesPerSlide: 1,
-	controls:false,
+	controls:true,
 	math: {
 	    mathjax: 'MathJax/MathJax.js',
 	    config: 'TeX-AMS_SVG-full'
@@ -633,7 +657,14 @@ head.load("reveal.js/js/reveal.js", function() {
 	    // MathJax
 	    { src: 'reveal.js/plugin/math/math.js', async: true},
 	    { src: 'reveal.js-plugins/chalkboard/chalkboard.js'},
-	    { src: 'reveal.js-plugins/menu/menu.js'},
+	// Speaker notes
+	    {
+	  src: 'reveal.js/plugin/notes/notes.js',
+	  async: true,
+	  condition: function () {
+          return !!document.body.classList;
+          }
+	  }
 	],
 	keyboard: {
 	    67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle chalkboard when 'c' is pressed

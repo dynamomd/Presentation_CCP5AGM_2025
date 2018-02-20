@@ -322,12 +322,19 @@
 	</section>
 	<section>
 	  <section>
-	    <h3>The binary hard sphere model</h3>
+	    <h3>The Binary Hard Sphere Model</h3>
 	    <div style="display:flex;align-items:center;">
 	      <div style="flex: 1 1 calc(100% * 0.5);">
 		<ul>
 		  <li>Simplest possible molecular model, hard spheres
 		    at near-ideal densities/pressures.
+		    <img src="img/hard_sphere_diagram.svg" style="width:100%">
+		  </li>
+		  <li class="fragment">
+		    For $\sigma_1/\sigma_2=10$ and $m_1/m_2=1000$ (see
+		    right), thermal diffusion in response to a heat
+		    gradient is evident! Conduction in binary mixtures
+		    is both transient and inhomogeneous in concentration.
 		  </li>
 		</ul>
 	      </div>
@@ -374,39 +381,25 @@
 	      $L_{q,q}\,T^{-1}\neq k$.
 	    </p>
 	    <p class="fragment">
-	      For example, the so-called mainstream definition uses
+	      For example, the so-called mainstream definition which
+	      is convenient for calculations uses
 	      $\vec{X}_a=-T\,\nabla \mu_a\,T^{-1}$, thus temperature
-	      gradients may appear from this.
+	      gradients may appear from this. $L_{q,q}$ may be a red
+	      herring!
 	    </p>
 	  </section>
 	  <section>
 	    <p>
-	      Our difficulty is increased as there is no unique
-	      separation of the heat flux into a thermal, $\vec{X}_q$,
-	      and diffusive part, $\vec{X}_a$.
-	    </p>
-	    <p>
-	      In the presence of choice, the most convenient choice
-	      (for calculations) is best:
-
-	      \begin{align*}
-	      \vec{X}_q &= -T^{-1} \nabla T & \vec{X}_a &= -T^{-1}\nabla \left(\mu_a\,T^{-1}\right)
-	      \end{align*}
-	    </p>
-	  </section>
-	  <section>
-	    <p>
-	      Taking the expression for the corresponding mass flux:
+	      A better expression can be derived by taking the
+	      expression for the mass flux:
 	      
 	      \begin{align*}
 	      \vec{J}_a &= L_{q,a}\,\vec{X}_q + \sum_b L_{a,b}\,\vec{X}_b
 	      \end{align*}
 
-	      where $L_{a,b}$ is a mutual diffusion coefficient.
-	    </p>
-	    <p>
-	      In binary mixtures, we can solve for a uniquely defined "steady state"
-	      thermal conductivity ($\vec{J}_a = 0$):
+	      where $L_{a,b}$ is a mutual diffusion coefficient and
+	      solving for a "steady state" thermal conductivity
+	      where $\vec{J}_a = 0$, thus eliminating $\vec{X}_a$ to give:
 
 	      \begin{align*}
 	      \lambda = L_{q,q} - \frac{L_{a,q}^2}{L_{a,a}}

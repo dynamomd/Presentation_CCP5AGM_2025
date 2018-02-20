@@ -45,17 +45,14 @@
 			</div>	    
 		    </section>
 		    <section data-background="img/new_kings.jpg">
-			<aside class="notes">
-			    Fifth UK university after Oxford (1167), Cambridge (1209),
-			    St Andrews (1410), and Glasgow (1451).
-			</aside>
 			<h2 class="backbox" style="width:80%; margin-left:auto;margin-right:auto;">University of Aberdeen</h2>
 			<div class="backbox" style="width:80%; margin-left:auto;margin-right:auto;">
 			    <p >
 				<ul >
 				    <li>
-					Ancient university, established in 1495 (fifth in
-					the UK).
+					Ancient university, King's college established in 1495, fifth in
+					the UK after Oxford (1167), Cambridge (1209),
+					St Andrews (1410), and Glasgow (1451).
 				    </li>
 				    <li class="fragment">
 					5 Nobel prize winners: insulin treatment,
@@ -63,10 +60,11 @@
 					chromatography.
 				    </li>
 				    <li class="fragment">
-					James Clerk Maxwell was here, but was fired in
-					1860 when Marischal and King's college merged to
-					form the university.
-				    </li>
+					James Clerk Maxwell was here,
+					but was fired in 1860 when
+					Marischal college (Est. 1593)
+					which employed him merged with
+					King's college.</li>
 				    <li class="fragment">
 					Currently has around 16,000 students.
 				    </li>
@@ -220,7 +218,7 @@
 			    </li>
 			    <li class="fragment">
 				Neglecting the outliers, most results for water-based
-				nanofluids agreed within 10%.
+				nanofluids agreed within 5%.
 			    </li>
 			    <li class="fragment">
 				Are these consensus results anomalous though? What
@@ -342,11 +340,15 @@
 					Enskog theory (3rd Sonine).
 				    </li>
 				    <li class="fragment">
-					For $\sigma_1/\sigma_2=10$ and $m_1/m_2=1000$ (see
-					right), thermal diffusion in response to a heat
-					gradient is evident! Conduction in binary mixtures
-					is both transient and inhomogeneous in concentration.
-				    </li>
+					For $\sigma_1/\sigma_2=10$ and
+					$m_1/m_2=1000$ (see right),
+					thermal diffusion in response
+					to a heat gradient is evident!
+					First result is that
+					conduction in binary mixtures
+					is both transient and
+					inhomogeneous in
+					concentration.</li>
 				</ul>
 			    </div>
 			    <div style="flex: 1 1 calc(100% * 0.5);">
@@ -358,50 +360,48 @@
 		</section>
 		<section id="Definition">
 		    <section>
-			<h3>Issue: Definition of thermal conductivity</h3>
+			<h3>Issue: The definition of thermal conductivity</h3>
 			<p>
 			    An observational definition of thermal conductivity is
 			    as follows:
 			    
 			    \begin{align*} \vec{q} = - k\, \nabla T \end{align*}
 			    
-			    Simple experiments (parallel plates) use this directly,
-			    others use transient results built from this model
+			    Simple experiments (parallel plates) and NEMD use this directly,
+			    others, such as THWT use transient results built from this model
 			    (which appears dangerous given the presence of transient
 			    thermodiffusion).</p>
 			<p class="fragment">
 			    For mixtures, thermal diffusion also plays a role:
 
-			    \begin{align*} \vec{q} &= L_{q,q}\,\vec{X}_q + \sum_a
-			    L_{q,a}\,\vec{X}_a \end{align*}
+			    \begin{align*} \vec{q} &= L_{uu}\,\vec{X}_u + \sum_a
+			    L_{ua}\,\vec{X}_a \end{align*}
 
-			    where $L_{q,q}$ is also a thermal conductivity,
-			    $\vec{X}_q$ is the heat "force" which has a relatively
+			    where $L_{uu}$ is also a thermal conductivity,
+			    $\vec{X}_u$ is the heat "force" which has a relatively
 			    constant definition,
 			    
-			    \begin{align*} \vec{X}_q=-T^{-1}\nabla\,T \end{align*}
+			    \begin{align*} \vec{X}_u=-T^{-1}\nabla\,T \end{align*}
 
 			    Depending on how the diffusion force $\vec{X}_a$ is
-			    defined changes the definition of $L_{q,q}$ and
-			    $\vec{L}_{qa}$, which is the thermal diffusivity. There
-			    are multiple definitions of thermal conductivity, but
-			    regardless of which is chosen $L_{q,q}\,T^{-1}\neq k$.</p>
-			<p class="fragment">
-			    For example, the so-called mainstream definition which
-			    is convenient for calculations uses
-			    $\vec{X}_a=-T\,\nabla \mu_a\,T^{-1}$.
+			    defined changes the definition of $L_{uu}$ and
+			    $\vec{L}_{ua}$, which is the thermal diffusivity.
 			</p>
+			<p class="fragment">
+			  There are multiple definitions of thermal
+			  conductivity, but regardless of which is
+			  chosen $L_{uu}\,T^{-1}\neq k$.</p>
 		    </section>
 		    <section>
 			<p>
 			    Consider the expression for the mass flux:
 			    
 			    \begin{align*}
-			    \vec{J}_a &= L_{q,a}\,\vec{X}_q + \sum_b
-			    L_{a,b}\,\vec{X}_b
+			    \vec{J}_a &= L_{ua}\,\vec{X}_u + \sum_b
+			    L_{ab}\,\vec{X}_b
 			    \end{align*}
 			    
-			    where $L_{a,b}$ is a mutual diffusion coefficient.
+			    where $L_{ab}$ is a mutual diffusion coefficient.
 			</p>
 			<p class="fragment">
 			    Solving for a "steady state" where $\vec{J}_a = 0$,
@@ -409,8 +409,8 @@
 			    flux yields the following expression:
 
 			    \begin{align*}
-			    \vec{q} &= T^{-1}\left(L_{q,q} -
-			    \frac{L_{a,q}^2}{L_{a,a}}\right) \nabla\,T\\
+			    \vec{q} &= T^{-1}\left(L_{uu} -
+			    \frac{L_{au}^2}{L_{aa}}\right) \nabla\,T\\
 			    &=-\lambda\,\nabla\,T
 			    \end{align*}
 			    where the &ldquo;steady-state&rdquo; thermal conductivity $\lambda$ has been implicitly defined.
@@ -425,66 +425,95 @@
 		</section>
 		<section>
 		    <figure>
-			<img src="img/NEMDAspectRatioPlot_vf_0.2.svg" style="width:70%">
+			<img src="img/NEMDAspectRatioPlot_vf_0.2.svg" style="width:50%">
 			<figcaption>
 			    NEMD results for the observed thermal
 			    conductivity for a binary mixture of
-			    $\sigma_1/\sigma_2=0.4$, $m_1/m_2=20$ at a
-			    number density of $\sigma_1^3\,N/V=0.01$,
-			    for a range of system sizes and aspect
-			    ratios.
-			</figcaption>
+			    $N\approx10^5$, $\sigma_1/\sigma_2=0.4$,
+			    $m_1/m_2=20$ at a number density of
+			    $\sigma_1^3\,N/V=0.01$ and $x_1=0.2$, for
+			    a range of system sizes and aspect ratios,
+			    subject to a fixed $\pm10\%$ temperature
+			    gradient. Each point is 10 simulations,
+			    each compressed from a low density
+			    starting configuration and equilibrated
+			    for $10^3$ events per particle before
+			    being run for $10^4$ events per particle.
+			    $\lambda$ appears to correspond to the
+			    observed thermal conductivity $k$.</figcaption>
 		    </figure>
 		</section>
 		<section>
 		    <figure>
-			<img src="img/NEMDAspectRatioPlot_vf_0.2.svg" style="width:70%">
+			<img src="img/comparisonPlot.svg" style="width:50%">
 			<figcaption>
-			    NEMD results for the observed thermal
-			    conductivity for a binary mixture of
-			    $\sigma_1/\sigma_2=0.4$, $m_1/m_2=20$ at a
-			    number density of $\sigma_1^3\,N/V=0.01$,
-			    for a range of system sizes and aspect
-			    ratios.
-			</figcaption>
+			    Various thermal conductivities for the
+			    system described in the previous graph as
+			    a function of volume fraction. NEMD
+			    results are extrapolated to the infinite
+			    system size limit. Both $L_{uu}$ and
+			    $\lambda$ are well outside the classical
+			    limits (dashed lines) but in opposite
+			    directions for this fluid.</figcaption>
+		    </figure>
+		</section>
+		<section>
+		    <figure>
+			<img src="img/contourPlotDistanceLambda.svg" style="width:62%">
+			<figcaption>
+			    Fluids geometries which exhibit truly
+			    anomalous thermal conductivity below
+			    (dashed) and above (solid) the classical
+			    limits, as predicted by enskog
+			    theory. Contours indicate the ratio of the
+			    max/min thermal conductivity compared to
+			    the parallel/series limit for all
+			    concentrations.  The hashed area
+			    corresponds to frozen larger particles,
+			    thus Enskog theory is unreliable there and
+			    data is discarded.</figcaption>
 		    </figure>
 		</section>
 		<section>
 		    <h2>Conclusions</h2>
 		    <ul>
 			<li>
-			    Binary mixtures of hard-spheres used as a model
-			    nanofluid display both anomalous enhancements and
-			    dehancements:<br/>
+			    The steady-state thermal conductivity
+			    $\lambda$ is a close approximation of the
+			    observed thermal conductivity $k$.</li>
+			<li class="fragment">
+			    Binary mixtures of hard-spheres display
+			    anomalous thermal conductivities outside
+			    classical theory:<br/>
 			    <b><u>Classical limits can be broken.</u></b>
 			</li>
-			<li>
-			    $\lambda$ is the most appropriate definition of the
-			    thermal conductivity as NEMD results reach this at
-			    steady state.
-			</li>
-			<li>
-			    Enhancements (in this system and if they exist), are
-			    short lived before  the system diffuses
-			    significantly ($k\to\lambda$).
-			</li>
+			<li class="fragment">
+			    Most of the &ldquo;interesting&rdquo;
+			    behavior is for light, but large,
+			    nanoparticles (bubbly fluids?). But
+			    anomalous dehancements are close to
+			    realistic geometries.</li>
 		    </ul>
 		</section>
 		<section>
 		    <section>
-			<h2>Outlook</h2>
+			<h2>Ongoing work</h2>
 			<ul>
 			    <li>
-				These results provide a recipe for anomalous nanofluids,
-				lets go make and test some!
-			    </li>
+				Can we correlate real nanofluids using
+				Enskog theory? The unphyscial heat
+				capacity of large hard sphere particles
+				must be addressed.</li>
 			    <li>
-				Super-enhancements are transient, can we design
-				equipment which operates in the transient regime?
-			    </li>
+				Is there something to the large peak
+				for $L_{uu}$, is there a transient
+				super enhancement?</li>
 			    <li>
-				Only way to test this is through coupled kinetic
-				theory/hydrodynamic simulations.
+				This can be tested using coupled
+				kinetic theory/hydrodynamic
+				simulations with oscillating
+				temperature gradients, initial results
+				are being collected.
 			    </li>
 			</ul>
 		    </section>
@@ -493,10 +522,26 @@
 			    <source data-src="videos/hydro.mp4" type="video/mp4" />
 			</video>
 			<p>
-			    Simulation of two heated walls ($k_B\,T=\{1,\,1.5\}$)
-			    ten NP diameters apart contacting a size ratio 1:0.5, mass
-			    ratio 1:0.5, $\rho=0.2$, $k_B\,T=1$ system.
-			</p>
+			    Coupled kinetic theory and hydrodynamic
+			    simulation of two heated walls
+			    ($k_B\,T=\{1,\,1.5\}$) ten NP diameters
+			    apart contacting a size ratio 1:0.5, mass
+			    ratio 1:0.5, $\rho=0.2$, $k_B\,T=1$
+			    system.</p>
+		    </section>
+		</section>
+		<section>
+		    <section>
+			<h3>Thanks</h3>
+			<ul>
+			    <li>Thank you to:
+				<ul>
+				    <li>Craig Moir (Aberdeen/Curtin) PhD student.</li>
+				    <li>Leo Lue (Strathclyde).</li>
+				    <li>You for your attention</li>
+				</ul>
+			    </li>
+			</ul>
 		    </section>
 		</section>
 		<section>

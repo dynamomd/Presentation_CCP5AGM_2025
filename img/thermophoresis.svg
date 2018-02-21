@@ -14,7 +14,7 @@
    preserveAspectRatio="xMidYMid meet"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.1 r15371"
    sodipodi:docname="thermophoresis.svg"
    shape-rendering="crispEdges">
   <defs
@@ -43,7 +43,7 @@
        inkscape:isstock="true">
       <path
          id="path6998"
-         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#fbf7f3;stroke-opacity:1;fill:#fbf7f3;fill-opacity:1"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
          d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
          transform="scale(0.3) rotate(180) translate(-2.3,0)" />
     </marker>
@@ -2569,7 +2569,7 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="3.959798"
-     inkscape:cx="47.709427"
+     inkscape:cx="2.8839081"
      inkscape:cy="40.390157"
      inkscape:document-units="px"
      inkscape:current-layer="g4295-3"
@@ -2581,7 +2581,7 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:window-width="3200"
-     inkscape:window-height="1691"
+     inkscape:window-height="1735"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1">
@@ -2603,7 +2603,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -3073,7 +3073,7 @@
          cy="17.357378"
          r="5" />
       <path
-         style="fill:none;fill-rule:evenodd;stroke:#fbf7f3;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker7221)"
+         style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker7221)"
          d="m 103.7933,88.071664 -60.357139,0"
          id="path6959"
          inkscape:connector-curvature="0" />

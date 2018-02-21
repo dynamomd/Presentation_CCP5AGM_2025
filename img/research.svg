@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:ns1="http://sozi.baierouge.fr"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="research.svg"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 507.99998 285.75001"
+   height="1080"
+   width="1920"
+   inkscape:version="0.92.1 r15371">
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="0"
+     inkscape:window-x="0"
+     inkscape:window-height="1735"
+     inkscape:window-width="3200"
+     units="px"
+     showgrid="false"
+     inkscape:current-layer="svg8"
+     inkscape:document-units="mm"
+     inkscape:cy="433.12899"
+     inkscape:cx="1177.0107"
+     inkscape:zoom="0.98994949"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-11.24998)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1" />
+  <script
+     ns1:version="13.11-30213629"
+     id="sozi-extras-media-script">/*
+ * Sozi - A presentation tool using the SVG standard
+ *
+ * Copyright (C) 2010-2013 Guillaume Savaton
+ *
+ * This program is dual licensed under the terms of the MIT license
+ * or the GNU General Public License (GPL) version 3.
+ * A copy of both licenses is provided in the doc/ folder of the
+ * official release of Sozi.
+ * 
+ * See http://sozi.baierouge.fr/wiki/en:license for details.
+ */
+
+this.addEventListener(&quot;load&quot;, function () {
+	var	svgNs = &quot;http://www.w3.org/2000/svg&quot;,
+	    soziNs = &quot;http://sozi.baierouge.fr&quot;,
+		xhtmlNs = &quot;http://www.w3.org/1999/xhtml&quot;,
+		window = this,
+		document = window.document,
+		mediaSources = [],
+		mediaList, i, j, k, rect, foreignObject,
+		html, htmlMedia, htmlSource;
+	
+    function clickHandler(evt) {
+        evt.stopPropagation();
+    }
+    
+    function registerFrameChangeHandler(htmlMedia, startFrame, stopFrame) {
+        sozi.events.listen(&quot;sozi.player.framechange&quot;, function(index) {
+            var frameId = sozi.document.frames[index].id;
+		    if (frameId === startFrame) {
+		        htmlMedia.play();
+			}
+            else if (frameId === stopFrame) {
+                htmlMedia.pause();
+            }
+		});
+    }
+    
+	mediaSources.push(document.getElementsByTagNameNS(soziNs, &quot;video&quot;));
+	mediaSources.push(document.getElementsByTagNameNS(soziNs, &quot;audio&quot;));
+
+	mediaList = [];
+	for (k = 0; k &lt; mediaSources.length; k += 1) {
+	    for (i = 0; i &lt; mediaSources[k].length; i += 1) {
+		    rect = mediaSources[k][i].parentNode;
+	
+		    // Create HTML media source element
+		    htmlSource = document.createElementNS(xhtmlNs, &quot;source&quot;);
+		    htmlSource.setAttribute(&quot;type&quot;, mediaSources[k][i].getAttributeNS(soziNs, &quot;type&quot;));
+		    htmlSource.setAttribute(&quot;src&quot;, mediaSources[k][i].getAttributeNS(soziNs, &quot;src&quot;));
+
+		    for (j = 0; j &lt; mediaList.length; j += 1) {
+			    if (mediaList[j].rect === rect) {
+				    break;
+			    }
+		    }
+	
+		    if (j === mediaList.length) {
+		        rect.setAttribute(&quot;visibility&quot;, &quot;hidden&quot;);
+		        
+			    // Create HTML media element
+			    htmlMedia = document.createElementNS(xhtmlNs, mediaSources[k][i].localName);
+			    htmlMedia.setAttribute(&quot;controls&quot;, &quot;controls&quot;);
+			    if (mediaSources[k][i].localName === &quot;video&quot;) {
+			        htmlMedia.setAttribute(&quot;width&quot;, rect.getAttribute(&quot;width&quot;));
+			        htmlMedia.setAttribute(&quot;height&quot;, rect.getAttribute(&quot;height&quot;));
+			    }
+		        htmlMedia.addEventListener(&quot;click&quot;, clickHandler, false);
+		        htmlMedia.addEventListener(&quot;contextmenu&quot;, clickHandler, false);
+		        
+			    // Create HTML root element
+			    html = document.createElementNS(xhtmlNs, &quot;html&quot;);
+			    html.appendChild(htmlMedia);
+		
+			    // Create SVG foreign object
+			    foreignObject = document.createElementNS(svgNs, &quot;foreignObject&quot;);
+			    foreignObject.setAttribute(&quot;x&quot;, rect.getAttribute(&quot;x&quot;));
+			    foreignObject.setAttribute(&quot;y&quot;, rect.getAttribute(&quot;y&quot;));
+			    foreignObject.setAttribute(&quot;width&quot;, rect.getAttribute(&quot;width&quot;));
+			    foreignObject.setAttribute(&quot;height&quot;, rect.getAttribute(&quot;height&quot;));
+			    foreignObject.appendChild(html);
+				
+			    rect.parentNode.insertBefore(foreignObject, rect.nextSibling);
+			
+			    if (mediaSources[k][i].hasAttributeNS(soziNs, &quot;start-frame&quot;)) {
+			        registerFrameChangeHandler(htmlMedia,
+			            mediaSources[k][i].getAttributeNS(soziNs, &quot;start-frame&quot;),
+			            mediaSources[k][i].getAttributeNS(soziNs, &quot;stop-frame&quot;)
+			         );
+			    }
+			
+			    mediaList.push({
+				    rect: mediaSources[k][i].parentNode,
+				    htmlMedia: htmlMedia
+			    });
+		    }
+	    
+    		// Append HTML source element to current HTML media element
+    		mediaList[j].htmlMedia.appendChild(htmlSource);
+	    }
+	}				
+}, false);
+</script>
+  <g
+     id="g4549"
+     transform="translate(-113.85682,-26.459683)">
+    <rect
+       id="rect4547"
+       height="186.53806"
+       width="248.71741"
+       y="37.150467"
+       x="140.04922"
+       style="fill:#aaaaaa;stroke:none;stroke-width:0.38862094">
+      <ns1:video
+         ns1:src="video/hydro.mp4"
+         ns1:type="video/mp4" />
+      <ns1:video
+         ns1:type="video/mp4"
+         ns1:src="hydro.mp4" />
+      <ns1:video
+         ns1:src="img/hydro.mp4"
+         ns1:type="video/mp4" />
+    </rect>
+  </g>
+</svg>

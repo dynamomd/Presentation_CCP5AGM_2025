@@ -79,7 +79,42 @@
 		</section>
 		<section>
 		    <section>
-			<h3>Motivation</h3>
+			<img src="img/dynamo.svg" style="width:70%">
+		    </section>
+		    <section>
+			<video autoplay width="60%" loop controls style="display:inline-block">
+			    <source data-src="videos/Gran_damper.mp4" type="video/mp4" />
+			</video>
+			<video autoplay width="30%" loop controls style="display:inline-block">
+			    <source data-src="videos/zeroG.mp4" type="video/mp4" />
+			</video>
+			<p>
+			    First direct application of DynamO to simulate real granular-damper systems.
+			</p>
+		    </section>
+		    <section>
+			<ul>
+			    <li><img src="img/KilnTrials.jpg" style="width:40%; float:right;" >Green concrete project (£3.3M, GORD)</li>
+			    <li>
+				Development of high-temperature cement kiln models and thermodynamics.
+			    </li>
+			    <li>
+				Designed and oversaw trial productions
+				of $\approx 1$ tonne of cement.
+			    </li>
+			    <li>
+				Development of computer algebra
+				library approach to thermodynamics,
+				which now powers general potentials
+				within DynamO.<br/>
+				<img src="img/CementTrials2.jpg" style="width:50%">
+			    </li>
+			</ul>
+		    </section>
+		</section>
+		<section>
+		    <section>
+			<h3>Motivation for nanofluids</h3>
 			<aside class="notes">Water has a thermal conductivity of $\approx$0.6 W/m/K, copper is 385 W/m/K.</aside>
 			<img src="img/thermal_conductivity.svg" style="width:100%">
 			<p>
@@ -433,7 +468,7 @@
 			    $m_1/m_2=20$ at a number density of
 			    $\sigma_1^3\,N/V=0.01$ and $x_1=0.2$, for
 			    a range of system sizes and aspect ratios,
-			    subject to a fixed $\pm10\%$ temperature
+			    subject to a fixed $\pm5\%$ temperature
 			    gradient. Each point is 10 simulations,
 			    each compressed from a low density
 			    starting configuration and equilibrated
@@ -485,7 +520,13 @@
 			    Binary mixtures of hard-spheres display
 			    anomalous thermal conductivities outside
 			    classical theory:<br/>
-			    <b><u>Classical limits can be broken.</u></b>
+			    <b>Classical limits can be broken.</b>
+			</li>
+			<li class="fragment">
+			    This is possible even in the ideal gas limit:<br/>
+			    <b>Structural arguments (interfacial
+			    resistance/layering models) are not
+			    relevant for this type of enhancement.</b>
 			</li>
 			<li class="fragment">
 			    Most of the &ldquo;interesting&rdquo;
@@ -504,11 +545,12 @@
 				Enskog theory? The unphyscial heat
 				capacity of large hard sphere particles
 				must be addressed.</li>
-			    <li>
+			    <li class="fragment">
 				Is there something to the large peak
-				for $L_{uu}$, is there a transient
-				super enhancement?</li>
-			    <li>
+				for $L_{uu}$ or is it just a red
+				herring: is there a transient super
+				enhancement?</li>
+			    <li class="fragment">
 				This can be tested using coupled
 				kinetic theory/hydrodynamic
 				simulations with oscillating

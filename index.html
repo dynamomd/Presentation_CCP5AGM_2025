@@ -60,18 +60,15 @@
 		    chromatography.
 		  </li>
 		  <li class="fragment">
+		    16,000 students, including a <em>general</em> school of
+		    engineering with over 1000 UG students.
+		  </li>
+		  <li class="fragment">
 		    James Clerk Maxwell was here,
 		    but was fired in 1860 when
 		    Marischal college (Est. 1593)
 		    which employed him merged with
 		    King's college.</li>
-		  <li class="fragment">
-		    Currently has around 16,000 students.
-		  </li>
-		  <li class="fragment">
-		    A <em>general</em> school of engineering with over 1000 UG
-		    students.
-		  </li>
 		</ul>
 	      </p>
 	    </div>
@@ -80,56 +77,85 @@
 	<section>
 	  <section>
 	    <img src="img/dynamo.svg" style="width:70%">
-	  </section>
-	  <section>
-	    <video autoplay width="30%" loop controls style="display:inline-block; float:left;">
-	      <source data-src="videos/zeroG.mp4" type="video/mp4" />
-	    </video>
-	    
-	    <video autoplay width="60%" loop controls style="display:inline-block">
-	      <source data-src="videos/Gran_damper.mp4" type="video/mp4" />
-	    </video>
 	    <p>
-	      First direct application of DynamO to simulate real granular-damper systems (2009-2011).
+	      All (my) research leads to DynamO, an event-driven particle simulation package...
 	    </p>
 	  </section>
 	  <section>
-	    <ul>
+	    <ul >
 	      <li>
-		(2017-18) UG student project on
-		accoustic levitation, using DynamO to
-		simulate inertial manipulation</li>
-	      <li>
-		FPGAs (used to generate the phase
-		shifted signals) are the only opportunity
-		to accelerate event-driven techniques.
+		Direct application of DynamO to simulate real
+		<b>granular-damper systems</b> in microgravity (2009-2011).
+		<video autoplay width="30%" loop controls muted style="display:inline-block; vertical-align: middle;">
+		  <source data-src="videos/zeroG.mp4" type="video/mp4" />
+		</video>
+		<video autoplay width="60%" loop controls muted style="display:inline-block;vertical-align: middle;">
+		  <source data-src="videos/Gran_damper.mp4" type="video/mp4" />
+		</video>
 	      </li>
 	    </ul>
-	    <video autoplay width="80%" loop controls style="display:inline-block">
-	      <source data-src="videos/levitation.mp4" type="video/mp4" />
-	    </video>			
 	  </section>
 	  <section>
 	    <ul>
-	      <li><img src="img/KilnTrials.jpg" style="width:40%; float:right;" >Green concrete project (£3.3M, GORD) 2012-2016.</li>
 	      <li>
-		Development of high-temperature cement kiln models and thermodynamics.
+		<b>Accoustic levitation granular devices</b> (2017-current).
+		<video autoplay width="90%" loop controls muted style="display:inline-block">
+		  <source data-src="videos/levitation.mp4" type="video/mp4" />
+		</video>
 	      </li>
 	      <li>
-		Designed and oversaw trial productions
-		of $\approx 1$ tonne of novel
+		FPGAs used in the levitator are also the only
+		opportunity to accelerate/parallelise event-driven
+		techniques.
+	      </li>
+	    </ul>
+	  </section>
+	  <section>
+	    <ul>
+	      <li><img src="img/KilnTrials.jpg" style="width:40%; float:right;" >
+		<b>Green concrete project</b> (£3.3M, GORD, 2012-16) <br/>(&euro;420k, Nanocem, 2019-22).</li>
+	      <li>
+		High-temperature cement kiln models and thermodynamics.
+	      </li>
+	      <li>
+		Trial productions of $\approx 1$ tonne of novel
 		sulfur-based cement.</li>
 	      <li>
-		Development of computer algebra
-		library for thermodynamics which now
-		powers general potentials within
-		DynamO.<br/>
+		Computer Algebra Library for thermodynamics, now
+		powers general potentials within DynamO.<br/>
 		<img src="img/CementTrials2.jpg" style="width:50%">
 	      </li>
 	    </ul>
 	  </section>
 	</section>
 	<section>
+	  <section>
+	    <h3>Motivation for nanofluids</h3>
+	    <img src="img/heat_pipes.jpg" style="width:30%; float:right;">
+	    <ul style="float:left; width:55%;margin-top:10%">
+	      <li><b>Heat transfer is the most important area for
+		  research.</b>
+	      </li>
+	      <li class="fragment">
+		Anything we do must satisfy the second law of thermodynamics:
+		\begin{align*}
+		\oint \frac{{\rm d}Q}{T} \le 0
+		\end{align*}
+	      </li>
+	      <li class="fragment">
+		Thus heat transfer ultimately drives (and dissipates
+		from) all processes we carry out.
+	      </li>
+	      <li class="fragment">
+		It is increasingly the limiting factor in the design of modern devices.
+	      </li>
+	      <li class="fragment">
+		Although novel techniques are now employed (e.g., heat
+		pipes, right), we are fast reaching the limitations of
+		our heat transfer fluids.
+	      </li>
+	    </ul>
+	  </section>
 	  <section>
 	    <h3>Motivation for nanofluids</h3>
 	    <aside class="notes">Water has a thermal conductivity of $\approx$0.6 W/m/K, copper is 385 W/m/K.</aside>
@@ -141,7 +167,7 @@
 	  </section>
 	  <section>
 	    <div style="display:flex;align-items:center;">
-	      <div style="flex: 1 1 calc(100% * 0.7);">
+	      <div style="flex: 1 1 calc(100% * 0.7);margin-right:5px;">
 		<ul>
 		  <li>
 		    Nanofluids are an attempt to "alloy" the
@@ -161,7 +187,7 @@
 		  </li>
 		  <li class="fragment">
 		    Initial results for copper in ethylene glycol
-		    reported in 2001 were promising &hellip;
+		    reported in 2001 were promising&hellip;
 		  </li>
 		</ul>
 	      </div>
@@ -188,7 +214,7 @@
 		  <li>
 		    Measured enhancements of 40% over the base fluid
 		    for 0.2%&nbsp;v/v seemed improbable, leading to them
-		    being termed <i>&ldquo;anomalous.&rdquo;</i>
+		    being termed <i>&ldquo;anomalous&rdquo;</i>.
 		  </li>
 		  <li class="fragment">
 		    An explosion of research followed, with
@@ -249,31 +275,40 @@
 		      T. Sundararajan, E. Timofeeva, T. Tritcak,
 		      A. N. Turanov, S. Van Vaerenbergh, D. Wen,
 		      S. Witharana, C. Yang, W.-H. Yeh, X.-Z. Zhao,
-		      and S.-Q. Zhou</small> <br/> "A benchmark study
+		      and S.-Q. Zhou</small> <br/> &ldquo;A benchmark study
 		    on the thermal conductivity of
-		    nanofluids",<br/>
+		    nanofluids&rdquo;,<br/>
 		    <i>J. Appl. Phys.</i>, <b>106</b>,
 		    094312 (2009)
 		</i></p> 
 	      </li>
 	      <li class="fragment">
 		All samples were blind, organizations did not know
-		what they were testing.
+		what they were actually testing.
 	      </li>
+	      <li class="fragment">
+		The size of the author list alone indicates how
+		widespread the issue of repeatability had become.
+	      </li>	      
 	    </ul>
 	  </section>
 	  <section>
 	    <ul>
 	      <li>
-		Even the results for deionized water had some outliers:
-		<img src="img/deionized_water.png" style="width:100%;display:block;margin-left:auto; margin-right:auto;">
+		<b>Even the results for deionized water</b> had some outliers!
+		<img src="img/deionized_water.png" style="width:80%;display:block;margin-left:auto; margin-right:auto;">
+	      </li>
+	      <li class="fragment">
+		This highlights how difficult &ldquo;simple&rdquo;
+		transport properties can be to measure accurately.
 	      </li>
 	      <li class="fragment">
 		Neglecting the outliers, most results for water-based
 		nanofluids agreed within 5%.
 	      </li>
 	      <li class="fragment">
-		Are these consensus results anomalous though? What
+		Some very large enhancements still remained but are
+		these consensus results &ldquo;anomalous&rdquo;? What
 		simple limits can we generate?
 	      </li>
 	    </ul>
@@ -283,10 +318,10 @@
 	      <div style="flex: 1 1 calc(100% * 0.7);">
 		<ul>
 		  <li>
-		    The upper/lower limits possible in continuum
-		    models are series and parallel resistance, and
-		    most data (including from the benchmark study)
-		    fits between these limits<sup>1</sup>.
+		    The upper/lower limits of continuum models are
+		    series and parallel resistance, and most data
+		    (including from the benchmark study) fits between
+		    these limits<sup>1</sup>.
 		  </li>
 		  <li class="fragment" data-fragment-index="1">
 		    Maxwell also developed in 1873 (post-Aberdeen) an
@@ -306,10 +341,10 @@
 		    There are still results which are outside these
 		    so-called &ldquo;classical&rdquo;
 		    bounds<sup>2</sup>; however, the results do have
-		    large scatter, or are for ill-defined systems
+		    large scatter, or are for poorly-defined systems
 		    (olive oil/water?). More conclusive proof is
 		    needed that these truly anomalous results are even
-		    possible.
+		    real.
 		  </li>
 		</ul>
 	      </div>
@@ -324,18 +359,21 @@
 	      (2010)
 	    </div>	     
 	    <div class="footnote fragment" data-fragment-index="3">
-	      2: L. Wang and J. Fan, "Toward nanofluids of ultra-high
-	      thermal conductivity", <i>Nano. Research
+	      2: L. Wang and J. Fan, &ldquo;Toward nanofluids of ultra-high
+	      thermal conductivity&rdquo;, <i>Nano. Research
 		Lett.</i>, <b>6</b>, 153 (2011)
 	    </div>
 	  </section>
 	  <section>
 	    <img src="img/anomylous.svg" style="width:60%">
 	    <div class="footnote">
-	      The remaining "anomalous" results, some of which are truly anomalous.
-	      Taken from L. Wang and J. Fan, "Toward nanofluids of ultra-high
-	      thermal conductivity", <i>Nano. Research
-		Lett.</i>, <b>6</b>, 153 (2011)
+	      The remaining &ldquo;anomalous&rdquo; results (outside the Maxwell
+	      bounds given as lines), some of which are truly
+	      anomalous (outside classical limits, e.g. olive
+	      oil-water).  Taken from L. Wang and J. Fan, &ldquo;Toward
+	      nanofluids of ultra-high thermal
+	      conductivity&rdquo;, <i>Nano. Research Lett.</i>, <b>6</b>,
+	      153 (2011)
 	    </div>
 	  </section>
 	  <section>
@@ -349,8 +387,9 @@
 		most are within Maxwell's limits (not even anomalous).
 	      </li>
 	      <li class="fragment">
-		Only molecular (non-continuum) models can demonstrate
-		truly anomalous results.
+		If results can exist beyond classical/continuum
+		limits, they can only be explored and explained by
+		molecular (non-continuum) models.
 	      </li>
 	    </ul>
 	    <p class="fragment">
@@ -359,8 +398,8 @@
 	    <ul>
 	      <li class="fragment">
 		Are anomalous effects possible? If so, why haven't we
-		seen it more conclusively? Is it difficult to measure
-		anomalous thermal conductivity? 
+		seen it more conclusively? Why is it so difficult to
+		measure anomalous thermal conductivity?
 	      </li>
 	      <li class="fragment">
 		Is the scatter in the current anomalous results due to
@@ -374,22 +413,19 @@
 	  <section>
 	    <h3>The Binary Hard Sphere Model</h3>
 	    <div style="display:flex;align-items:center;">
-	      <div style="flex: 1 1 calc(100% * 0.5);">
+	      <div style="flex: 1 1 calc(100% * 0.5);margin-right:5%;">
 		<ul>
 		  <li>
-		    There are many
-		    Brownian/interfacial models,
-		    which have inconsistencies,
-		    here we start from the ground
-		    up.</li>
+		    There are many pseudo-molecular models in the
+		    literature which have serious inconsistencies.
+		    Here we start from the ground up.</li>
 		  <li class="fragment">Simplest possible binary molecular model, hard spheres
 		    at near-ideal densities/pressures.
 		    <img src="img/hard_sphere_diagram.svg" style="width:100%">
 		  </li>
 		  <li class="fragment">
-		    Non-equilibrium molecular
-		    dynamics, with predictions from
-		    Enskog theory (3rd Sonine).
+		    We will directly simulate conduction
+		    using Non-Equilibrium Molecular Dynamics (NEMD).
 		  </li>
 		  <li class="fragment">
 		    For $\sigma_1/\sigma_2=10$ and
@@ -404,7 +440,7 @@
 		</ul>
 	      </div>
 	      <div style="flex: 1 1 calc(100% * 0.5);">
-		<video autoplay width="100%" loop controls class="stretch">
+		<video autoplay width="100%" loop controls muted class="stretch">
 		  <source data-src="videos/bounded_nequil.mp4" type="video/mp4" />
 		</video>
 	      </div>
@@ -412,131 +448,196 @@
 	</section>
 	<section id="Definition">
 	  <section>
-	    <h3>Issue: The definition of thermal conductivity</h3>
-	    <p>
-	      An observational definition of thermal conductivity is
-	      as follows:
-	      
-	      \begin{align*} \vec{q} = - k\, \nabla T \end{align*}
-	      
-	      Simple experiments (parallel plates) and NEMD use this directly,
-	      others, such as THWT use transient results built from this model
-	      (which appears dangerous given the presence of transient
-	      thermodiffusion).</p>
-	    <p class="fragment">
-	      For mixtures, thermal diffusion also plays a role:
+	    <h3>Challenge: The definition of thermal conductivity</h3>
+	    <ul>
+	      <li>
+		The standard experimental definition of thermal
+		conductivity is as follows: \begin{align*} \vec{Q} = -
+		\frac{A\,k}{L} \Delta T \end{align*}
+	      </li>
+	      <li class="fragment">
+		Simple experiments (parallel plates) and Non-Equilibrium
+		Molecular Dynamics can use this directly.
+	      </li>
+	      <li class="fragment">
+		Other experiments, such as Transient Heated Wire Tests
+		use transient results built from this model, which now
+		appears dangerous given the presence of transient
+		thermodiffusion, perhaps explaining the scatter in the literature?
+	      </li>
+	      <li class="fragment">
+		To better understand the effect of thermodiffusion we need hydrodynamics, but multi-component hydrodynamics actually
+		has many definitions of the heat flux, $\vec{q}$:
 
-	      \begin{align*} \vec{q} &= L_{uu}\,\vec{X}_u + \sum_a
-	      L_{ua}\,\vec{X}_a \end{align*}
-
-	      where $L_{uu}$ is also a thermal conductivity,
-	      $\vec{X}_u$ is the heat "force" which has a relatively
-	      constant definition,
-	      
-	      \begin{align*} \vec{X}_u=-T^{-1}\nabla\,T \end{align*}
-
-	      Depending on how the diffusion force $\vec{X}_a$ is
-	      defined changes the definition of $L_{uu}$ and
-	      $\vec{L}_{ua}$, which is the thermal diffusivity.
-	    </p>
-	    <p class="fragment">
-	      There are multiple definitions of thermal
-	      conductivity, but regardless of which is
-	      chosen $L_{uu}\,T^{-1}\neq k$.</p>
+		\begin{align*}
+		\vec{q} &= - L_{qq}\,T^{-1}\nabla\,T - \sum_a L_{qa}\, T \nabla\,\frac{\mu_a}{T} & \text{(Mainstream)}\\
+		&= - L_{qq}'\,T^{-1}\nabla\,T - \sum_a L_{qa}'\, \nabla\,\mu_a & \text{(Prime)}\\
+		&= - L_{qq}''\,T^{-1}\nabla\,T - \sum_a L_{qa}''\, \left(\nabla\,\mu_a + s_a\,\nabla\,T\right)& \text{(Double prime)}\\
+		&=\ldots
+		\end{align*}
+		
+		where $L_{qq}$ is the thermal conductivity, $L_{qa}$
+		is the thermal diffusivity, $\mu_a$ is the chemical
+		potential of species $a$, and the primes denote
+		alternative definitions.
+	      </li>
+	      <li class="fragment">
+		Temperature terms can be arbitrarily moved in and out
+		of the definitions of $L_{qa}$ and $L_{qq}$, so there
+		is no uniquely defined hydrodynamic thermal
+		conductivity! Which is closest to the experimental
+		value, $k$?
+	      </li>
+	    </ul>
 	  </section>
 	  <section>
-	    <p>
-	      Consider the expression for the mass flux:
-	      
-	      \begin{align*}
-	      \vec{J}_a &= L_{ua}\,\vec{X}_u + \sum_b
-	      L_{ab}\,\vec{X}_b
-	      \end{align*}
-	      
-	      where $L_{ab}$ is a mutual diffusion coefficient.
-	    </p>
-	    <p class="fragment">
-	      Solving for a "steady state" where $\vec{J}_a = 0$,
-	      and using this to eliminate $\vec{X}_a$ in the heat
-	      flux yields the following expression:
-
-	      \begin{align*}
-	      \vec{q} &= T^{-1}\left(L_{uu} -
-	      \frac{L_{au}^2}{L_{aa}}\right) \nabla\,T\\
-	      &=-\lambda\,\nabla\,T
-	      \end{align*}
-	      where the &ldquo;steady-state&rdquo; thermal conductivity $\lambda$ has been implicitly defined.
-	    </p>
-	    <p class="fragment">
-	      $\lambda$ is independent of the definition of
-	      $\vec{X}_a$, but may depend on temperature and
-	      concentration, both of which vary across a conducting
-	      system.
-	    </p>
+	    <ul>
+	      <li>
+		Considering &ldquo;steady state&rdquo; where the mass
+		fluxes in the system are zero, all definitions of the
+		heat flux can be collapsed into to one expression:
+		
+		\begin{align*}
+		\vec{q} &= T^{-1}\left(L_{uu} - 
+		\frac{L_{au}^2}{L_{aa}}\right) \nabla\,T \\
+		&=-\lambda\,\nabla\,T
+		\end{align*}
+		
+		where the &ldquo;steady-state&rdquo; thermal conductivity $\lambda$ has been implicitly defined.
+	      </li>
+	      <li class="fragment">
+		Even though $\lambda$ is unique, it still may depend
+		on temperature and concentration, both of which vary
+		across a conducting system.
+	      </li>
+	      <li class="fragment">
+		Our first challenge is to use large NEMD simulations
+		to prove $\lambda$ is close to $k$.
+	      </li>
+	    </ul>
 	  </section>
 	</section>
 	<section>
-	  <figure>
-	    <img src="img/NEMDAspectRatioPlot_vf_0.2.svg" style="width:50%">
+	  <figure style="width:45%; float:right;">
+	    <img src="img/NEMDAspectRatioPlot_vf_0.2.svg" style="width:100%;">
 	    <figcaption>
-	      NEMD results for the observed thermal
-	      conductivity for a binary mixture of
-	      $N\approx10^5$, $\sigma_1/\sigma_2=0.4$,
-	      $m_1/m_2=20$ at a number density of
-	      $\sigma_1^3\,N/V=0.01$ and $x_1=0.2$, for
-	      a range of system sizes and aspect ratios,
-	      subject to a fixed $\pm5\%$ temperature
-	      gradient. Each point is 10 simulations,
-	      each compressed from a low density
-	      starting configuration and equilibrated
-	      for $10^3$ events per particle before
-	      being run for $10^4$ events per particle.
-	      $\lambda$ appears to correspond to the
-	      observed thermal conductivity $k$.</figcaption>
-	  </figure>
-	</section>
-	<section>
-	  <figure>
-	    <img src="img/comparisonPlot.svg" style="width:50%">
-	    <figcaption>
-	      Various thermal conductivities for the
-	      system described in the previous graph as
-	      a function of volume fraction. NEMD
-	      results are extrapolated to the infinite
-	      system size limit. Both $L_{uu}$ and
-	      $\lambda$ are well outside the classical
-	      limits (dashed lines) but in opposite
-	      directions for this fluid.</figcaption>
-	  </figure>
-	</section>
-	<section>
-	  <figure>
-	    <img src="img/contourPlotDistanceLambda.svg" style="width:62%">
-	    <figcaption>
-	      Fluids geometries which exhibit truly
-	      anomalous thermal conductivity below
-	      (dashed) and above (solid) the classical
-	      limits, as predicted by enskog
-	      theory. Contours indicate the ratio of the
-	      max/min thermal conductivity compared to
-	      the parallel/series limit for all
-	      concentrations.  The hashed area
-	      corresponds to frozen larger particles,
-	      thus Enskog theory is unreliable there and
-	      data is discarded.</figcaption>
-	  </figure>
-	</section>
-	<section>
-	  <figure>
-	    <img src="img/contourPlotDistanceLuu.svg" style="width:62%">
-	    <figcaption>
-	      Fluids geometries which exhibit truly
-	      anomalous values of $L_{uu}$ above the
-	      classical limits, as predicted by enskog
-	      theory. Although dramatic, it remains to
-	      be seen whether this effect has any meaning.
+	      NEMD results for the observed thermal conductivity
+	      for a binary mixture of $N\approx10^5$,
+	      $\sigma_1/\sigma_2=0.4$, $m_1/m_2=20$ at a number
+	      density of $\sigma_1^3\,N/V=0.01$ and $x_1=0.2$, for
+	      a range of system sizes and aspect ratios, subject
+	      to a fixed $\pm5\%$ temperature gradient. Each point
+	      is 10 simulations, equilibrated for $10^3$ events
+	      per particle before being run for $10^4$ events per
+	      particle.
 	    </figcaption>
 	  </figure>
+	  <ul style="float:left; width:45%;margin-top:15%">
+	    <li>
+	      Once system size effects are scaled out, it appears that
+	      the steady state<sup style="font-size:75%;">1</sup> thermal conductivity, $\lambda$,
+	      corresponds to the observed thermal conductivity, $k$.
+	    </li>
+	    <li class="fragment">
+	      This is suprising, as it says that strong
+	      inhomogeneities in the concentration, temperature, and
+	      density all &ldquo;average&rdquo; out!
+	    </li>
+	    <li class="fragment">
+	      We can now use kinetic theory to explore the full
+	      parameter space looking for truly anomalous results.
+	    </li>
+	    <div class="footnote" style="clear:both;">
+	      <sup style="font-size:75%;">1</sup>As predicted using Revised Enskog Theory
+	      in the third sonine approximation, and verified using
+	      equilibrium molecular dynamics simulations.
+	    </div>
+	  </ul>
+	</section>
+	<section>
+	  <ul style="float:left; width:45%;">
+	    <li>
+	      We find that certain mixtures exhibit thermal
+	      conductivities not only below the series bound but even
+	      below the pure components(!).
+	    </li>
+	    <li class="fragment">
+	      This implies that a mixture can be more insulating than
+	      its components.
+	    </li>
+	    <li class="fragment">
+	      Even our simple/fundamental fluid can depart from
+	      classical behaviour.
+	    </li>
+	    <li class="fragment">
+	      In fact, the mainstream thermal conductivity $L_{qq}$
+	      also exceeds the parallel bounds (and the components
+	      themselves!).
+	    </li>
+	    <li class="fragment">
+	      This could hint that a fluid can switch from anomalously
+	      high to anomalously low thermal conductivity over short
+	      timescales, but this needs very careful exploration.
+	    </li>
+	  </ul>
+	  <figure style="width:45%; float:right;">
+	    <img src="img/comparisonPlot.svg" style="width:100%">
+	    <figcaption>
+	      Thermal conductivities for the same system as a function
+	      of volume fraction. Both $L_{uu}$ and $\lambda$ are well
+	      outside the classical limits (dashed lines) but in
+	      opposite directions for this fluid.</figcaption>
+	  </figure>	  
+	</section>
+	<section>
+	  <ul style="float:left; width:45%;margin-top:10%;">
+	    <li>
+	      We predict using kinetic theory that certain real gas
+	      mixtures will exhibit truly &ldquo;anomalous&rdquo;
+	      thermal conductivity, below the two components used to
+	      make the mixture.
+	    </li>
+	    <li>
+	      Helium-Hydrogen appears to be one of the strongest
+	      predicted effects, and data is available in the
+	      literature.
+	    </li>
+	  </ul>
+	  <figure style="width:45%; float:right;">
+	    <img src="img/contour.svg" style="width:100%">
+	    <figcaption>
+	      Simple binary molecular mixtures and their kinetic mass
+	      and size ratios. The white region is the anomalously low
+	      thermal conductivity. Contours indicate the ratio of the
+	      max/min thermal conductivity compared to the
+	      parallel/series limit for all concentrations as
+	      predicted by Enskog theory.</figcaption>
+	  </figure>
+	</section>
+	<section>
+	  <ul style="float:left; width:45%;margin-top:10%;">
+	    <li>
+	      Interestingly, the Helium-Hydrogen literature in the 70s
+	      also had some controversy over &ldquo;anomalous&rdquo;
+	      heat transfer with extremely low thermal conductivities,
+	      which were later found to be unrepeatable!.
+	      <span class="footnote">
+		A. G. Shashkov, F.P. Jamchatov, and T. N. Abramenko,
+		&ldquo;Thermal conductivity of the hydrogen-helium
+		mixture&rdquo;, <i>J. Eng. Phys.</i>, <b>24</b>, 461-464
+		(1973)
+	      </span>
+	    </li>
+	    <li class="fragment">
+	      <i>&ldquo;Those who do not learn history are doomed to repeat it.&rdquo;</i><br/>
+	      George Santayana
+	    </li>
+	    <li class="fragment">	      
+	    </li>
+	  </ul>
+	  <figure style="width:35%; float:right;">
+	    <img src="img/HeH2.png" style="width:100%">
+	  </figure>	  
 	</section>
 	<section>
 	  <h2>Conclusions</h2>
@@ -558,17 +659,16 @@
 		relevant for this type of enhancement.</b>
 	    </li>
 	    <li class="fragment">
-	      Most of the &ldquo;interesting&rdquo;
-	      behavior is for light, but large,
-	      nanoparticles (bubbly fluids?). But
-	      anomalous dehancements are close to
-	      realistic geometries.</li>
+	      Helium-Hydrogen systems confirm that anomalous drops in
+	      thermal conductivity are possible, but anomalous
+	      enhancements have yet to be proven (although they are
+	      predicted by Enskog theory).</li>
 	  </ul>
 	</section>
 	<section>
 	  <section>
 	    <h2>Ongoing work</h2>
-	    <ul>
+	    <ul style="float:left; width:65%; margin-top:5%;">
 	      <li>
 		Can we correlate real nanofluids using
 		Enskog theory? The unphyscial heat
@@ -579,14 +679,24 @@
 		for $L_{uu}$ or is it just a red
 		herring: is there a transient super
 		enhancement?</li>
+	      <li  class="fragment">
+		We are constructing a fast Transient Heated Wire cell
+		(right) to measure transient effects in the thermal
+		conductivity of gases to experimentally test this.
+	      </li>
 	      <li class="fragment">
-		This can be tested using coupled
-		kinetic theory/hydrodynamic
-		simulations with oscillating
-		temperature gradients, initial results
-		are being collected.
+		This can also be tested using coupled kinetic
+		theory/hydrodynamic simulations with oscillating
+		temperature gradients, initial results are being
+		collected.
+	      </li>
+	      <li class="fragment">
+		Thank you for your attention!
 	      </li>
 	    </ul>
+	  <figure style="width:30%; float:right;">
+	    <img src="img/THW.jpg" style="width:100%">
+	  </figure>	  
 	  </section>
 	  <section>
 	    <video autoplay width="100%" loop controls class="stretch">

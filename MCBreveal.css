@@ -1,7 +1,11 @@
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
-.reveal h2 {
+body {
+    background: #f3f1e6;
+}
+
+ .reveal h2 {
     font-size: 2em;
 }
 
@@ -83,10 +87,6 @@ body.print-pdf .chalkboard-button {
 }
 
 .reveal .backbox {
-    background: rgba(250, 247, 234, 0.9);
-    border-radius: 10px;
-    padding:5px;
-    margin:5px 0;
 }
 
 .reveal .footnote {

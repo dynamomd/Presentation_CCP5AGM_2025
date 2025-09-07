@@ -49,14 +49,14 @@
 				<section>
 					<img src="img/dynamo.svg" style="width:70%">
 					<p class="backbox">
-						<a href="https://DynamOMD.com">https://DynamOMD.com</a> is an event-driven particle simulation
-						package, popular for exploring hard-sphere and square-well models, but the method is in-fact
-						much more general.
+						<a href="https://DynamOMD.com">https://DynamOMD.com</a> is an open-source general Event-Driven
+						Particle Dynamics (EDPD)
+						package. How general can EDPD be?
 					</p>
 				</section>
 				<section>
 					<p>
-						Hard spheres have many direct applications, </br>
+						Hard-spheres are the most well-known EDPD potential and have many direct applications, </br>
 						E.g. Granular-damper systems in microgravity with a <b>spring</b> forcing the box.<br />
 						<span style="text-align:center; font-size: 75%;">
 							<a href="http://dx.doi.org/10.1103/PHYSREVE.84.011301">M. N. Bannerman, J. E. Kollmer, A.
@@ -80,12 +80,29 @@
 					</div>
 				</section>
 				<section>
-					<h1>Beyond hard of the hard-sphere -> Stepped potentials</h1>
+					<h3>Beyond hardness</h3>
+					<ul>
+					<li> Stepped potentials can be used to approximate continuous potentials in EDPD. </li>
+					<li class="fragment">Here, time-steps, $\Delta t$, have been swapped for potential energy steps, $\Delta U$.</li>
+					<li class="fragment">Only faster than traditional methods for low/gas densities (unless accelerated via FPGAs).</li>
+					</ul>
+					<video autoplay width="45%" loop controls>
+						<source data-src="videos/stepped_LJ.mp4" type="video/mp4" />
+					</video>
+					<img src="img/steppedLJphasediag.png" width="696px" height="392px"
+						style="width:45%;height:auto;"></img>
+					<p class="footnote" style="font-size:75%">
+						<a href="http://dx.doi.org/10.1063/1.4861669">Thomson, C.,
+							Lue, L. & Bannerman, MN. . 'Mapping continuous potentials
+							to discrete forms'. <i>J. Chem. Phys</i>, <b>140</b>,
+							034105 (2014)</a>
+					</p>
 				</section>
 				<section style="height:100%" data-background-video="videos/Parallel%20Hard%20Cubes.mp4"
 					data-background-video-loop="true" data-background-size="contain">
-					<h1>Beyond spheres</h1>
-					<p class="backbox">Parallel hard-cubes are a toy system that have a visible but
+					<div class="backbox">
+					<h3>Beyond spheres</h3>
+					<p>Parallel hard-cubes are a toy system that have a visible but
 						continuous "freezing" transition which remains diffusive.<br />
 						<span class="footnote">
 							1:<a href="http://dx.doi.org/10.1007/s10955-009-9795-0">
@@ -96,12 +113,14 @@
 							</a>
 						</span>
 					</p>
+					</div>
 				</section>
 				<section style="height:100%"
 					data-background-video="videos/System%20of%20infinitely-thin%20hard%20rods.mp4"
 					data-background-video-loop="true" data-background-size="contain">
-					<h1>Beyond spheres</h1>
-					<p class="backbox">
+					<div class="backbox">
+					<h3>Beyond spheres</h3>
+					<p>
 						The thin hard rod model has no excluded volume (ideal
 						gas) yet it has complex transport
 						coefficients<sup>1</sup>. Cannot be simulated without EDMD.
@@ -115,16 +134,21 @@
 							</a>
 						</span>
 					</p>
+					</div>
+				</section>
+				<section style="height:100%" data-background-video="videos/snowmen.mp4"
+					data-background-video-loop="true" data-background-size="contain">
+					<div class="backbox">
+					<h3>Beyond monomers</h3>
+					<p>
+						We can solve rigid-body assemblies of spheres, like these snowmen molecules.
+					</p>
 				</section>
 				<section style="height:100%" data-background-video="videos/Two%20HP%20Polymers%20Binding%20Together.mp4"
 					data-background-video-loop="true" data-background-size="contain">
 					<p class="backbox">
-						Square-well homo/hetero-polymer systems are investigated with replica-exchange and
-						multi-canonical methods.
+						Or flexible bonding polymers with replica-exchange, PMF calculations, and multi-canonical sampling methods too.
 					</p>
-				</section>
-				<section>
-					<h1>Snowmen/Rigid body dynamics</h1>
 				</section>
 				<section>
 					<h1>Compression/Shearing dynamics</h1>
@@ -791,7 +815,7 @@
 					</ul>
 				</section>
 			</section>
-			<section id="binaryhardsphere">
+			<section id="modelling">
 				<section>
 					<h3>The Binary Hard Sphere Model</h3>
 					<div style="display:flex;align-items:center;">
@@ -830,8 +854,6 @@
 
 					</ul>
 				</section>
-			</section>
-			<section id="Definition">
 				<section>
 					<h3>Challenge: The definition of thermal conductivity</h3>
 					<ul>
@@ -900,196 +922,200 @@
 					</ul>
 				</section>
 			</section>
-			<section id="NEMD">
-				<figure style="width:45%; float:right;">
-					<img src="img/NEMDAspectRatioPlot_vf_0.2.svg" style="width:80%;">
-					<figcaption>
-						NEMD results for the observed thermal conductivity
-						for a binary mixture of $N\approx10^5$,
-						$\sigma_1/\sigma_2=0.4$, $m_1/m_2=20$ at a number
-						density of $\sigma_1^3\,N/V=0.01$ and $x_1=0.2$, for
-						a range of system sizes and aspect ratios, subject
-						to a fixed $\pm5\%$ temperature gradient. Each point
-						is 10 simulations, equilibrated for $10^3$ events
-						per particle before being run for $10^4$ events per
-						particle.
-					</figcaption>
-				</figure>
-				<ul style="float:left; width:45%;margin-top:15%">
-					<li>
-						Once system size effects are scaled out, it appears that
-						the steady state<sup style="font-size:75%;">1</sup> thermal conductivity, $\lambda$,
-						corresponds to the observed thermal conductivity, $k$.
-						<br />
-						<span class="footnote" style="clear:both;">
-							<sup style="font-size:75%;">1</sup>As predicted using Revised Enskog Theory
-							in the third sonine approximation, and verified using
-							equilibrium molecular dynamics simulations.
-						</span>
-
-					</li>
-					<li class="fragment">
-						This is suprising, as it says that strong
-						inhomogeneities in the concentration, temperature, and
-						density all &ldquo;average&rdquo; out!
-					</li>
-					<li class="fragment">
-						We can now use kinetic theory to explore the full
-						parameter space looking for truly anomalous results.
-					</li>
-				</ul>
-			</section>
-			<section>
-				<ul style="float:left; width:45%;">
-					<li>
-						We find that certain mixtures exhibit thermal
-						conductivities not only below the series bound but even
-						below the pure components(!).
-					</li>
-					<li class="fragment">
-						This implies that a mixture can be more insulating than
-						its components.
-					</li>
-					<li class="fragment">
-						Even our simple/fundamental fluid can depart from
-						classical behaviour.
-					</li>
-					<li class="fragment">
-						In fact, the mainstream thermal conductivity $L_{qq}$
-						also exceeds the parallel bounds (and the components
-						themselves!).
-					</li>
-					<li class="fragment">
-						This could hint that a fluid can switch from anomalously
-						high to anomalously low thermal conductivity over short
-						timescales, but this needs very careful exploration.
-					</li>
-				</ul>
-				<figure style="width:45%; float:right;">
-					<img src="img/comparisonPlot.svg" style="width:100%">
-					<figcaption>
-						Thermal conductivities for the same system as a function
-						of volume fraction. Both $L_{uu}$ and $\lambda$ are well
-						outside the classical limits (dashed lines) but in
-						opposite directions for this fluid.</figcaption>
-				</figure>
-			</section>
-			<section>
-				<ul style="float:left; width:45%;margin-top:10%;">
-					<li>
-						We predict using kinetic theory that certain real gas
-						mixtures will exhibit truly &ldquo;anomalous&rdquo;
-						thermal conductivity, below the two components used to
-						make the mixture.
-					</li>
-					<li>
-						Helium-Hydrogen appears to be one of the strongest
-						predicted effects, and data is available in the
-						literature.
-					</li>
-				</ul>
-				<figure style="width:42%; float:right;">
-					<img src="img/contour.svg" style="width:100%">
-					<figcaption>
-						Simple binary molecular mixtures and their kinetic mass
-						and size ratios. The white region is the anomalously low
-						thermal conductivity. Contours indicate the ratio of the
-						max/min thermal conductivity compared to the
-						parallel/series limit for all concentrations as
-						predicted by Enskog theory.</figcaption>
-				</figure>
-			</section>
-			<section>
-				<ul style="float:left; width:45%;margin-top:10%;">
-					<li>
-						Interestingly, the Helium-Hydrogen literature in the 70s
-						also had some controversy over &ldquo;anomalous&rdquo;
-						heat transfer with extremely low thermal conductivities,
-						which were later found to be unrepeatable! <br />
-						<span class="footnote">
-							A. G. Shashkov, F.P. Jamchatov, and T. N. Abramenko,
-							&ldquo;Thermal conductivity of the hydrogen-helium
-							mixture&rdquo;, <i>J. Eng. Phys.</i>, <b>24</b>, 461-464
-							(1973)
-						</span>
-					</li>
-					<li class="fragment">
-						<i>&ldquo;Those who do not learn history are doomed to repeat it.&rdquo;</i><br />
-						George Santayana
-					</li>
-				</ul>
-				<figure style="width:35%; float:right;">
-					<img src="img/HeH2.png" style="width:100%">
-				</figure>
-			</section>
-			<section>
-				<h2>Conclusions</h2>
-				<ul>
-					<li>
-						The steady-state thermal conductivity
-						$\lambda$ is a close approximation of the
-						observed thermal conductivity $k$.</li>
-					<li class="fragment">
-						Binary mixtures of hard-spheres display
-						anomalous thermal conductivities outside
-						classical theory:<br />
-						<b>Classical limits can be broken.</b>
-					</li>
-					<li class="fragment">
-						This is possible even in the ideal gas limit:<br />
-						<b>Structural arguments (interfacial
-							resistance/layering models) are not
-							relevant for this type of enhancement.</b>
-					</li>
-					<li class="fragment">
-						Helium-Hydrogen systems confirm that anomalous drops in
-						thermal conductivity are possible, but anomalous
-						enhancements have yet to be proven (although they are
-						predicted by Enskog theory).</li>
-				</ul>
-			</section>
-			<section id="OngoingWork">
-				<section>
-					<h2>Ongoing work</h2>
-					<ul style="float:left; width:65%; margin-top:5%;">
+			<section id="results">
+				<section id="NEMD">
+					<figure style="width:45%; float:right;">
+						<img src="img/NEMDAspectRatioPlot_vf_0.2.svg" style="width:80%;">
+						<figcaption>
+							NEMD results for the observed thermal conductivity
+							for a binary mixture of $N\approx10^5$,
+							$\sigma_1/\sigma_2=0.4$, $m_1/m_2=20$ at a number
+							density of $\sigma_1^3\,N/V=0.01$ and $x_1=0.2$, for
+							a range of system sizes and aspect ratios, subject
+							to a fixed $\pm5\%$ temperature gradient. Each point
+							is 10 simulations, equilibrated for $10^3$ events
+							per particle before being run for $10^4$ events per
+							particle.
+						</figcaption>
+					</figure>
+					<ul style="float:left; width:45%;margin-top:15%">
 						<li>
-							Is there something to the large peak
-							for $L_{qq}$ or is it just a red
-							herring: is there a transient super
-							enhancement?</li>
-						<li class="fragment">
-							We are constructing a fast Transient Heated Wire cell
-							(right) to measure transient effects in the thermal
-							conductivity of gases to experimentally test this.
+							Once system size effects are scaled out, it appears that
+							the steady state<sup style="font-size:75%;">1</sup> thermal conductivity, $\lambda$,
+							corresponds to the observed thermal conductivity, $k$.
+							<br />
+							<span class="footnote" style="clear:both;">
+								<sup style="font-size:75%;">1</sup>As predicted using Revised Enskog Theory
+								in the third sonine approximation, and verified using
+								equilibrium molecular dynamics simulations.
+							</span>
+
 						</li>
 						<li class="fragment">
-							This can also be tested using coupled kinetic
-							theory/hydrodynamic simulations with oscillating
-							temperature gradients, initial results are being
-							collected.
+							This is suprising, as it says that strong
+							inhomogeneities in the concentration, temperature, and
+							density all &ldquo;average&rdquo; out!
 						</li>
 						<li class="fragment">
-							If its there, this could revolutionise heat transfer
-							using nanodevices.
+							We can now use kinetic theory to explore the full
+							parameter space looking for truly anomalous results.
 						</li>
 					</ul>
-					<figure style="width:30%; float:right;">
-						<img src="img/THW.jpg" style="width:100%">
+				</section>
+				<section>
+					<ul style="float:left; width:45%;">
+						<li>
+							We find that certain mixtures exhibit thermal
+							conductivities not only below the series bound but even
+							below the pure components(!).
+						</li>
+						<li class="fragment">
+							This implies that a mixture can be more insulating than
+							its components.
+						</li>
+						<li class="fragment">
+							Even our simple/fundamental fluid can depart from
+							classical behaviour.
+						</li>
+						<li class="fragment">
+							In fact, the mainstream thermal conductivity $L_{qq}$
+							also exceeds the parallel bounds (and the components
+							themselves!).
+						</li>
+						<li class="fragment">
+							This could hint that a fluid can switch from anomalously
+							high to anomalously low thermal conductivity over short
+							timescales, but this needs very careful exploration.
+						</li>
+					</ul>
+					<figure style="width:45%; float:right;">
+						<img src="img/comparisonPlot.svg" style="width:100%">
+						<figcaption>
+							Thermal conductivities for the same system as a function
+							of volume fraction. Both $L_{uu}$ and $\lambda$ are well
+							outside the classical limits (dashed lines) but in
+							opposite directions for this fluid.</figcaption>
+					</figure>
+				</section>
+				<section>
+					<ul style="float:left; width:45%;margin-top:10%;">
+						<li>
+							We predict using kinetic theory that certain real gas
+							mixtures will exhibit truly &ldquo;anomalous&rdquo;
+							thermal conductivity, below the two components used to
+							make the mixture.
+						</li>
+						<li>
+							Helium-Hydrogen appears to be one of the strongest
+							predicted effects, and data is available in the
+							literature.
+						</li>
+					</ul>
+					<figure style="width:42%; float:right;">
+						<img src="img/contour.svg" style="width:100%">
+						<figcaption>
+							Simple binary molecular mixtures and their kinetic mass
+							and size ratios. The white region is the anomalously low
+							thermal conductivity. Contours indicate the ratio of the
+							max/min thermal conductivity compared to the
+							parallel/series limit for all concentrations as
+							predicted by Enskog theory.</figcaption>
+					</figure>
+				</section>
+				<section>
+					<ul style="float:left; width:45%;margin-top:10%;">
+						<li>
+							Interestingly, the Helium-Hydrogen literature in the 70s
+							also had some controversy over &ldquo;anomalous&rdquo;
+							heat transfer with extremely low thermal conductivities,
+							which were later found to be unrepeatable! <br />
+							<span class="footnote">
+								A. G. Shashkov, F.P. Jamchatov, and T. N. Abramenko,
+								&ldquo;Thermal conductivity of the hydrogen-helium
+								mixture&rdquo;, <i>J. Eng. Phys.</i>, <b>24</b>, 461-464
+								(1973)
+							</span>
+						</li>
+						<li class="fragment">
+							<i>&ldquo;Those who do not learn history are doomed to repeat it.&rdquo;</i><br />
+							George Santayana
+						</li>
+					</ul>
+					<figure style="width:35%; float:right;">
+						<img src="img/HeH2.png" style="width:100%">
 					</figure>
 				</section>
 			</section>
-			<section id="acknowledgements">
+			<section id="Conclusions">
 				<section>
-					<h3>Thanks</h3>
+					<h2>Conclusions</h2>
 					<ul>
-						<li>Thank you to:
-							<ul>
-								<li>Craig Moir (Aberdeen/Curtin) PhD student.</li>
-								<li>Leo Lue (Strathclyde).</li>
-								<li>You for your attention.</li>
-							</ul>
+						<li>
+							The steady-state thermal conductivity
+							$\lambda$ is a close approximation of the
+							observed thermal conductivity $k$.</li>
+						<li class="fragment">
+							Binary mixtures of hard-spheres display
+							anomalous thermal conductivities outside
+							classical theory:<br />
+							<b>Classical limits can be broken.</b>
 						</li>
+						<li class="fragment">
+							This is possible even in the ideal gas limit:<br />
+							<b>Structural arguments (interfacial
+								resistance/layering models) are not
+								relevant for this type of enhancement.</b>
+						</li>
+						<li class="fragment">
+							Helium-Hydrogen systems confirm that anomalous drops in
+							thermal conductivity are possible, but anomalous
+							enhancements have yet to be proven (although they are
+							predicted by Enskog theory).</li>
 					</ul>
+				</section>
+				<section id="OngoingWork">
+					<section>
+						<h2>Ongoing work</h2>
+						<ul style="float:left; width:65%; margin-top:5%;">
+							<li>
+								Is there something to the large peak
+								for $L_{qq}$ or is it just a red
+								herring: is there a transient super
+								enhancement?</li>
+							<li class="fragment">
+								We are constructing a fast Transient Heated Wire cell
+								(right) to measure transient effects in the thermal
+								conductivity of gases to experimentally test this.
+							</li>
+							<li class="fragment">
+								This can also be tested using coupled kinetic
+								theory/hydrodynamic simulations with oscillating
+								temperature gradients, initial results are being
+								collected.
+							</li>
+							<li class="fragment">
+								If its there, this could revolutionise heat transfer
+								using nanodevices.
+							</li>
+						</ul>
+						<figure style="width:30%; float:right;">
+							<img src="img/THW.jpg" style="width:100%">
+						</figure>
+					</section>
+				</section>
+				<section id="acknowledgements">
+					<section>
+						<h3>Thanks</h3>
+						<ul>
+							<li>Thank you to:
+								<ul>
+									<li>Craig Moir (Aberdeen/Curtin) PhD student.</li>
+									<li>Leo Lue (Strathclyde).</li>
+									<li>You for your attention.</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
 				</section>
 			</section>
 			<section id="appendix">

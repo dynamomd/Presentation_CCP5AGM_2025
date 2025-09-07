@@ -123,10 +123,10 @@
 					<p>
 						The thin hard rod model has no excluded volume (ideal
 						gas) yet it has complex transport
-						coefficients<sup>1</sup>. Cannot be simulated without EDMD.
+						coefficients. Cannot be simulated without EDMD.
 						<br />
 						<span class="footnote">
-							1:<a href="http://dx.doi.org/10.1103/PhysRevLett.47.1025">
+							<a href="http://dx.doi.org/10.1103/PhysRevLett.47.1025">
 								Frenkel, D., 'Molecular Dynamics Study of Infinitely
 								Thin Hard Rods: Scaling Behavior of Transport
 								Properties'. <i> Phys. Rev. Lett.</i> <b>47</b>,
@@ -136,82 +136,58 @@
 					</p>
 					</div>
 				</section>
-				<section style="height:100%" data-background-video="videos/snowmen.mp4"
-					data-background-video-loop="true" data-background-size="contain">
-					<div class="backbox">
-					<h3>Beyond monomers</h3>
-					<p>
-						We can solve rigid-body assemblies of spheres, like these snowmen molecules.
-					</p>
-				</section>
 				<section style="height:100%" data-background-video="videos/Two%20HP%20Polymers%20Binding%20Together.mp4"
 					data-background-video-loop="true" data-background-size="contain">
-					<p class="backbox">
-						Or flexible bonding polymers with replica-exchange, PMF calculations, and multi-canonical sampling methods too.
-					</p>
+					<div class="backbox">
+						<h3>Beyond monomers</h3>
+						<p>
+						Flexibly bonded polymers with replica-exchange, PMF calculations, and multi-canonical sampling methods is available.
+						<span class="footnote">
+							<a href="http://dx.doi.org/10.1103/PhysRevE.80.021801">M. N. Bannerman, J.E. Magee, and L. Lue, “Structure and stability of helices in square-well homopolymers,” Phys. Rev. E, 80, 021801 (2009)</a>
+						</span>
+						</p>
+					</div>
 				</section>
-				<section>
-					<h1>Compression/Shearing dynamics</h1>
+				<section style="height:100%" data-background-video="videos/dumbell_compression.mp4"
+					data-background-video-loop="true" data-background-size="contain">
+					<div class="backbox">
+					<h3>Beyond NVE and symmetric potentials</h3>
+					<p>
+						We can solve rigid-body assemblies of spheres, assymmetric stepped potentials, and have compression/shear dynamics.
+					</p>
 				</section>
 			</section>
 			<section id="EDalgorithm">
 				<section>
 					<ul>
 						<li>
-							Both ED and TD particle dynamics simulations solve
-							Newton's equation of motion:
-							<script type="math/tex; mode=display">
-                  \begin{align*}
-	          \vec{v}_i(t+\Delta t) - \vec{v}_i(t) &=  \int_t^{t+\Delta t} \vec{a}_i(t)\,{\rm d}t
-                  \\
-	          \vec{r}_i(t+\Delta t) - \vec{r}_i(t) &=  \int_t^{t+\Delta t} \vec{v}_i(t)\,{\rm d}t
-	          \end{align*}
-                </script>
+							What makes DynamO unique is its generality...<br/> 
+							...but why is that so hard to achieve? Why don't we have barostats, or long-range forces?
 						</li>
 						<li class="fragment">
-							Definitive definition:<b><u>ED simulations only use
+							While both ED and TD particle dynamics simulations solve
+							Newton's equation of motion, <b><u>ED simulations only use
 									models where the integral is piecewise
 									analytic.</u></b>
 						</li>
 						<li class="fragment">
-							$\Delta t$ is the time a particular analytical
-							solution is valid, and "events" are the transitions
-							between the analytical solutions.
+							Events are transitions between analytical solutions of the system's motion.
 						</li>
 					</ul>
 				</section>
 				<section>
-					<h3>Event-driven algorithm</h3>
-					<div style="width:100%;">
-						<div class="fragment">
-							<p>
-								Rather than step through time, we calculate the time
-								of "events" exactly (using an approximate model).
-							</p>
-						</div>
-						<object type="image/svg+xml" data="img/eventdriven.svg" width="100%" height="100%"
-							class="fragment" style="margin-top:1em;">
-							Your browser does not support SVG
-						</object>
-						<p class="fragment">
-							This is the automatic adaptive stepping of ED. It
-							jumps to times where significant force/impulse is
-							exchanged.
-						</p>
-					</div>
-				</section>
-			</section>
-			<section id="EDPDalgorithm">
-				<section>
-					<h3>How are event times calculated?</h3>
+					<h3>How does EDPD work?</h3>
 					<object type="image/svg+xml" data="img/catapult.svg" width="100%" style="margin-top:1em;"></object>
 					<div style="display:none;">
 						\definecolor{teal}{RGB}{128,255,128}
 						\definecolor{aqua}{RGB}{128,255,64}
 						\definecolor{lime}{RGB}{0,255,0}
 					</div>
+					<p>
+						Say we're simulating bouncing hard spheres from a catapult in a gravitational field.
+					</p>
 					<p class="fragment">
-						Assuming no drag (our approximate model), the
+						Assuming no aerodynamic drag, the
 						<u>exact</u> solution to the projectile motion is a
 						parabola:
 						<script type="math/tex; mode=display">\begin{align*}
@@ -246,6 +222,9 @@
 					<p class="fragment">
 						<u>Event-detection is driven by root finding.</u>
 					</p>
+					<p class="fragment">
+						DynamO has root finding algorithms for arbitrary order polynomials, and transcendental functions with bounding functions, but they must be fast AND not miss any roots! This is hard.
+					</p>
 				</section>
 				<section>
 					<h3>Generalising for multiple particles</h3>
@@ -264,6 +243,9 @@
 					</p>
 					<p class="fragment">
 						<u>Event processing is driven by sorting</u>.
+					</p>
+					<p class="fragment">
+						When we update this list, we want events to only update a few particles, to stay fast! This is restrictive (no barostats), and sorting the event list is done in $\mathcal{O}(1)$ time!
 					</p>
 				</section>
 				<section>
@@ -296,6 +278,9 @@
 					</p>
 					<p class="fragment">
 						<u>Event execution is driven by root finding for an impulse.</u>
+					</p>
+					<p class="fragment">
+						Actually this bit is trivial even for rotating bodies.
 					</p>
 				</section>
 				<section>

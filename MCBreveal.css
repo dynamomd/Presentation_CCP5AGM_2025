@@ -87,8 +87,15 @@ body.print-pdf .chalkboard-button {
 }
 
 .reveal .backbox {
+    background-color: rgba(243,241,230,0.8);
+    border-radius: 5px;
 }
 
 .reveal .footnote {
     font-size:80%;
+}
+
+.reveal .phantom {
+    opacity:0;
+    visibility:hidden;
 }

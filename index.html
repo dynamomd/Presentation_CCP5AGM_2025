@@ -27,7 +27,7 @@
 <body>
 	<div class="reveal">
 		<div class="slides" style="border: 1px solid red">
-			<section style="height:100%;width:100%;">
+			<section style="height:100%;width:100%;" id="Title">
 				<section style="height:100%;width:100%;">
 					<div class="backbox">
 						<h1>Event-driven MD and anomalous thermal conductivity</h1>
@@ -45,27 +45,26 @@
 					</div>
 				</section>
 			</section>
-			<section>
+			<section style="height:100%;width:100%;" id="EDMDintro">
 				<section>
 					<img src="img/dynamo.svg" style="width:70%">
-					<p>
+					<p class="backbox">
 						<a href="https://DynamOMD.com">https://DynamOMD.com</a> is an event-driven particle simulation
-						package,
-						popular for exploring hard-sphere and square-well models, with many applications in
-						colloids/glasses.
+						package, popular for exploring hard-sphere and square-well models, but the method is in-fact
+						much more general.
 					</p>
 				</section>
 				<section>
 					<p>
-						Hard spheres may appear abstract, but there are many direct applications. </br>
-						E.g. <b>granular-damper systems</b> in microgravity.<br />
+						Hard spheres have many direct applications, </br>
+						E.g. Granular-damper systems in microgravity with a <b>spring</b> forcing the box.<br />
 						<span style="text-align:center; font-size: 75%;">
 							<a href="http://dx.doi.org/10.1103/PHYSREVE.84.011301">M. N. Bannerman, J. E. Kollmer, A.
 								Sack, M. Heckel, P. Mueller, and T. Poeschel, “Movers and shakers: Granular damping in
 								microgravity,” <i>Phys. Rev. E</i>, <b>84</b>, 011301 (2011)</a>
 						</span>
 					</p>
-					<div style="display:flex;align-items:center;width:75%; margin-left:auto; margin-right:auto;">
+					<div style="display:flex;align-items:center;width:80%; margin-left:auto; margin-right:auto;">
 						<div style="flex: 1 1 calc(100% * 0.3);margin-right:5px;">
 							<video autoplay width="100%" loop controls muted
 								style="display:inline-block; vertical-align: middle;">
@@ -79,123 +78,59 @@
 							</video>
 						</div>
 					</div>
-					<p> This simulation also has a spring force on the box, EDMD can have soft forces in it!</p>
 				</section>
-			</section>
-			<section>
 				<section>
-					<p>ED is not just for spheres either, parallel hard-cubes are a toy system that have a visible but continuous
-						"freezing" transition which remains diffusive<sup>1</sup>.</p>
-					<div>
-						<video autoplay width="60%" loop controls>
-							<source data-src="videos/Parallel%20Hard%20Cubes.mp4" type="video/mp4" />
-						</video>
-						<div class="footnote">
+					<h1>Beyond hard of the hard-sphere -> Stepped potentials</h1>
+				</section>
+				<section style="height:100%" data-background-video="videos/Parallel%20Hard%20Cubes.mp4"
+					data-background-video-loop="true" data-background-size="contain">
+					<h1>Beyond spheres</h1>
+					<p class="backbox">Parallel hard-cubes are a toy system that have a visible but
+						continuous "freezing" transition which remains diffusive.<br />
+						<span class="footnote">
 							1:<a href="http://dx.doi.org/10.1007/s10955-009-9795-0">
 								Hoover, W. G., Hoover, C. G., Bannerman, M. N.
 								'Single-Speed Molecular Dynamics of Hard Parallel
 								Squares and Cubes'. <i>J. Stat. Phys.</i> <b>136</b>
 								(4), 715-732 (2009)
 							</a>
-						</div>
-					</div>
+						</span>
+					</p>
 				</section>
-				<section>
-					<div style="opacity:0; visibility:hidden;">
-						<p><b>E</b>vent-Driven (<b>ED</b>) <i>versus</i> <b>T</b>ime-<b>D</b>riven (<b>TD</b>) dynamics
-						</p>
-					</div>
-					<p>
+				<section style="height:100%"
+					data-background-video="videos/System%20of%20infinitely-thin%20hard%20rods.mp4"
+					data-background-video-loop="true" data-background-size="contain">
+					<h1>Beyond spheres</h1>
+					<p class="backbox">
 						The thin hard rod model has no excluded volume (ideal
 						gas) yet it has complex transport
-						coefficients<sup>1</sup>.
-					</p>
-					<video autoplay width="60%" loop controls>
-						<source data-src="videos/System%20of%20infinitely-thin%20hard%20rods.mp4" type="video/mp4" />
-					</video>
-					<div class="footnote">
-						1:<a href="http://dx.doi.org/10.1103/PhysRevLett.47.1025">
-							Frenkel, D., 'Molecular Dynamics Study of Infinitely
-							Thin Hard Rods: Scaling Behavior of Transport
-							Properties'. <i> Phys. Rev. Lett.</i> <b>47</b>,
-							1025 (1981)
-						</a>
-					</div>
-				</section>
-				<section>
-					<div style="opacity:0; visibility:hidden;">
-						<p><b>E</b>vent-Driven (<b>ED</b>) <i>versus</i> <b>T</b>ime-<b>S</b>tepping (<b>TS</b>)
-							dynamics</p>
-					</div>
-					<div>
-						<p>
-							ED is not just for repulsive/instantaneous-contact
-							forces.
-						</p>
-						<div>
-							<video autoplay width="50%" loop controls>
-								<source data-src="videos/Two%20HP%20Polymers%20Binding%20Together.mp4"
-									type="video/mp4" />
-							</video>
-							<p>
-								(Square-well homopolymers are attractive, have
-								multibody contacts, and are used in fundamental
-								bio-polymer models.)
-							</p>
-						</div>
-				</section>
-				<section>
-					<div style="opacity:0; visibility:hidden;">
-						<p><b>E</b>vent-Driven (<b>ED</b>) <i>versus</i> <b>T</b>ime-<b>S</b>tepping (<b>TS</b>)
-							dynamics</p>
-					</div>
-					<div>
-						<p>
-							ED is not just for impulsive forces.
-						</p>
-						<video autoplay width="50%" loop controls>
-							<source data-src="videos/Granular Damper Simulation and Experiment.mp4" type="video/mp4" />
-						</video>
-						<p>
-							The granular damper container itself has a finite mass
-							and is forced by a spring.
-						</p>
-						<div class="footnote">
-							1:<a href="http://dx.doi.org/10.1103/PhysRevE.84.011301">
-								Bannerman, M. N., Kollmer, J. E., Sack, A., Heckel,
-								M., Mueller, P. Poschel, T., 'Movers and shakers:
-								Granular damping in microgravity'. <i>
-									Phys. Rev. E.</i> <b>84</b>, 011301 (2011)
+						coefficients<sup>1</sup>. Cannot be simulated without EDMD.
+						<br />
+						<span class="footnote">
+							1:<a href="http://dx.doi.org/10.1103/PhysRevLett.47.1025">
+								Frenkel, D., 'Molecular Dynamics Study of Infinitely
+								Thin Hard Rods: Scaling Behavior of Transport
+								Properties'. <i> Phys. Rev. Lett.</i> <b>47</b>,
+								1025 (1981)
 							</a>
-						</div>
+						</span>
+					</p>
+				</section>
+				<section style="height:100%" data-background-video="videos/Two%20HP%20Polymers%20Binding%20Together.mp4"
+					data-background-video-loop="true" data-background-size="contain">
+					<p class="backbox">
+						Square-well homo/hetero-polymer systems are investigated with replica-exchange and
+						multi-canonical methods.
+					</p>
+				</section>
+				<section>
+					<h1>Snowmen/Rigid body dynamics</h1>
+				</section>
+				<section>
+					<h1>Compression/Shearing dynamics</h1>
 				</section>
 			</section>
 			<section id="EDalgorithm">
-				<!--<section>
-	    <ul>
-	      <li>
-                Discrete Element Method $\approx$ Granular Dynamics (GD) $\approx$ Molecular Dynamics (MD) $\approx$ <b>Particle Dynamics (PD)</b>
-              </li>
-              <li class="fragment">
-                <b>PD</b> solves for the motion of a collection of
-                discrete masses or "particles".
-              </li>
-	      <li class="fragment">
-		Consider a
-		particle, <script type="math/tex">i</script>, with
-		mass, <script type="math/tex">m_i</script>, we want to
-		solve for:
-		<div class="container-fluid"  style="text-align:center;">
-                  <div class="col-md-6" >Position: <script type="math/tex">\vec{r}_i(t)</script></div> <div class="col-md-6">Velocity: <script type="math/tex">\vec{v}_i(t)</script></div>
-		</div>
-	      </li>
-              <li class="fragment">
-                (Velocity is chosen over momentum as it is
-                indeterminate for infinite mass particles, which may
-                be used for boundaries).
-              </li>
-            </ul>
-          </section> !-->
 				<section>
 					<ul>
 						<li>
@@ -222,38 +157,6 @@
 					</ul>
 				</section>
 				<section>
-					<ul>
-						<li>
-							<b>For completeness, <u>Time-Driven approaches use a
-									regular value of $\Delta t$ and numerical
-									quadrature.</u></b>
-
-						</li>
-						<li class="fragment">
-							For example, forward Euler integration:
-							<script type="math/tex; mode=display">
-                    \begin{align*}
-	            \vec{v}_i(t+\Delta t) - \vec{v}_i(t) &= \int_t^{t+\Delta t} \vec{a}_i(t)\,{\rm d}t \approx a(t)\Delta t
-                    \\
-	            \vec{r}_i(t+\Delta t) - \vec{r}_i(t) &=\int_t^{t+\Delta t} \vec{v}_i(t)\,{\rm d}t \approx  v(t)\Delta t
-	            \end{align*}
-                  </script>
-						</li>
-						<li class="fragment">
-							But, this looks suprisingly like a ED simulation with
-							a linear trajectory between time steps and update the
-							velocity with an impulse at the end. This asks the
-							question: when are they equivalent? (more later)
-						</li>
-						<li class="fragment">
-							<u>In EDPD, the approximation is explicit in the
-								model</u>, no approximate integration is required.
-						</li>
-					</ul>
-				</section>
-			</section>
-			<section>
-				<section>
 					<h3>Event-driven algorithm</h3>
 					<div style="width:100%;">
 						<div class="fragment">
@@ -274,7 +177,7 @@
 					</div>
 				</section>
 			</section>
-			<section>
+			<section id="EDPDalgorithm">
 				<section>
 					<h3>How are event times calculated?</h3>
 					<object type="image/svg+xml" data="img/catapult.svg" width="100%" style="margin-top:1em;"></object>
@@ -371,8 +274,6 @@
 						<u>Event execution is driven by root finding for an impulse.</u>
 					</p>
 				</section>
-			</section>
-			<section>
 				<section>
 					<h3>The EDPD algorithm</h3>
 					<p>
@@ -405,19 +306,26 @@
 					<p>
 						Modern EDPD algorithms are quite complex.
 					<ul>
-						<li class="fragment" data-fragment-index="1">
+						<li class="fragment">
 							Originally, events were sorted using heaps giving
 							<script type="math/tex">\mathcal{O}(\log_2(N))</script>
 							scaling for updates.
 						</li>
-						<li class="fragment" data-fragment-index="2">
+						<li class="fragment">
 							Modern implementations use bounded-calendar priority
 							queues<sup>1</sup> for sorting, leading
 							to
 							<script type="math/tex">\mathcal{O}(1)</script>
-							costs for <u>updates</u>.
+							costs for <u>updates</u>.<br />
+							<div class="footnote">
+								1:<a href="http://dx.doi.org/10.1016/j.jcp.2006.06.042">
+									Paul, G., 'A Complexity ${O}(1)$ priority queue for
+									event driven molecular dynamics simulations'. <i>
+										J. Comput. Phys.</i> <b>221</b>, 615-625 (2007)
+								</a>
+							</div>
 						</li>
-						<li class="fragment" data-fragment-index="3">
+						<li class="fragment">
 							Lazy deletion is also used, where invalid events are
 							deleted only when they are "next".
 						</li>
@@ -428,16 +336,9 @@
 							(this time-warp algorithm requires a neighbour list).
 						</li>
 					</ul>
-					<div class="fragment footnote" data-fragment-index="2">
-						1:<a href="http://dx.doi.org/10.1016/j.jcp.2006.06.042">
-							Paul, G., 'A Complexity ${O}(1)$ priority queue for
-							event driven molecular dynamics simulations'. <i>
-								J. Comput. Phys.</i> <b>221</b>, 615-625 (2007)
-						</a>
-					</div>
 				</section>
 				<section>
-					<video autoplay width="100%" loop controls>
+					<video autoplay width="80%" loop controls>
 						<source data-src="videos/timewarp.mp4" type="video/mp4" />
 					</video>
 					<p>
@@ -505,7 +406,7 @@
 					</p>
 				</section>
 				<section>
-					<video autoplay width="100%" loop controls>
+					<video autoplay width="80%" loop controls>
 						<source data-src="videos/Failing HS.mp4" type="video/mp4" />
 					</video>
 					<p>
@@ -592,350 +493,26 @@
 					<p>
 						Applying this stable algorithm requires finding the
 						roots of the overlap function $f(t)$, and its time
-						derivative $\dot{f}(t)$
+						derivative $\dot{f}(t)$. These functions become increasingly complex. For
+						example,
 					</p>
-					<p class="fragment">
-						These functions become increasingly complex. For
-						example, consider spheres in gravity...
-					</p>
-				</section>
-				<section>
-					<video autoplay width="100%" loop controls>
-						<source data-src="videos/SleepingParticlesInDynamo.mp4" type="video/mp4" />
-					</video>
-					<p>In this system the overlap function is a quartic:
-						<script type="math/tex; mode=display">\begin{align*}
-		f(t+\Delta t) = \left(\vec{r}_{ij}(t)+\Delta t\,\vec{v}_{ij}(t) +\frac{\Delta t^2}{2}\,\vec{a}_{ij}(t)\right)^2 - \sigma_{ij}^2
-		\end{align*}</script>
-					</p>
-				</section>
-				<section>
-					<video autoplay width="100%" loop controls>
-						<source data-src="videos/Snowmen Moelcules.mp4" type="video/mp4" />
-					</video>
-					<p>
-						In rotating systems, the functions are transcendental,
-						and yet we must reliably determine all roots (to remain
-						stable).
-					</p>
-				</section>
-				<section>
-					<p>
-						DynamO has a compile-time Computer Algebra System (CAS)
-						library. It allows simple definitions of overlap
-						functions:
-					<pre><code class="cpp" data-trim>
-Variable<'t'> t;
-Vector<> rij, vij, aij;
-double diam2_ij;		      
-/*...*/
-delta_t = nextroot(pow<2>(rij+t*(vij+aij*t/2))-diam2_ij, t);
-	      </code></pre>
-					</p>
-					<p class="fragment">
-						The compiler will transform the overlap function to
-						create derivatives, and select different classes of root
-						finding.
-					</p>
-					<p class="fragment">
-						The library can find <em>all</em> roots
-						of
-						<script type="math/tex">N</script>-order polynomials
-						and certain classes of other functions in a stable way,
-						allowing a wide range of models/events to be detected.
-					</p>
-				</section>
-				<section>
-					<p>
-						For up to 3rd order polynomials, solution by radicals is
-						used. Solution by radicals is too numerically unstable
-						for 4th order and impossible for 5th order.
-					</p>
-					<p class="fragment" data-fragment-index="1"> For higher
-						order polynomials, roots are bounded using Local Max
-						Quadratic estimates<sup>1</sup>, then bisected using
-						Sturm's method to avoid repeated transformations of the
-						polynomial.
-					</p>
-					<p class="fragment" data-fragment-index="2">
-						For transcendental overlap functions, the roots are
-						bounded using a bounding object with a polynomial
-						overlap function. The bounds are then updated using a
-						"worst case" polynomial approximation constructed using
-						Taylor's theorem. This is accelerated using standard
-						numerical root finding techniques.
-					</p>
-					<div class="fragment footnote" data-fragment-index="1">
-						<sup>1:</sup><a href=""> Akritas, A. G.,
-							Strzebonski, A. W., Vigklas, P. S., 'Improving
-							the Performance of the Continued Fractions Method
-							Using New Bounds of Positive Roots'. <i>Nonlinear
-								Analysis: Modelling and Control</i>, <b>13</b>, 265-279
-							(2008)
-						</a>
-					</div>
-				</section>
-			</section>
-			<section id="SteppedPotentials">
-				<h3>General forces: Stepped potentials</h3>
-				<section>
-					<h3 class="phantom">Stepped Potentials</h3>
-					<p>
-						Can we simulate "real" contact forces using EDPD?
-					</p>
-					<p>
-						We recently demonstrated elastic forces can be
-						"stepped".
-					</p>
-					<video autoplay width="80%" loop controls class="fragment">
-						<source data-src="videos/stepped_LJ.mp4" type="video/mp4" />
-					</video>
-					<p class="footnote">
-						<a href="http://dx.doi.org/10.1063/1.4861669">Thomson, C.,
-							Lue, L. & Bannerman, MN. . 'Mapping continuous potentials
-							to discrete forms'. <i>J. Chem. Phys</i>, <b>140</b>,
-							034105 (2014)</a>
-					</p>
-				</section>
-				<section>
-					<h3 class="phantom">Stepped Potentials</h3>
-					<p>
-						Conversion of a potential first requires the steps to be
-						placed.
-					</p>
-					<object type="image/svg+xml" data="img/placement.svg" width="70%" style="background:#ffffff;">
-						Your browser does not support SVG
-					</object>
-					<p class="fragment">
-						Optimal placement was determined to be at fixed changes
-						in the potential energy, $\Delta U$ (analogue of timestep, $\Delta t$!).
-					</p>
-					<p class="footnote">
-						<a href="http://dx.doi.org/10.1063/1.4861669">Thomson, C.,
-							Lue, L. & Bannerman, MN. . 'Mapping continuous potentials
-							to discrete forms'. <i>J. Chem. Phys</i>, <b>140</b>,
-							034105 (2014)</a>
-					</p>
-				</section>
-				<section>
-					<h3 class="phantom">Stepped Potentials</h3>
-					<p>
-						<object type="image/svg+xml" data="img/energies.svg" width="60%" style="background:#ffffff;">
-							Your browser does not support SVG
-						</object>
-					</p>
-					<p>
-						Optimal energies are given by equating the second virial
-						contribution, which is a volumetric average at
-						$T\to\infty$:
-						<script type="math/tex; mode=display">\begin{align*}
-		\Phi_i^{Volume} &= \frac{3}{r_{i}^3-r_{i+1}^3}\int_{r_{i+1}}^{r_{i}}
-		\Phi \left(r\right) r^2\, {\rm d}r\nonumber
-		\end{align*}</script>
-					</p>
-					<p class="footnote">
-						<a href="http://dx.doi.org/10.1063/1.4861669">Thomson, C.,
-							Lue, L. & Bannerman, MN. . 'Mapping continuous potentials
-							to discrete forms'. <i>J. Chem. Phys</i>, <b>140</b>,
-							034105 (2014)</a>
-					</p>
-				</section>
-				<section>
-					<h3 class="phantom">Stepped Potentials</h3>
-					<p>
-						These stepped approximations can closely reproduce the
-						phase behaviour of the LJ system:
-					</p>
-					<img src="img/steppedLJphasediag.png" width="696px" height="392px"
-						style="width:90%;height:auto;"></img>
-					<p class="footnote">
-						<a href="http://dx.doi.org/10.1063/1.4861669">Thomson, C.,
-							Lue, L. & Bannerman, MN. . 'Mapping continuous potentials
-							to discrete forms'. <i>J. Chem. Phys</i>, <b>140</b>,
-							034105 (2014)</a>
-					</p>
-				</section>
-				<section>
-					<h3 class="phantom">Stepped Potentials</h3>
-					<p>
-						And the dynamics, for example, the shear viscosity:
-					</p>
-					<img src="img/steppedLJviscosity.png" width="699px" height="516px"></img>
-					<p class="footnote">
-						<a href="http://dx.doi.org/10.1063/1.4861669">Thomson, C.,
-							Lue, L. & Bannerman, MN. . 'Mapping continuous potentials
-							to discrete forms'. <i>J. Chem. Phys</i>, <b>140</b>,
-							034105 (2014)</a>
-					</p>
-				</section>
-				<section>
-					<h3 class="phantom">Stepped Potentials</h3>
-					<img src="img/steppedLJspeedup.png" width="701px" height="399px"></img>
-					<p>
-						Molecular forces are too soft and EDPD is inefficient at
-						high density: harder, granular potentials are more
-						efficient.
-					</p>
-					<p class="footnote">
-						<a href="http://dx.doi.org/10.1063/1.4861669">Thomson, C.,
-							Lue, L. & Bannerman, MN. . 'Mapping continuous potentials
-							to discrete forms'. <i>J. Chem. Phys</i>, <b>140</b>,
-							034105 (2014)</a>
-					</p>
-				</section>
-			</section>
-			<section id="event-driven-spring-dashpot">
-				<section>
-					<h3>Event-Driven Spring Dashpot</h3>
-					<p>
-						In the past few months, we have worked on a
-						spring-dashpot force as an example implementation of
-						viscous forces.
-					</p>
-					<p class="fragment" data-fragment-index="1">
-						Previous work<sup>1</sup> in this direction focussed on
-						single-event collision dynamics and required storing
-						"history". It also demonstrated the importance of
-						considering individual particle trajectories.
-					</p>
-					<p class="fragment" data-fragment-index="2">
-						A pair of colliding particles under with an elastic
-						spring is simulated to test the trajectory.
-					</p>
-					<p class="footnote fragment" data-fragment-index="1">
-						<sup>1:</sup><a href=""> M&uuml;ller, P., P&ouml;schel, T.
-							'Event-driven molecular dynamics of soft
-							particles'. <i>Phys. Rev. E</i>, <b>87</b>, 033301 (2013)
-						</a>
-					</p>
-				</section>
-				<section>
-					<img src="img/single_sim.png" width="80%" style="background:transparent; border: none;" />
-					<p>
-						For a single collision, the key parameter is where it
-						lands on the final step (inset). $\tau =
-						KE_{final}/(U_{final+1}-U_{final})$
-					</p>
-				</section>
-				<section>
-					<img src="img/spring_unfixed.png" width="80%" style="background:transparent; border: none;" />
-					<p>
-						There is an issue in the last step: for vanishing
-						remaining energy the particles become stuck! ("elastic collapse"?).
-					</p>
-				</section>
-				<section>
-					<p>
-						<img src="img/spring_fixed.png" width="80%"
-							style="background:transparent; border: none;" /><br /> By
-						enforcing a minimum kinetic energy (immediately bouncing
-						$\tau<\alpha$, where $\alpha=1/9$ in the last step), the average collision time is correct. </p>
-				</section>
-				<section>
-					<p>
-						Published dissipative forces in EDPD have so far been
-						limited to inelastic coefficients.
-					</p>
-					<p class="fragment">
-						To implement arbitrary dissipative forces cheaply, it
-						should be approximated using an impulse/energy loss at
-						each step:
-					</p>
-					<p class="fragment">
-						<script type="math/tex; mode=display">\begin{align*}
-		\Delta KE_{diss.} &= \int F_{diss.,ij}\,{\rm d}r_{ij}
-		\\
-		&\approx F_{diss.,ij}(r(t)) \Delta r
-		\end{align*}
-	      </script>
-						Where $\Delta r$ is the width of the step the particle
-						is leaving. No step-change = no energy loss
-						(quasi-static elastic limit/no inelastic collapse).
-					</p>
-				</section>
-				<section>
-					<p>
-						<img src="img/springdashpotSteps50e04traj.png" width="80%" style="background:transparent; border:
-		   none;" /><br />
-
-						Even for high inelasticiy ($\gamma$ set such that $e_{exact}=0.4$) this simple approach
-						is accurate with minor time scattering.
-					</p>
-				</section>
-				<section>
-					<p>
-						<img src="img/springdashpotSteps50e0.8tc.png" width="80%" style="background:transparent; border:
-		   none;" /><br />
-
-						Relatively small numbers of steps are acceptable, with
-						collision time showing the most scatter.
-					</p>
-				</section>
-				<section>
-					<p>
-						<img src="img/springdashpotSteps50e0.8rc.png" width="80%" style="background:transparent; border:
-		   none;" /><br />
-
-						Maximum distance is rigidly enforced.
-					</p>
-				</section>
-				<section>
-					<p>
-						<img src="img/springdashpotSteps50e0.8Cor.png" width="80%" style="background:transparent; border:
-		   none;" /><br />
-
-						And the model demonstrates the required constant
-						coefficient of restitution for spring-dashpot particles.
-					</p>
-				</section>
-			</section>
-			<section id="future">
-				<section>
-					<h3>Outlook of EDPD</h3>
 					<ul>
-						<li class="fragment">
-							Complex shapes, forces etc. are easy to implement
-							using the CAS library of DynamO.
+						<li class="fragment">Spheres in gravity require quartics to be solved.</li>
+						<li class="fragment">Hard lines and other rotating bodies require transcendental root finding.
 						</li>
-						<li class="fragment">
-							Viscous forces are now available in EDPD (48 years
-							late!).
-						</li>
-						<li class="fragment">
-							Friction forces (Coulomb's law, Cundall and Strack,
-							etc.) should come soon using these ideas.
-						</li>
-						<li class="fragment">
-							With the above improvements in place, new advanced
-							optimisation algorithms for DEM are possible and
-							should be investigated.
-						</li>
+						<li class="fragment">This all must be fast and robust! DynamO uses compile-time computer algebra
+							with homotopy methods to implement this at speed.</li>
 					</ul>
-				</section>
-				<section>
-					<video autoplay width="100%" loop controls>
-						<source data-src="videos/SleepingParticlesInDynamo.mp4" type="video/mp4" />
-					</video>
-					<p style="font-size:50%;">
-						"Sleeping particles" algorithm allows free simulation of
-						stationary particles. Possible massive speed-ups in
-						heaps, rolling drums, etc.
+					<p class="fragment">
+						We'll now look at an interesting application of DynamO which needs its speed.
 					</p>
-					<div class="footnote" data-fragment-index="1">
-						<sup>1:</sup><a href=""> Gonz&aacute;lez, S., Risso, D.,
-							Soto, R. 'Extended event driven molecular dynamics
-							for simulating dense granular
-							matter'. <i>Eur. Phys. J. Special
-								Topics</i>, <b>179</b>, 33-41 (2009)
-						</a>
-					</div>
 				</section>
 			</section>
-			<section>
+			<section id="nanofluid-motivation">
 				<section>
 					<h3>Motivation for nanofluids</h3>
 					<img src="img/heat_pipes.jpg" style="width:30%; float:right;">
-					<ul style="float:left; width:55%;margin-top:10%">
+					<ul style="float:left; width:65%;margin-top:10%">
 						<li><b>Heat transfer is the most important area for
 								research.</b>
 						</li>
@@ -1214,15 +791,17 @@ delta_t = nextroot(pow<2>(rij+t*(vij+aij*t/2))-diam2_ij, t);
 					</ul>
 				</section>
 			</section>
-			<section>
+			<section id="binaryhardsphere">
 				<section>
 					<h3>The Binary Hard Sphere Model</h3>
 					<div style="display:flex;align-items:center;">
 						<div style="flex: 1 1 calc(100% * 0.5);margin-right:5%;">
 							<ul>
 								<li>
-									Thanks to the efficiency of EDMD, we can access long time scales and large system sizes 
-									($N\approx10^5$) to explore slow processes such as diffusion and heat conduction in low concentration systems.
+									Thanks to the efficiency of EDMD, we can access long time scales and large system
+									sizes
+									($N\approx10^5$) to explore slow processes such as diffusion and heat conduction in
+									low concentration systems.
 									<img src="img/hard_sphere_diagram.svg" style="width:100%">
 								</li>
 								<li class="fragment">
@@ -1262,7 +841,8 @@ delta_t = nextroot(pow<2>(rij+t*(vij+aij*t/2))-diam2_ij, t);
 							\frac{A\,k}{L} \Delta T$
 						</li>
 						<li class="fragment">
-							Most experiments use this, does missing thermophoresis explain the scatter in the literature?
+							Most experiments use this, does missing thermophoresis explain the scatter in the
+							literature?
 						</li>
 						<li class="fragment">
 							To better understand the effect of thermodiffusion we need hydrodynamics, but
@@ -1320,7 +900,7 @@ delta_t = nextroot(pow<2>(rij+t*(vij+aij*t/2))-diam2_ij, t);
 					</ul>
 				</section>
 			</section>
-			<section>
+			<section id="NEMD">
 				<figure style="width:45%; float:right;">
 					<img src="img/NEMDAspectRatioPlot_vf_0.2.svg" style="width:80%;">
 					<figcaption>
@@ -1340,12 +920,12 @@ delta_t = nextroot(pow<2>(rij+t*(vij+aij*t/2))-diam2_ij, t);
 						Once system size effects are scaled out, it appears that
 						the steady state<sup style="font-size:75%;">1</sup> thermal conductivity, $\lambda$,
 						corresponds to the observed thermal conductivity, $k$.
-						<br/>
-					<span class="footnote" style="clear:both;">
-						<sup style="font-size:75%;">1</sup>As predicted using Revised Enskog Theory
-						in the third sonine approximation, and verified using
-						equilibrium molecular dynamics simulations.
-					</span>
+						<br />
+						<span class="footnote" style="clear:both;">
+							<sup style="font-size:75%;">1</sup>As predicted using Revised Enskog Theory
+							in the third sonine approximation, and verified using
+							equilibrium molecular dynamics simulations.
+						</span>
 
 					</li>
 					<li class="fragment">
@@ -1468,7 +1048,7 @@ delta_t = nextroot(pow<2>(rij+t*(vij+aij*t/2))-diam2_ij, t);
 						predicted by Enskog theory).</li>
 				</ul>
 			</section>
-			<section>
+			<section id="OngoingWork">
 				<section>
 					<h2>Ongoing work</h2>
 					<ul style="float:left; width:65%; margin-top:5%;">
@@ -1497,6 +1077,27 @@ delta_t = nextroot(pow<2>(rij+t*(vij+aij*t/2))-diam2_ij, t);
 						<img src="img/THW.jpg" style="width:100%">
 					</figure>
 				</section>
+			</section>
+			<section id="acknowledgements">
+				<section>
+					<h3>Thanks</h3>
+					<ul>
+						<li>Thank you to:
+							<ul>
+								<li>Craig Moir (Aberdeen/Curtin) PhD student.</li>
+								<li>Leo Lue (Strathclyde).</li>
+								<li>You for your attention.</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section id="appendix">
+				<section>
+					<h2>Appendix</h2>
+				</section>
+			</section>
+			<section id="CoupledKineticHydro">
 				<section>
 					<video autoplay width="100%" loop controls class="stretch">
 						<source data-src="videos/hydro.mp4" type="video/mp4" />
@@ -1511,23 +1112,6 @@ delta_t = nextroot(pow<2>(rij+t*(vij+aij*t/2))-diam2_ij, t);
 				</section>
 			</section>
 			<section>
-				<section>
-					<h3>Thanks</h3>
-					<ul>
-						<li>Thank you to:
-							<ul>
-								<li>Craig Moir (Aberdeen/Curtin) PhD student.</li>
-								<li>Leo Lue (Strathclyde).</li>
-								<li>You for your attention.</li>
-							</ul>
-						</li>
-					</ul>
-				</section>
-			</section>
-			<section>
-				<section>
-					<h2>Appendix</h2>
-				</section>
 				<section>
 					<div style="display:inline-block;width:60%;">
 						<object type="image/svg+xml" data="img/thermalcond.svg" width="100%" class="stretch">
@@ -1582,6 +1166,321 @@ delta_t = nextroot(pow<2>(rij+t*(vij+aij*t/2))-diam2_ij, t);
 							opposite fluxes of mass. If there is a heat capacity
 							imbalance, this results in a flux.
 						</p>
+					</div>
+				</section>
+			</section>
+			<section id="SteppedPotentials">
+				<h3>General forces: Stepped potentials</h3>
+				<section>
+					<h3 class="phantom">Stepped Potentials</h3>
+					<p>
+						Can we simulate "real" contact forces using EDPD?
+					</p>
+					<p>
+						We recently demonstrated elastic forces can be
+						"stepped".
+					</p>
+					<video autoplay width="70%" loop controls class="fragment">
+						<source data-src="videos/stepped_LJ.mp4" type="video/mp4" />
+					</video>
+					<p class="footnote">
+						<a href="http://dx.doi.org/10.1063/1.4861669">Thomson, C.,
+							Lue, L. & Bannerman, MN. . 'Mapping continuous potentials
+							to discrete forms'. <i>J. Chem. Phys</i>, <b>140</b>,
+							034105 (2014)</a>
+					</p>
+				</section>
+				<section>
+					<h3 class="phantom">Stepped Potentials</h3>
+					<p>
+						Conversion of a potential first requires the steps to be
+						placed.
+					</p>
+					<object type="image/svg+xml" data="img/placement.svg" width="60%" style="background:#ffffff;">
+						Your browser does not support SVG
+					</object>
+					<p class="fragment">
+						Optimal placement was determined to be at fixed changes
+						in the potential energy, $\Delta U$ (analogue of timestep, $\Delta t$!).
+					</p>
+					<p class="footnote">
+						<a href="http://dx.doi.org/10.1063/1.4861669">Thomson, C.,
+							Lue, L. & Bannerman, MN. . 'Mapping continuous potentials
+							to discrete forms'. <i>J. Chem. Phys</i>, <b>140</b>,
+							034105 (2014)</a>
+					</p>
+				</section>
+				<section>
+					<h3 class="phantom">Stepped Potentials</h3>
+					<p>
+						<object type="image/svg+xml" data="img/energies.svg" width="60%" style="background:#ffffff;">
+							Your browser does not support SVG
+						</object>
+					</p>
+					<p>
+						Optimal energies are given by equating the second virial
+						contribution, which is a volumetric average at
+						$T\to\infty$:
+						<script type="math/tex; mode=display">\begin{align*}
+		\Phi_i^{Volume} &= \frac{3}{r_{i}^3-r_{i+1}^3}\int_{r_{i+1}}^{r_{i}}
+		\Phi \left(r\right) r^2\, {\rm d}r\nonumber
+		\end{align*}</script>
+					</p>
+					<p class="footnote">
+						<a href="http://dx.doi.org/10.1063/1.4861669">Thomson, C.,
+							Lue, L. & Bannerman, MN. . 'Mapping continuous potentials
+							to discrete forms'. <i>J. Chem. Phys</i>, <b>140</b>,
+							034105 (2014)</a>
+					</p>
+				</section>
+				<section>
+					<h3 class="phantom">Stepped Potentials</h3>
+					<p>
+						These stepped approximations can closely reproduce the
+						phase behaviour of the LJ system:
+					</p>
+					<img src="img/steppedLJphasediag.png" width="696px" height="392px"
+						style="width:70%;height:auto;"></img>
+					<p class="footnote">
+						<a href="http://dx.doi.org/10.1063/1.4861669">Thomson, C.,
+							Lue, L. & Bannerman, MN. . 'Mapping continuous potentials
+							to discrete forms'. <i>J. Chem. Phys</i>, <b>140</b>,
+							034105 (2014)</a>
+					</p>
+				</section>
+				<section>
+					<h3 class="phantom">Stepped Potentials</h3>
+					<p>
+						And the dynamics, for example, the shear viscosity:
+					</p>
+					<img src="img/steppedLJviscosity.png" width="699px" height="516px"
+						style="width:50%;height:auto;"></img>
+					<p class="footnote">
+						<a href="http://dx.doi.org/10.1063/1.4861669">Thomson, C.,
+							Lue, L. & Bannerman, MN. . 'Mapping continuous potentials
+							to discrete forms'. <i>J. Chem. Phys</i>, <b>140</b>,
+							034105 (2014)</a>
+					</p>
+				</section>
+				<section>
+					<h3 class="phantom">Stepped Potentials</h3>
+					<img src="img/steppedLJspeedup.png" width="701px" height="399px"
+						style="width:65%;height:auto;"></img>
+					<p>
+						Molecular forces are too soft and EDPD is inefficient at
+						high density: harder, granular potentials are more
+						efficient.
+					</p>
+					<p class="footnote">
+						<a href="http://dx.doi.org/10.1063/1.4861669">Thomson, C.,
+							Lue, L. & Bannerman, MN. . 'Mapping continuous potentials
+							to discrete forms'. <i>J. Chem. Phys</i>, <b>140</b>,
+							034105 (2014)</a>
+					</p>
+				</section>
+			</section>
+			<section id="event-driven-spring-dashpot">
+				<section>
+					<h3>Event-Driven Spring Dashpot</h3>
+					<p>
+						We have worked on a
+						spring-dashpot force as an example implementation of
+						viscous forces.
+					</p>
+					<p class="fragment" data-fragment-index="1">
+						Previous work<sup>1</sup> in this direction focussed on
+						single-event collision dynamics and required storing
+						"history". It also demonstrated the importance of
+						considering individual particle trajectories.
+					</p>
+					<p class="fragment" data-fragment-index="2">
+						A pair of colliding particles under with an elastic
+						spring is simulated to test the trajectory.
+					</p>
+					<p class="footnote fragment" data-fragment-index="1">
+						<sup>1:</sup><a href=""> M&uuml;ller, P., P&ouml;schel, T.
+							'Event-driven molecular dynamics of soft
+							particles'. <i>Phys. Rev. E</i>, <b>87</b>, 033301 (2013)
+						</a>
+					</p>
+				</section>
+				<section>
+					<img src="img/single_sim.png" width="80%" style="background:transparent; border: none;" />
+					<p>
+						For a single collision, the key parameter is where it
+						lands on the final step (inset). $\tau =
+						KE_{final}/(U_{final+1}-U_{final})$
+					</p>
+				</section>
+				<section>
+					<img src="img/spring_unfixed.png" width="80%" style="background:transparent; border: none;" />
+					<p>
+						There is an issue in the last step: for vanishing
+						remaining energy the particles become stuck! ("elastic collapse"?).
+					</p>
+				</section>
+				<section>
+					<p>
+						<img src="img/spring_fixed.png" width="80%"
+							style="background:transparent; border: none;" /><br /> By
+						enforcing a minimum kinetic energy (immediately bouncing
+						$\tau<\alpha$, where $\alpha=1/9$ in the last step), the average collision time is correct. </p>
+				</section>
+				<section>
+					<p>
+						Published dissipative forces in EDPD have so far been
+						limited to inelastic coefficients.
+					</p>
+					<p class="fragment">
+						To implement arbitrary dissipative forces cheaply, it
+						should be approximated using an impulse/energy loss at
+						each step:
+					</p>
+					<p class="fragment">
+						<script type="math/tex; mode=display">\begin{align*}
+		\Delta KE_{diss.} &= \int F_{diss.,ij}\,{\rm d}r_{ij}
+		\\
+		&\approx F_{diss.,ij}(r(t)) \Delta r
+		\end{align*}
+	      </script>
+						Where $\Delta r$ is the width of the step the particle
+						is leaving. No step-change = no energy loss
+						(quasi-static elastic limit/no inelastic collapse).
+					</p>
+				</section>
+				<section>
+					<p>
+						<img src="img/springdashpotSteps50e04traj.png" width="80%" style="background:transparent; border:
+		   none;" /><br />
+
+						Even for high inelasticiy ($\gamma$ set such that $e_{exact}=0.4$) this simple approach
+						is accurate with minor time scattering.
+					</p>
+				</section>
+				<section>
+					<p>
+						<img src="img/springdashpotSteps50e0.8tc.png" width="80%" style="background:transparent; border:
+		   none;" /><br />
+
+						Relatively small numbers of steps are acceptable, with
+						collision time showing the most scatter.
+					</p>
+				</section>
+				<section>
+					<p>
+						<img src="img/springdashpotSteps50e0.8rc.png" width="80%" style="background:transparent; border:
+		   none;" /><br />
+
+						Maximum distance is rigidly enforced.
+					</p>
+				</section>
+				<section>
+					<p>
+						<img src="img/springdashpotSteps50e0.8Cor.png" width="80%" style="background:transparent; border:
+		   none;" /><br />
+
+						And the model demonstrates the required constant
+						coefficient of restitution for spring-dashpot particles.
+					</p>
+				</section>
+			</section>
+			<section id="CASsolver">
+				<section>
+					<p>
+						DynamO has a compile-time Computer Algebra System (CAS)
+						library. It allows simple definitions of overlap
+						functions:
+					<pre><code class="cpp" data-trim>
+Variable<'t'> t;
+Vector<> rij, vij, aij;
+double diam2_ij;		      
+/*...*/
+delta_t = nextroot(pow<2>(rij+t*(vij+aij*t/2))-diam2_ij, t);
+	      </code></pre>
+					</p>
+					<p class="fragment">
+						The compiler will transform the overlap function to
+						create derivatives, and select different classes of root
+						finding.
+					</p>
+					<p class="fragment">
+						The library can find <em>all</em> roots
+						of
+						<script type="math/tex">N</script>-order polynomials
+						and certain classes of other functions in a stable way,
+						allowing a wide range of models/events to be detected.
+					</p>
+				</section>
+				<section>
+					<p>
+						For up to 3rd order polynomials, solution by radicals is
+						used. Solution by radicals is too numerically unstable
+						for 4th order and impossible for 5th order.
+					</p>
+					<p class="fragment" data-fragment-index="1"> For higher
+						order polynomials, roots are bounded using Local Max
+						Quadratic estimates<sup>1</sup>, then bisected using
+						Sturm's method to avoid repeated transformations of the
+						polynomial.
+					</p>
+					<p class="fragment" data-fragment-index="2">
+						For transcendental overlap functions, the roots are
+						bounded using a bounding object with a polynomial
+						overlap function. The bounds are then updated using a
+						"worst case" polynomial approximation constructed using
+						Taylor's theorem. This is accelerated using standard
+						numerical root finding techniques.
+					</p>
+					<div class="fragment footnote" data-fragment-index="1">
+						<sup>1:</sup><a href=""> Akritas, A. G.,
+							Strzebonski, A. W., Vigklas, P. S., 'Improving
+							the Performance of the Continued Fractions Method
+							Using New Bounds of Positive Roots'. <i>Nonlinear
+								Analysis: Modelling and Control</i>, <b>13</b>, 265-279
+							(2008)
+						</a>
+					</div>
+				</section>
+			</section>
+			<section id="future">
+				<section>
+					<h3>Outlook of EDPD</h3>
+					<ul>
+						<li class="fragment">
+							Complex shapes, forces etc. are easy to implement
+							using the CAS library of DynamO.
+						</li>
+						<li class="fragment">
+							Viscous forces are now available in EDPD (48 years
+							late!).
+						</li>
+						<li class="fragment">
+							Friction forces (Coulomb's law, Cundall and Strack,
+							etc.) should come soon using these ideas.
+						</li>
+						<li class="fragment">
+							With the above improvements in place, new advanced
+							optimisation algorithms for DEM are possible and
+							should be investigated.
+						</li>
+					</ul>
+				</section>
+				<section>
+					<video autoplay width="80%" loop controls>
+						<source data-src="videos/SleepingParticlesInDynamo.mp4" type="video/mp4" />
+					</video>
+					<p style="font-size:50%;">
+						"Sleeping particles" algorithm allows free simulation of
+						stationary particles. Possible massive speed-ups in
+						heaps, rolling drums, etc.
+					</p>
+					<div class="footnote" data-fragment-index="1">
+						<sup>1:</sup><a href=""> Gonz&aacute;lez, S., Risso, D.,
+							Soto, R. 'Extended event driven molecular dynamics
+							for simulating dense granular
+							matter'. <i>Eur. Phys. J. Special
+								Topics</i>, <b>179</b>, 33-41 (2009)
+						</a>
 					</div>
 				</section>
 			</section>

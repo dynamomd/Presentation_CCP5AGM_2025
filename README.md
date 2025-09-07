@@ -1,2 +1,3 @@
+# Presentation on DynamO and its applications
 
-http://www.marcusbannerman.co.uk/Presentation_Anomalous_Thermal_Conductivity/
+[See slides hosted online here.](https://dynamomd.github.io/Presentation_CCP5AGM_2025/#/)

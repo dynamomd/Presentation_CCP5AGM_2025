@@ -51,7 +51,7 @@
 					<p class="backbox">
 						<a href="https://DynamOMD.com">https://DynamOMD.com</a> is an open-source general Event-Driven
 						Particle Dynamics (EDPD)
-						package. How general can EDPD be?
+						package.<br/> How general can EDPD be?
 					</p>
 				</section>
 				<section>
@@ -498,7 +498,7 @@
 					</div>
 				</section>
 				<section>
-					<h3>Generality</h3>
+					<h3>The challenge of generality</h3>
 					<p>
 						Applying this stable algorithm requires finding the
 						roots of the overlap function $f(t)$, and its time
@@ -509,8 +509,9 @@
 						<li class="fragment">Spheres in gravity require quartics to be solved.</li>
 						<li class="fragment">Hard lines and other rotating bodies require transcendental root finding.
 						</li>
+						<li class="fragment">Every variation (compression, shearing, gravity/external-force) has a different overlap function!</li>
 						<li class="fragment">This all must be fast and robust! DynamO uses compile-time computer algebra
-							with homotopy methods to implement this at speed.</li>
+							with homotopy methods to implement this at speed and in general.</li>
 					</ul>
 					<p class="fragment">
 						We'll now look at an interesting application of DynamO which needs its speed.

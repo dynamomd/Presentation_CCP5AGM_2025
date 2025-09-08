@@ -51,7 +51,7 @@
 					<p class="backbox">
 						<a href="https://DynamOMD.com">https://DynamOMD.com</a> is an open-source general Event-Driven
 						Particle Dynamics (EDPD)
-						package.<br/> How general can EDPD be?
+						package.<br /> How general can EDPD be?
 					</p>
 				</section>
 				<section>
@@ -82,9 +82,11 @@
 				<section>
 					<h3>Beyond hardness</h3>
 					<ul>
-					<li> Stepped potentials can be used to approximate continuous potentials in EDPD. </li>
-					<li class="fragment">Here, time-steps, $\Delta t$, have been swapped for potential energy steps, $\Delta U$.</li>
-					<li class="fragment">Only faster than traditional methods for low/gas densities (unless accelerated via FPGAs).</li>
+						<li> Stepped potentials can be used to approximate continuous potentials in EDPD. </li>
+						<li class="fragment">Here, time-steps, $\Delta t$, have been swapped for potential energy steps,
+							$\Delta U$.</li>
+						<li class="fragment">Only faster than traditional methods for low/gas densities (unless
+							accelerated via FPGAs).</li>
 					</ul>
 					<video autoplay width="45%" loop controls>
 						<source data-src="videos/stepped_LJ.mp4" type="video/mp4" />
@@ -101,39 +103,39 @@
 				<section style="height:100%" data-background-video="videos/Parallel%20Hard%20Cubes.mp4"
 					data-background-video-loop="true" data-background-size="contain">
 					<div class="backbox">
-					<h3>Beyond spheres</h3>
-					<p>Parallel hard-cubes are a toy system that have a visible but
-						continuous "freezing" transition which remains diffusive.<br />
-						<span class="footnote">
-							1:<a href="http://dx.doi.org/10.1007/s10955-009-9795-0">
-								Hoover, W. G., Hoover, C. G., Bannerman, M. N.
-								'Single-Speed Molecular Dynamics of Hard Parallel
-								Squares and Cubes'. <i>J. Stat. Phys.</i> <b>136</b>
-								(4), 715-732 (2009)
-							</a>
-						</span>
-					</p>
+						<h3>Beyond spheres</h3>
+						<p>Parallel hard-cubes are a toy system that have a visible but
+							continuous "freezing" transition which remains diffusive.<br />
+							<span class="footnote">
+								1:<a href="http://dx.doi.org/10.1007/s10955-009-9795-0">
+									Hoover, W. G., Hoover, C. G., Bannerman, M. N.
+									'Single-Speed Molecular Dynamics of Hard Parallel
+									Squares and Cubes'. <i>J. Stat. Phys.</i> <b>136</b>
+									(4), 715-732 (2009)
+								</a>
+							</span>
+						</p>
 					</div>
 				</section>
 				<section style="height:100%"
 					data-background-video="videos/System%20of%20infinitely-thin%20hard%20rods.mp4"
 					data-background-video-loop="true" data-background-size="contain">
 					<div class="backbox">
-					<h3>Beyond spheres</h3>
-					<p>
-						The thin hard rod model has no excluded volume (ideal
-						gas) yet it has complex transport
-						coefficients. Cannot be simulated without EDMD.
-						<br />
-						<span class="footnote">
-							<a href="http://dx.doi.org/10.1103/PhysRevLett.47.1025">
-								Frenkel, D., 'Molecular Dynamics Study of Infinitely
-								Thin Hard Rods: Scaling Behavior of Transport
-								Properties'. <i> Phys. Rev. Lett.</i> <b>47</b>,
-								1025 (1981)
-							</a>
-						</span>
-					</p>
+						<h3>Beyond spheres</h3>
+						<p>
+							The thin hard rod model has no excluded volume (ideal
+							gas) yet it has complex transport
+							coefficients. Cannot be simulated without EDMD.
+							<br />
+							<span class="footnote">
+								<a href="http://dx.doi.org/10.1103/PhysRevLett.47.1025">
+									Frenkel, D., 'Molecular Dynamics Study of Infinitely
+									Thin Hard Rods: Scaling Behavior of Transport
+									Properties'. <i> Phys. Rev. Lett.</i> <b>47</b>,
+									1025 (1981)
+								</a>
+							</span>
+						</p>
 					</div>
 				</section>
 				<section style="height:100%" data-background-video="videos/Two%20HP%20Polymers%20Binding%20Together.mp4"
@@ -141,27 +143,31 @@
 					<div class="backbox">
 						<h3>Beyond monomers</h3>
 						<p>
-						Flexibly bonded polymers with replica-exchange, PMF calculations, and multi-canonical sampling methods is available.
-						<span class="footnote">
-							<a href="http://dx.doi.org/10.1103/PhysRevE.80.021801">M. N. Bannerman, J.E. Magee, and L. Lue, “Structure and stability of helices in square-well homopolymers,” Phys. Rev. E, 80, 021801 (2009)</a>
-						</span>
+							Flexibly bonded polymers with replica-exchange, PMF calculations, and multi-canonical
+							sampling methods is available.
+							<span class="footnote">
+								<a href="http://dx.doi.org/10.1103/PhysRevE.80.021801">M. N. Bannerman, J.E. Magee, and
+									L. Lue, “Structure and stability of helices in square-well homopolymers,” Phys. Rev.
+									E, 80, 021801 (2009)</a>
+							</span>
 						</p>
 					</div>
 				</section>
 				<section style="height:100%" data-background-video="videos/dumbell_compression.mp4"
 					data-background-video-loop="true" data-background-size="contain">
 					<div class="backbox">
-					<h3>Beyond NVE and symmetric potentials</h3>
-					<p>
-						We can solve rigid-body assemblies of spheres, assymmetric stepped potentials, and have compression/shear dynamics.
-					</p>
+						<h3>Beyond NVE and symmetric potentials</h3>
+						<p>
+							We can solve rigid-body assemblies of spheres, assymmetric stepped potentials, and have
+							compression/shear dynamics.
+						</p>
 				</section>
 			</section>
 			<section id="EDalgorithm">
 				<section>
 					<ul>
 						<li>
-							What makes DynamO unique is its generality...<br/> 
+							What makes DynamO unique is its generality...<br />
 							...but why is that so hard to achieve? Why don't we have barostats, or long-range forces?
 						</li>
 						<li class="fragment">
@@ -223,7 +229,8 @@
 						<u>Event-detection is driven by root finding.</u>
 					</p>
 					<p class="fragment">
-						DynamO has root finding algorithms for arbitrary order polynomials, and transcendental functions with bounding functions, but they must be fast AND not miss any roots! This is hard.
+						DynamO has root finding algorithms for arbitrary order polynomials, and transcendental functions
+						with bounding functions, but they must be fast AND not miss any roots! This is hard.
 					</p>
 				</section>
 				<section>
@@ -245,7 +252,8 @@
 						<u>Event processing is driven by sorting</u>.
 					</p>
 					<p class="fragment">
-						When we update this list, we want events to only update a few particles, to stay fast! This is restrictive (no barostats), and sorting the event list is done in $\mathcal{O}(1)$ time!
+						When we update this list, we want events to only update a few particles, to stay fast! This is
+						restrictive (no barostats), and sorting the event list is done in $\mathcal{O}(1)$ time!
 					</p>
 				</section>
 				<section>
@@ -509,7 +517,8 @@
 						<li class="fragment">Spheres in gravity require quartics to be solved.</li>
 						<li class="fragment">Hard lines and other rotating bodies require transcendental root finding.
 						</li>
-						<li class="fragment">Every variation (compression, shearing, gravity/external-force) has a different overlap function!</li>
+						<li class="fragment">Every variation (compression, shearing, gravity/external-force) has a
+							different overlap function!</li>
 						<li class="fragment">This all must be fast and robust! DynamO uses compile-time computer algebra
 							with homotopy methods to implement this at speed and in general.</li>
 					</ul>
@@ -684,26 +693,39 @@
 					</ul>
 				</section>
 				<section>
-					<ul>
-						<li>
-							<b>Even the results for deionized water</b> had some outliers!
-							<img src="img/deionized_water.png"
-								style="width:80%;display:block;margin-left:auto; margin-right:auto;">
-						</li>
-						<li class="fragment">
-							This highlights how difficult &ldquo;simple&rdquo;
-							transport properties can be to measure accurately.
-						</li>
-						<li class="fragment">
-							Neglecting the outliers, most results for water-based
-							nanofluids agreed within 5%.
-						</li>
-						<li class="fragment">
-							Some very large enhancements still remained but are
-							these consensus results &ldquo;anomalous&rdquo;? What
-							simple limits can we generate?
-						</li>
-					</ul>
+					<div style="display:flex;align-items:center;">
+						<div style="flex: 1 1 calc(100% * 0.5);">
+							<ul>
+								<li>
+									<b>Even the results for deionized water</b> had some outliers!
+									<!-- <img src="img/deionized_water.png"
+								style="width:80%;display:block;margin-left:auto; margin-right:auto;"> -->
+								</li>
+								<li class="fragment">
+									This highlights how difficult &ldquo;simple&rdquo;
+									transport properties can be to measure accurately.
+								</li>
+								<li class="fragment">
+									Neglecting the outliers, most results for water-based
+									nanofluids agreed within 5%. 
+								</li>
+								<li class="fragment">
+									Some very large enhancements still remained but are
+									these consensus results &ldquo;anomalous&rdquo;? What
+									simple limits can we generate?
+								</li>
+							</ul>
+						</div>
+						<div style="flex: 1 1 calc(100% * 0.5);">
+							<figure>
+									<img src="img/nanofluid_benchmark.png"
+										style="width:100%">
+								<figcaption style="text-align:center;">
+									Benchmark results for deionized water (top) and 31% v/v 22nm silica water (bottom). Red and blue are transient heated wire experiments.
+								</figcaption>
+							</figure>
+						</div>
+					</div>
 				</section>
 				<section>
 					<div style="display:flex;align-items:center;">
@@ -741,7 +763,7 @@
 							</ul>
 						</div>
 						<div style="flex: 1 1 calc(100% * 0.5);">
-						<!--	<img src="img/Classical_limits.svg" style="width:100%" /> -->
+							<!--	<img src="img/Classical_limits.svg" style="width:100%" /> -->
 							<img src="img/classical_models.png" style="width:100%" />
 						</div>
 					</div>
@@ -934,8 +956,9 @@
 							<span class="footnote" style="clear:both;">
 								<sup style="font-size:75%;">1</sup>As predicted using Revised Enskog Theory
 								in the third sonine approximation, and verified using
-								equilibrium molecular dynamics simulations. 
-								See <a href="http://hdl.handle.net/20.500.11937/81765">PhD thesis, Craig Moir, “Thermal Transport in Mixtures,” School of Engineering, University of Aberdeen (2020)</a>
+								equilibrium molecular dynamics simulations.
+								See <a href="http://hdl.handle.net/20.500.11937/81765">PhD thesis, Craig Moir, “Thermal
+									Transport in Mixtures,” School of Engineering, University of Aberdeen (2020)</a>
 							</span>
 
 						</li>
@@ -982,8 +1005,9 @@
 							Thermal conductivities for the same system as a function
 							of volume fraction. Both $L_{uu}$ and $\lambda$ are well
 							outside the classical limits (dashed lines) but in
-							opposite directions for this fluid. 
-						See <a href="http://hdl.handle.net/20.500.11937/81765">PhD thesis, Craig Moir, “Thermal Transport in Mixtures,” School of Engineering, University of Aberdeen (2020)</a>
+							opposite directions for this fluid.
+							See <a href="http://hdl.handle.net/20.500.11937/81765">PhD thesis, Craig Moir, “Thermal
+								Transport in Mixtures,” School of Engineering, University of Aberdeen (2020)</a>
 						</figcaption>
 					</figure>
 				</section>
@@ -1010,7 +1034,8 @@
 							max/min thermal conductivity compared to the
 							parallel/series limit for all concentrations as
 							predicted by Enskog theory.
-						See <a href="http://hdl.handle.net/20.500.11937/81765">PhD thesis, Craig Moir, “Thermal Transport in Mixtures,” School of Engineering, University of Aberdeen (2020)</a>
+							See <a href="http://hdl.handle.net/20.500.11937/81765">PhD thesis, Craig Moir, “Thermal
+								Transport in Mixtures,” School of Engineering, University of Aberdeen (2020)</a>
 						</figcaption>
 					</figure>
 				</section>
